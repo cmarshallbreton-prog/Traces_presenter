@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.upload-section {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+#fileInput {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+}
+
+.upload-btn:hover {
+    background: #0056b3;
+}
+
+.file-info {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+.project-info {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-info h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.project-stats {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.student-selector {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.student-selector label {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.student-selector select {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 1em;
+    color: #333;
+    min-width: 250px;
+}
+
+.student-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.student-dashboard {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.student-dashboard h3 {
+    text-align: center;
+    color: #007bff;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #007bff;
+    background: #f8f9fa;
+}
+
+.tab-btn.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+    background: #f8f9fa;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.trace-controls {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.trace-controls label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.trace-controls select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 1em;
+    color: #333;
+}
+
+.trace-controls select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.chart-container {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    min-height: 400px;
+}
+
+.chart-container h4 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.table-container {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.table-container h4 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.no-data {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 50px;
+    font-size: 1.1em;
+}
+
+.error-message {
+    background: #dc3545;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .student-selector {
+        text-align: left;
+    }
+    
+    .student-selector label {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .student-selector select {
+        width: 100%;
+        min-width: auto;
+    }
+}
