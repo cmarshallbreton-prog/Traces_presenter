@@ -116,7 +116,7 @@ function onStudentChange() {
 function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('selectedStudentName').textContent = `Étudiant : ${studentName}`;
     
-    // Sauvegarder les traces de l'étudiant
+    // Catégoriser les traces selon les nouvelles règles
     currentStudentTraces = categorizeTraces(studentTraces);
     
     // Nettoyer les anciens graphiques
@@ -127,15 +127,15 @@ function displayStudentDashboard(studentName, studentTraces) {
     });
     chartsInstances = {};
     
-    // Peupler les dropdowns pour les onglets avec graphiques
+    // Peupler les dropdowns pour static et dynamic seulement
     populateTraceDropdown('staticTraceSelect', currentStudentTraces.static);
     populateTraceDropdown('dynamicTraceSelect', currentStudentTraces.dynamic);
     
     // Générer les tableaux pour les onglets suspicious et others
-    generateSuspiciousTable(currentStudentTraces.suspicious);
-    generateOthersTable(currentStudentTraces.others);
+    generateTable('suspiciousTable', currentStudentTraces.suspicious);
+    generateTable('othersTable', currentStudentTraces.others);
     
-    // Rester sur l'onglet actuel ou aller sur statique par défaut
+    // Rester sur l'onglet actuel
     switchToTab(currentTab);
     
     document.getElementById('studentDashboard').style.display = 'block';
@@ -152,14 +152,17 @@ function categorizeTraces(traces) {
     traces.forEach(trace => {
         const categories = trace.trace.category || [];
         
-        if (categories.includes('Static')) {
+        if (categories.includes('Suspicious') || categories.length === 0) {
+            // Suspicious ou sans catégorie -> tableau
+            if (categories.includes('Suspicious')) {
+                categorized.suspicious.push(trace);
+            } else {
+                categorized.others.push(trace);
+            }
+        } else if (categories.includes('Static')) {
             categorized.static.push(trace);
         } else if (categories.includes('Dynamic')) {
             categorized.dynamic.push(trace);
-        } else if (categories.includes('Suspicious')) {
-            categorized.suspicious.push(trace);
-        } else {
-            categorized.others.push(trace);
         }
     });
     
@@ -181,23 +184,19 @@ function populateTraceDropdown(selectId, traces) {
         return;
     }
     
-    // Vider la dropdown
     select.innerHTML = '';
     
     // Déterminer quelle trace sélectionner
     const category = selectId.replace('TraceSelect', '');
     let selectedTrace = null;
     
-    // Si on a une trace mémorisée pour cette catégorie et qu'elle existe encore
     if (selectedTraces[category] && traceNames.includes(selectedTraces[category])) {
         selectedTrace = selectedTraces[category];
     } else {
-        // Sinon, prendre la première trace disponible
         selectedTrace = traceNames[0];
         selectedTraces[category] = selectedTrace;
     }
     
-    // Ajouter toutes les traces à la dropdown
     traceNames.forEach(traceName => {
         const option = document.createElement('option');
         option.value = traceName;
@@ -208,7 +207,6 @@ function populateTraceDropdown(selectId, traces) {
         select.appendChild(option);
     });
     
-    // Déclencher automatiquement l'affichage du graphique si on est sur l'onglet actuel
     if (category === currentTab) {
         updateChart(category);
     }
@@ -223,7 +221,6 @@ function switchTab(event) {
 function switchToTab(tabName) {
     currentTab = tabName;
     
-    // Mettre à jour les boutons d'onglets
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.dataset.tab === tabName) {
@@ -231,7 +228,6 @@ function switchToTab(tabName) {
         }
     });
     
-    // Mettre à jour le contenu des onglets
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
     });
@@ -241,7 +237,6 @@ function switchToTab(tabName) {
         targetTab.classList.add('active');
     }
     
-    // Pour les onglets avec graphiques, déclencher automatiquement l'affichage
     if (tabName === 'static' || tabName === 'dynamic') {
         const select = document.getElementById(tabName + 'TraceSelect');
         if (select && select.value) {
@@ -259,7 +254,6 @@ function updateChart(category) {
     
     if (!selectedTrace) {
         chartTitle.textContent = 'Aucune trace disponible';
-        // Nettoyer le graphique
         if (chartsInstances[canvasId]) {
             chartsInstances[canvasId].destroy();
             delete chartsInstances[canvasId];
@@ -267,84 +261,32 @@ function updateChart(category) {
         return;
     }
     
-    // Mémoriser la trace sélectionnée
     selectedTraces[category] = selectedTrace;
     
-    // Filtrer les traces pour la trace sélectionnée
     const categoryTraces = currentStudentTraces[category];
     const selectedTraces_data = categoryTraces.filter(trace => trace.trace.trace_name === selectedTrace);
     
-    // Mettre à jour le titre
-    chartTitle.textContent = `Évolution : ${selectedTrace}`;
+    chartTitle.textContent = `${selectedTrace}`;
     
-    // Créer le graphique d'évolution avec moyenne de classe
-    createEvolutionChart(selectedTraces_data, canvasId, category, selectedTrace);
+    createChart(selectedTraces_data, canvasId, category, selectedTrace);
 }
 
-function createEvolutionChart(studentTraces, canvasId, category, traceName) {
-    // Détruire le graphique existant
+function createChart(studentTraces, canvasId, category, traceName) {
     if (chartsInstances[canvasId]) {
         chartsInstances[canvasId].destroy();
         delete chartsInstances[canvasId];
     }
     
     const canvas = document.getElementById(canvasId);
-    if (!canvas) {
-        console.error(`Canvas ${canvasId} not found`);
-        return;
-    }
+    if (!canvas) return;
     
-    console.log(`Creating chart for ${traceName} in category ${category} with ${studentTraces.length} traces`); // Debug
+    // Obtenir toutes les traces de ce type pour la moyenne de classe
+    const categoryName = category === 'static' ? 'Static' : 'Dynamic';
+    const allTraces = currentData.traces.filter(trace => {
+        return trace.trace.trace_name === traceName &&
+               trace.trace.category && trace.trace.category.includes(categoryName);
+    });
     
-    // Mapping des catégories avec la bonne casse
-    const categoryMap = {
-        'static': 'Static',
-        'dynamic': 'Dynamic',
-        'suspicious': 'Suspicious',
-        'others': 'others'
-    };
-    
-    const actualCategory = categoryMap[category];
-    console.log(`Mapped category ${category} to ${actualCategory}`); // Debug
-    
-    // Obtenir toutes les traces de ce type pour calculer la moyenne de classe
-    console.log('Filtering all traces for class average...'); // Debug
-    
-    let allTraces;
-    if (category === 'others') {
-        // Pour "others", on prend les traces sans catégorie spécifique
-        allTraces = currentData.traces.filter(trace => {
-            const categories = trace.trace.category || [];
-            const isOthers = categories.length === 0 || 
-                           (!categories.includes('Static') && 
-                            !categories.includes('Dynamic') && 
-                            !categories.includes('Suspicious'));
-            return trace.trace.trace_name === traceName && isOthers;
-        });
-    } else {
-        // Pour les autres catégories, filtrer par nom de trace ET par catégorie (avec la bonne casse)
-        allTraces = currentData.traces.filter(trace => {
-            if (trace.trace.trace_name !== traceName) return false;
-            
-            const categories = trace.trace.category || [];
-            const hasCategory = categories.includes(actualCategory);
-            
-            console.log(`Trace: ${trace.trace.trace_name}, Categories: [${categories.join(', ')}], Has ${actualCategory}: ${hasCategory}`); // Debug
-            return hasCategory;
-        });
-    }
-    
-    console.log(`Found ${allTraces.length} traces in total for ${traceName} in category ${actualCategory}`); // Debug
-    
-    // Debug: afficher quelques exemples de traces trouvées
-    if (allTraces.length > 0) {
-        console.log('Sample traces found:');
-        allTraces.slice(0, 3).forEach(trace => {
-            console.log(`- Student: ${trace.student_name}, Value: ${trace.trace.value}, Categories: [${(trace.trace.category || []).join(', ')}]`);
-        });
-    }
-    
-    // Trier les traces de l'étudiant par timestamp
     const sortedStudentTraces = studentTraces.sort((a, b) => 
         new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
     );
@@ -358,199 +300,127 @@ function createEvolutionChart(studentTraces, canvasId, category, traceName) {
         return;
     }
     
-    // Préparer les données selon le type de valeur
-    const datasets = [];
-    
-    // Vérifier le type de données
     const firstValue = sortedStudentTraces[0].trace.value;
-    console.log(`First value type: ${typeof firstValue}, value: ${firstValue}`); // Debug
     
-    // Créer les labels temporels simples
-    const labels = sortedStudentTraces.map((trace, index) => {
+    if (typeof firstValue === 'number') {
+        createNumericChart(sortedStudentTraces, allTraces, canvas, canvasId);
+    } else {
+        createTextualChart(sortedStudentTraces, canvas, canvasId);
+    }
+}
+
+function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
+    const labels = studentTraces.map(trace => {
         const date = new Date(trace.trace.timestamp);
         return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
     });
     
-    if (typeof firstValue === 'number') {
-        // Données numériques
-        const studentData = sortedStudentTraces.map(trace => trace.trace.value);
+    const studentData = studentTraces.map(trace => trace.trace.value);
+    
+    const datasets = [{
+        label: 'Étudiant',
+        data: studentData,
+        borderColor: '#007bff',
+        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+        fill: false,
+        tension: 0.4
+    }];
+    
+    // Calculer la moyenne de classe
+    const allNumericTraces = allTraces.filter(t => typeof t.trace.value === 'number');
+    if (allNumericTraces.length > 0) {
+        const allNumericValues = allNumericTraces.map(t => t.trace.value);
+        const classAverage = allNumericValues.reduce((sum, val) => sum + val, 0) / allNumericValues.length;
         
-        // Calculer la moyenne de classe
-        const allNumericTraces = allTraces.filter(t => typeof t.trace.value === 'number');
-        console.log(`Found ${allNumericTraces.length} numeric traces for class average`); // Debug
-        
-        if (allNumericTraces.length > 0) {
-            const allNumericValues = allNumericTraces.map(t => t.trace.value);
-            console.log(`Numeric values: [${allNumericValues.slice(0, 5).join(', ')}${allNumericValues.length > 5 ? '...' : ''}]`); // Debug
-            
-            const classAverage = allNumericValues.reduce((sum, val) => sum + val, 0) / allNumericValues.length;
-            console.log(`Calculated class average: ${classAverage}`); // Debug
-            
-            // Dataset pour l'étudiant
-            datasets.push({
-                label: 'Étudiant',
-                data: studentData,
-                borderColor: '#007bff',
-                backgroundColor: 'rgba(0, 123, 255, 0.1)',
-                fill: false,
-                tension: 0.4
-            });
-            
-            // Dataset pour la moyenne de classe (ligne horizontale)
-            const classAverageData = new Array(studentData.length).fill(classAverage);
-            datasets.push({
-                label: `Moyenne classe (${Math.round(classAverage)})`,
-                data: classAverageData,
-                borderColor: '#dc3545',
-                backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                borderDash: [5, 5],
-                fill: false
-            });
-        } else {
-            console.log('No numeric traces found for class average'); // Debug
-            // Seulement l'étudiant
-            datasets.push({
-                label: 'Étudiant',
-                data: studentData,
-                borderColor: '#007bff',
-                backgroundColor: 'rgba(0, 123, 255, 0.1)',
-                fill: false,
-                tension: 0.4
-            });
-        }
-        
-    } else if (firstValue === 'success' || firstValue === 'failure') {
-        // Données de tests (success/failure)
-        const studentData = sortedStudentTraces.map(trace => 
-            trace.trace.value === 'success' ? 1 : 0
-        );
-        
-        // Calculer le taux de réussite de la classe
-        const allTestTraces = allTraces.filter(t => 
-            t.trace.value === 'success' || t.trace.value === 'failure'
-        );
-        console.log(`Found ${allTestTraces.length} test traces for success rate`); // Debug
-        
-        if (allTestTraces.length > 0) {
-            const successCount = allTestTraces.filter(t => t.trace.value === 'success').length;
-            const successRate = successCount / allTestTraces.length;
-            console.log(`Success rate: ${successCount}/${allTestTraces.length} = ${successRate}`); // Debug
-            
-            // Dataset pour l'étudiant
-            datasets.push({
-                label: 'Étudiant',
-                data: studentData,
-                borderColor: '#28a745',
-                backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                fill: false,
-                stepped: true
-            });
-            
-            // Dataset pour la moyenne de classe
-            const classRateData = new Array(studentData.length).fill(successRate);
-            datasets.push({
-                label: `Taux de réussite classe (${Math.round(successRate * 100)}%)`,
-                data: classRateData,
-                borderColor: '#dc3545',
-                backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                borderDash: [5, 5],
-                fill: false
-            });
-        } else {
-            console.log('No test traces found for class average'); // Debug
-            // Seulement l'étudiant
-            datasets.push({
-                label: 'Étudiant',
-                data: studentData,
-                borderColor: '#28a745',
-                backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                fill: false,
-                stepped: true
-            });
-        }
-        
-    } else {
-        // Autres types de données (oui/non, etc.)
-        console.log('Processing other data types'); // Debug
-        const uniqueValues = [...new Set(allTraces.map(t => t.trace.value).filter(v => v !== undefined))];
-        console.log(`Unique values found: [${uniqueValues.join(', ')}]`); // Debug
-        
-        const valueMap = {};
-        uniqueValues.forEach((value, index) => {
-            valueMap[value] = index;
-        });
-        
-        const studentData = sortedStudentTraces.map(trace => 
-            valueMap[trace.trace.value] !== undefined ? valueMap[trace.trace.value] : 0
-        );
-        
+        const classAverageData = new Array(studentData.length).fill(classAverage);
         datasets.push({
-            label: 'Étudiant',
-            data: studentData,
-            borderColor: '#6f42c1',
-            backgroundColor: 'rgba(111, 66, 193, 0.1)',
-            fill: false,
-            stepped: true
+            label: `Moyenne classe (${Math.round(classAverage)})`,
+            data: classAverageData,
+            borderColor: '#dc3545',
+            borderDash: [5, 5],
+            fill: false
         });
     }
     
-    console.log('Creating chart with datasets:', datasets.length, 'datasets'); // Debug
-    
-    // Créer le graphique
     const ctx = canvas.getContext('2d');
     chartsInstances[canvasId] = new Chart(ctx, {
         type: 'line',
-        data: {
-            labels: labels,
-            datasets: datasets
-        },
+        data: { labels, datasets },
         options: {
             responsive: true,
             animation: false,
             scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Temps'
-                    }
-                },
+                x: { title: { display: true, text: 'Temps' } },
+                y: { beginAtZero: true, title: { display: true, text: 'Valeur' } }
+            },
+            plugins: { legend: { display: true, position: 'top' } }
+        }
+    });
+}
+
+function createTextualChart(studentTraces, canvas, canvasId) {
+    // Points colorés pour les valeurs textuelles
+    const allValues = [...new Set(studentTraces.map(t => t.trace.value))];
+    const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+    const colorMap = {};
+    
+    allValues.forEach((value, index) => {
+        colorMap[value] = colors[index % colors.length];
+    });
+    
+    const labels = studentTraces.map(trace => {
+        const date = new Date(trace.trace.timestamp);
+        return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    });
+    
+    const datasets = [];
+    allValues.forEach(value => {
+        const data = studentTraces.map(trace => trace.trace.value === value ? 1 : null);
+        
+        datasets.push({
+            label: value,
+            data: data,
+            backgroundColor: colorMap[value],
+            borderColor: colorMap[value],
+            pointRadius: 8,
+            showLine: false,
+            fill: false
+        });
+    });
+    
+    const ctx = canvas.getContext('2d');
+    chartsInstances[canvasId] = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            animation: false,
+            scales: {
+                x: { title: { display: true, text: 'Temps' } },
                 y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: typeof firstValue === 'number' ? 'Valeur' : 
-                              (firstValue === 'success' || firstValue === 'failure') ? 'Résultat' : 'Valeur'
-                    },
-                    ticks: typeof firstValue === 'number' ? {} : 
-                          (firstValue === 'success' || firstValue === 'failure') ? {
-                        callback: function(value) {
-                            return value === 1 ? 'Succès' : 'Échec';
-                        }
-                    } : {}
+                    min: 0.5, max: 1.5,
+                    ticks: { display: false },
+                    grid: { display: false },
+                    title: { display: false }
                 }
             },
             plugins: {
-                legend: {
-                    display: true,
-                    position: 'top'
-                }
+                legend: { display: true, position: 'top', labels: { usePointStyle: true } }
             }
         }
     });
-    
-    console.log('Chart created successfully'); // Debug
 }
 
-function generateSuspiciousTable(suspiciousTraces) {
-    const tableContainer = document.getElementById('suspiciousTable');
+function generateTable(tableId, traces) {
+    const tableContainer = document.getElementById(tableId);
     
     if (!tableContainer) {
-        console.error('Element suspiciousTable not found');
+        console.error(`Element ${tableId} not found`);
         return;
     }
     
-    if (suspiciousTraces.length === 0) {
-        tableContainer.innerHTML = '<div class="no-data">Aucune trace suspecte pour cet étudiant</div>';
+    if (traces.length === 0) {
+        tableContainer.innerHTML = '<div class="no-data">Aucune trace pour cet étudiant</div>';
         return;
     }
     
@@ -567,61 +437,7 @@ function generateSuspiciousTable(suspiciousTraces) {
                 <tbody>
     `;
     
-    // Trier par timestamp
-    const sortedTraces = suspiciousTraces.sort((a, b) => 
-        new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
-    );
-    
-    sortedTraces.forEach(trace => {
-        const timestamp = new Date(trace.trace.timestamp).toLocaleString('fr-FR');
-        const value = trace.trace.value !== undefined ? trace.trace.value : '-';
-        
-        tableHtml += `
-            <tr>
-                <td>${timestamp}</td>
-                <td>${trace.trace.trace_name}</td>
-                <td>${value}</td>
-            </tr>
-        `;
-    });
-    
-    tableHtml += `
-                </tbody>
-            </table>
-        </div>
-    `;
-    
-    tableContainer.innerHTML = tableHtml;
-}
-
-function generateOthersTable(otherTraces) {
-    const tableContainer = document.getElementById('othersTable');
-    
-    if (!tableContainer) {
-        console.error('Element othersTable not found');
-        return;
-    }
-    
-    if (otherTraces.length === 0) {
-        tableContainer.innerHTML = '<div class="no-data">Aucune autre trace pour cet étudiant</div>';
-        return;
-    }
-    
-    let tableHtml = `
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Horodatage</th>
-                        <th>Type de trace</th>
-                        <th>Valeur</th>
-                    </tr>
-                </thead>
-                <tbody>
-    `;
-    
-    // Trier par timestamp
-    const sortedTraces = otherTraces.sort((a, b) => 
+    const sortedTraces = traces.sort((a, b) => 
         new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
     );
     
