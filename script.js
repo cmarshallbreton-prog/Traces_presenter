@@ -6,6 +6,7 @@ let selectedTraces = {
     static: null,
     dynamic: null
 };
+let globalTimeRange = null; // Nouvelle variable pour stocker la plage temporelle globale
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('fileInput').addEventListener('change', handleFileUpload);
@@ -33,6 +34,7 @@ function handleFileUpload(event) {
         try {
             const data = JSON.parse(e.target.result);
             currentData = data;
+            calculateGlobalTimeRange(data); // Calculer la plage temporelle globale
             displayProjectInfo(data);
             populateStudentDropdown(data);
             fileInfo.innerHTML = `✅ Fichier "${file.name}" chargé avec succès`;
@@ -48,6 +50,15 @@ function handleFileUpload(event) {
     };
 
     reader.readAsText(file);
+}
+
+// Nouvelle fonction pour calculer la plage temporelle globale
+function calculateGlobalTimeRange(data) {
+    const allTimestamps = data.traces.map(trace => new Date(trace.trace.timestamp));
+    globalTimeRange = {
+        min: new Date(Math.min(...allTimestamps)),
+        max: new Date(Math.max(...allTimestamps))
+    };
 }
 
 function displayProjectInfo(data) {
@@ -312,13 +323,39 @@ function createChart(studentTraces, canvasId, category, traceName) {
     
 }
 
-function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
-    const labels = studentTraces.map(trace => {
-        const date = new Date(trace.trace.timestamp);
-        return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+// Fonction helper pour générer les labels temporels uniformes
+function generateUniformTimeLabels() {
+    const labels = [];
+    const current = new Date(globalTimeRange.min);
+    const end = globalTimeRange.max;
+    
+    // Générer des labels toutes les minutes (ajustable selon le besoin)
+    while (current <= end) {
+        labels.push(current.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }));
+        current.setMinutes(current.getMinutes() + 1);
+    }
+    
+    return labels;
+}
+
+// Fonction helper pour mapper les données sur la timeline uniforme
+function mapDataToUniformTimeline(traces) {
+    const uniformLabels = generateUniformTimeLabels();
+    const dataMap = new Map();
+    
+    // Créer une map des données par timestamp
+    traces.forEach(trace => {
+        const time = new Date(trace.trace.timestamp).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        dataMap.set(time, trace.trace.value);
     });
     
-    const studentData = studentTraces.map(trace => trace.trace.value);
+    // Mapper les données sur la timeline uniforme
+    return uniformLabels.map(label => dataMap.get(label) || null);
+}
+
+function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
+    const uniformLabels = generateUniformTimeLabels();
+    const studentData = mapDataToUniformTimeline(studentTraces);
     
     const datasets = [{
         label: 'Étudiant',
@@ -326,7 +363,8 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
         borderColor: '#007bff',
         backgroundColor: 'rgba(0, 123, 255, 0.1)',
         fill: false,
-        tension: 0.4
+        tension: 0.4,
+        spanGaps: true // Connecter les points même avec des valeurs null
     }];
     
     // Calculer la moyenne de classe
@@ -335,7 +373,7 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
         const allNumericValues = allNumericTraces.map(t => t.trace.value);
         const classAverage = allNumericValues.reduce((sum, val) => sum + val, 0) / allNumericValues.length;
         
-        const classAverageData = new Array(studentData.length).fill(classAverage);
+        const classAverageData = new Array(uniformLabels.length).fill(classAverage);
         datasets.push({
             label: `Moyenne classe (${Math.round(classAverage)})`,
             data: classAverageData,
@@ -348,12 +386,17 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
     const ctx = canvas.getContext('2d');
     chartsInstances[canvasId] = new Chart(ctx, {
         type: 'line',
-        data: { labels, datasets },
+        data: { labels: uniformLabels, datasets },
         options: {
             responsive: true,
             animation: false,
             scales: {
-                x: { title: { display: true, text: 'Temps' } },
+                x: { 
+                    title: { display: true, text: 'Temps' },
+                    ticks: {
+                        maxTicksLimit: 20 // Limiter le nombre de labels affichés
+                    }
+                },
                 y: { beginAtZero: true, title: { display: true, text: 'Valeur' } }
             },
             plugins: { legend: { display: true, position: 'top' } }
@@ -362,6 +405,8 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
 }
 
 function createTextualChart(studentTraces, canvas, canvasId) {
+    const uniformLabels = generateUniformTimeLabels();
+    
     // Points colorés pour les valeurs textuelles
     const allValues = [...new Set(studentTraces.map(t => t.trace.value))];
     const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
@@ -371,14 +416,19 @@ function createTextualChart(studentTraces, canvas, canvasId) {
         colorMap[value] = colors[index % colors.length];
     });
     
-    const labels = studentTraces.map(trace => {
-        const date = new Date(trace.trace.timestamp);
-        return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    // Créer une map des données par timestamp
+    const dataMap = new Map();
+    studentTraces.forEach(trace => {
+        const time = new Date(trace.trace.timestamp).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        dataMap.set(time, trace.trace.value);
     });
     
     const datasets = [];
     allValues.forEach(value => {
-        const data = studentTraces.map(trace => trace.trace.value === value ? 1 : null);
+        const data = uniformLabels.map(label => {
+            const traceValue = dataMap.get(label);
+            return traceValue === value ? 1 : null;
+        });
         
         datasets.push({
             label: value,
@@ -394,12 +444,17 @@ function createTextualChart(studentTraces, canvas, canvasId) {
     const ctx = canvas.getContext('2d');
     chartsInstances[canvasId] = new Chart(ctx, {
         type: 'line',
-        data: { labels, datasets },
+        data: { labels: uniformLabels, datasets },
         options: {
             responsive: true,
             animation: false,
             scales: {
-                x: { title: { display: true, text: 'Temps' } },
+                x: { 
+                    title: { display: true, text: 'Temps' },
+                    ticks: {
+                        maxTicksLimit: 20
+                    }
+                },
                 y: {
                     min: 0.5, max: 1.5,
                     ticks: { display: false },
@@ -415,6 +470,8 @@ function createTextualChart(studentTraces, canvas, canvasId) {
 }
 
 function createBooleanChart(studentTraces, canvas, canvasId) {
+    const uniformLabels = generateUniformTimeLabels();
+    
     // Points colorés pour les valeurs booléennes
     const allValues = [...new Set(studentTraces.map(t => t.trace.value))];
     const colorMap = {};
@@ -422,15 +479,19 @@ function createBooleanChart(studentTraces, canvas, canvasId) {
     colorMap[true] = '#2ecc71';
     colorMap[false] = '#e74c3c';
 
-    
-    const labels = studentTraces.map(trace => {
-        const date = new Date(trace.trace.timestamp);
-        return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    // Créer une map des données par timestamp
+    const dataMap = new Map();
+    studentTraces.forEach(trace => {
+        const time = new Date(trace.trace.timestamp).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        dataMap.set(time, trace.trace.value);
     });
     
     const datasets = [];
     allValues.forEach(value => {
-        const data = studentTraces.map(trace => trace.trace.value === value ? 1 : null);
+        const data = uniformLabels.map(label => {
+            const traceValue = dataMap.get(label);
+            return traceValue === value ? 1 : null;
+        });
         
         datasets.push({
             label: value,
@@ -446,12 +507,17 @@ function createBooleanChart(studentTraces, canvas, canvasId) {
     const ctx = canvas.getContext('2d');
     chartsInstances[canvasId] = new Chart(ctx, {
         type: 'line',
-        data: { labels, datasets },
+        data: { labels: uniformLabels, datasets },
         options: {
             responsive: true,
             animation: false,
             scales: {
-                x: { title: { display: true, text: 'Temps' } },
+                x: { 
+                    title: { display: true, text: 'Temps' },
+                    ticks: {
+                        maxTicksLimit: 20
+                    }
+                },
                 y: {
                     min: 0.5, max: 1.5,
                     ticks: { display: false },

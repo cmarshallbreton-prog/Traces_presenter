@@ -21,8 +21,8 @@ for i in range (0,limit):
         "value": """ + str(random.randint(15,100)) + """,
         \"category":["Static"]}"""
     elif rdm in range(31,41):
-        data += """"trace_name": "Contient un for",
-        "value": \"""" + random.choice(["oui", "non"]) + """\",
+        data += """"trace_name": "Nom des fonctions",
+        "value": \"""" + random.choice(["do_things", "open_door", "drink_coffee", "say_hi"]) + """\",
         \"category":["Static"]}"""
     elif rdm in range(41,71):
         data += """"trace_name": "test_""" + str(random.randint(1,5)) + """",
