@@ -304,9 +304,12 @@ function createChart(studentTraces, canvasId, category, traceName) {
     
     if (typeof firstValue === 'number') {
         createNumericChart(sortedStudentTraces, allTraces, canvas, canvasId);
-    } else {
+    } else if (typeof firstValue === 'boolean'){
+        createBooleanChart(sortedStudentTraces, canvas, canvasId);
+    }else{
         createTextualChart(sortedStudentTraces, canvas, canvasId);
     }
+    
 }
 
 function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
@@ -367,6 +370,58 @@ function createTextualChart(studentTraces, canvas, canvasId) {
     allValues.forEach((value, index) => {
         colorMap[value] = colors[index % colors.length];
     });
+    
+    const labels = studentTraces.map(trace => {
+        const date = new Date(trace.trace.timestamp);
+        return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    });
+    
+    const datasets = [];
+    allValues.forEach(value => {
+        const data = studentTraces.map(trace => trace.trace.value === value ? 1 : null);
+        
+        datasets.push({
+            label: value,
+            data: data,
+            backgroundColor: colorMap[value],
+            borderColor: colorMap[value],
+            pointRadius: 8,
+            showLine: false,
+            fill: false
+        });
+    });
+    
+    const ctx = canvas.getContext('2d');
+    chartsInstances[canvasId] = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            animation: false,
+            scales: {
+                x: { title: { display: true, text: 'Temps' } },
+                y: {
+                    min: 0.5, max: 1.5,
+                    ticks: { display: false },
+                    grid: { display: false },
+                    title: { display: false }
+                }
+            },
+            plugins: {
+                legend: { display: true, position: 'top', labels: { usePointStyle: true } }
+            }
+        }
+    });
+}
+
+function createBooleanChart(studentTraces, canvas, canvasId) {
+    // Points colorés pour les valeurs booléennes
+    const allValues = [...new Set(studentTraces.map(t => t.trace.value))];
+    const colorMap = {};
+    
+    colorMap[true] = '#2ecc71';
+    colorMap[false] = '#e74c3c';
+
     
     const labels = studentTraces.map(trace => {
         const date = new Date(trace.trace.timestamp);

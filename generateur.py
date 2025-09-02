@@ -26,7 +26,7 @@ for i in range (0,limit):
         \"category":["Static"]}"""
     elif rdm in range(41,71):
         data += """"trace_name": "test_""" + str(random.randint(1,5)) + """",
-        "value": \"""" + random.choice(["success","failure"]) + """\",
+        "value": """ + random.choice(["true","false"]) + """,
         \"category":["Dynamic"]}"""
     elif rdm in range(71,81):
         data += """"trace_name": "warnings",
