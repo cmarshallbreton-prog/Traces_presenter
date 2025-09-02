@@ -52,7 +52,7 @@ function handleFileUpload(event) {
     reader.readAsText(file);
 }
 
-// Nouvelle fonction pour calculer la plage temporelle globale
+// Fonction pour calculer la plage temporelle globale
 function calculateGlobalTimeRange(data) {
     const allTimestamps = data.traces.map(trace => new Date(trace.trace.timestamp));
     globalTimeRange = {
