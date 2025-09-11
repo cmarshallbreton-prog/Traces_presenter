@@ -333,25 +333,24 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
         pointHoverRadius: 6
     }];
     
-    // Ajouter la ligne de moyenne de classe
+    // Calculer la moyenne évolutive en 10 segments
     const allNumericTraces = allTraces.filter(t => typeof t.trace.value === 'number');
     if (allNumericTraces.length > 0) {
-        const allNumericValues = allNumericTraces.map(t => t.trace.value);
-        const classAverage = allNumericValues.reduce((sum, val) => sum + val, 0) / allNumericValues.length;
+        const averagePoints = calculateTimeBasedAverage(allNumericTraces);
         
-        datasets.push({
-            label: `Moyenne classe (${Math.round(classAverage)})`,
-            data: [
-                { x: globalTimeRange.min, y: classAverage },
-                { x: globalTimeRange.max, y: classAverage }
-            ],
-            backgroundColor: '#dc3545',
-            borderColor: '#dc3545',
-            borderDash: [5, 5],
-            pointRadius: 0,
-            showLine: true,
-            fill: false
-        });
+        if (averagePoints.length > 0) {
+            datasets.push({
+                label: 'Moyenne classe (évolutive)',
+                data: averagePoints,
+                backgroundColor: '#dc3545',
+                borderColor: '#dc3545',
+                borderDash: [5, 5],
+                pointRadius: 3,
+                showLine: true,
+                fill: false,
+                tension: 0.3
+            });
+        }
     }
     
     const ctx = canvas.getContext('2d');
@@ -386,6 +385,39 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
     });
 }
 
+// Nouvelle fonction pour calculer la moyenne par segments temporels
+function calculateTimeBasedAverage(allNumericTraces) {
+    const totalDuration = globalTimeRange.max.getTime() - globalTimeRange.min.getTime();
+    const segmentDuration = totalDuration / 10; // Diviser en 10 segments
+    
+    const averagePoints = [];
+    
+    for (let i = 0; i < 10; i++) {
+        const segmentStart = new Date(globalTimeRange.min.getTime() + (i * segmentDuration));
+        const segmentEnd = new Date(globalTimeRange.min.getTime() + ((i + 1) * segmentDuration));
+        const segmentMiddle = new Date(globalTimeRange.min.getTime() + ((i + 0.5) * segmentDuration));
+        
+        // Filtrer les traces qui tombent dans ce segment
+        const tracesInSegment = allNumericTraces.filter(trace => {
+            const traceTime = new Date(trace.trace.timestamp);
+            return traceTime >= segmentStart && traceTime < segmentEnd;
+        });
+        
+        // Calculer la moyenne pour ce segment s'il y a des données
+        if (tracesInSegment.length > 0) {
+            const values = tracesInSegment.map(t => t.trace.value);
+            const average = values.reduce((sum, val) => sum + val, 0) / values.length;
+            
+            averagePoints.push({
+                x: segmentMiddle,
+                y: average
+            });
+        }
+    }
+    
+    return averagePoints;
+}
+
 function createTextualChart(studentTraces, canvas, canvasId) {
     const allValues = [...new Set(studentTraces.map(t => t.trace.value))];
     const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
@@ -410,7 +442,6 @@ function createTextualChart(studentTraces, canvas, canvasId) {
             backgroundColor: colorMap[value],
             borderColor: colorMap[value],
             pointRadius: 8,
-            pointHoverRadius: 8,
             showLine: false
         });
     });
@@ -471,7 +502,6 @@ function createBooleanChart(studentTraces, canvas, canvasId) {
             backgroundColor: colorMap[value],
             borderColor: colorMap[value],
             pointRadius: 8,
-            pointHoverRadius: 8,
             showLine: false
         });
     });
