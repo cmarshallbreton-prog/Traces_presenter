@@ -382,9 +382,7 @@
         "timestamp": "2025-07-15T09:56:43Z",
         "trace_name": "test_4",
         "value": true,
-        "category": [
-          "Dynamic"
-        ]
+        "category": ["Dynamic"]
       }
     },
     {
@@ -1915,7 +1913,7 @@
       "student_id": "FST_006",
       "student_name": "Alain Cor",
       "trace": {
-        "timestamp": "2025-07-15T09:34:49Z",
+        "timestamp": "2025-07-15T09:54:13Z",
         "trace_name": "lignes de code",
         "value": 19,
         "category": [

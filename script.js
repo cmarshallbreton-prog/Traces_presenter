@@ -2,6 +2,7 @@ let currentData = null;
 let chartsInstances = {};
 let currentStudentTraces = {};
 let currentTab = 'static';
+const TIME_SEGMENTS = 10;
 let selectedTraces = {
     static: null,
     dynamic: null
@@ -12,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('fileInput').addEventListener('change', handleFileUpload);
     document.getElementById('studentSelect').addEventListener('change', onStudentChange);
     
-    // Événements pour les onglets
+    //Events pour les changements d'onglets
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', switchTab);
     });
     
-    // Événements pour les dropdowns de traces (seulement static et dynamic)
+    //Events pour la sélection des onglets à graphes
     document.getElementById('staticTraceSelect').addEventListener('change', () => updateChart('static'));
     document.getElementById('dynamicTraceSelect').addEventListener('change', () => updateChart('dynamic'));
 });
@@ -126,10 +127,10 @@ function onStudentChange() {
 function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('selectedStudentName').textContent = `Étudiant : ${studentName}`;
     
-    // Catégoriser les traces selon les nouvelles règles
+    // Catégoriser les traces selon les catégories
     currentStudentTraces = categorizeTraces(studentTraces);
     
-    // Nettoyer les anciens graphiques
+    // Suppression des anciens graphiques
     Object.values(chartsInstances).forEach(chart => {
         if (chart && typeof chart.destroy === 'function') {
             chart.destroy();
@@ -137,7 +138,7 @@ function displayStudentDashboard(studentName, studentTraces) {
     });
     chartsInstances = {};
     
-    // Peupler les dropdowns pour static et dynamic seulement
+    // Peupler les dropdowns des traces statiques et dynamiques
     populateTraceDropdown('staticTraceSelect', currentStudentTraces.static);
     populateTraceDropdown('dynamicTraceSelect', currentStudentTraces.dynamic);
     
@@ -145,12 +146,12 @@ function displayStudentDashboard(studentName, studentTraces) {
     generateTable('suspiciousTable', currentStudentTraces.suspicious);
     generateTable('othersTable', currentStudentTraces.others);
     
-    // Rester sur l'onglet actuel
     switchToTab(currentTab);
     
     document.getElementById('studentDashboard').style.display = 'block';
 }
 
+//Partie en dur pour les catégories.
 function categorizeTraces(traces) {
     const categorized = {
         static: [],
@@ -228,7 +229,7 @@ function switchTab(event) {
 
 function switchToTab(tabName) {
     currentTab = tabName;
-    
+    // active pour disply, cf css.
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.dataset.tab === tabName) {
@@ -288,6 +289,7 @@ function createChart(studentTraces, canvasId, category, traceName) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
     
+    //A changer si on a plus de catégories.
     const categoryName = category === 'static' ? 'Static' : 'Dynamic';
     const allTraces = currentData.traces.filter(trace => {
         return trace.trace.trace_name === traceName &&
@@ -333,7 +335,7 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
         pointHoverRadius: 6
     }];
     
-    // Calculer la moyenne évolutive en 10 segments
+    // Calculer la moyenne évolutive en TIME_SEGMENTS segments
     const allNumericTraces = allTraces.filter(t => typeof t.trace.value === 'number');
     if (allNumericTraces.length > 0) {
         const averagePoints = calculateTimeBasedAverage(allNumericTraces);
@@ -385,14 +387,14 @@ function createNumericChart(studentTraces, allTraces, canvas, canvasId) {
     });
 }
 
-// Nouvelle fonction pour calculer la moyenne par segments temporels
+// Calcul des intervals de temps pour la moyenne évolutive
 function calculateTimeBasedAverage(allNumericTraces) {
     const totalDuration = globalTimeRange.max.getTime() - globalTimeRange.min.getTime();
-    const segmentDuration = totalDuration / 10; // Diviser en 10 segments
+    const segmentDuration = totalDuration / TIME_SEGMENTS; // Diviser en TIME_SEGMENTS segments
     
     const averagePoints = [];
     
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < TIME_SEGMENTS; i++) {
         const segmentStart = new Date(globalTimeRange.min.getTime() + (i * segmentDuration));
         const segmentEnd = new Date(globalTimeRange.min.getTime() + ((i + 1) * segmentDuration));
         const segmentMiddle = new Date(globalTimeRange.min.getTime() + ((i + 0.5) * segmentDuration));
