@@ -18,26 +18,22 @@ for i in range (0,limit):
     rdm = random.randint(1,100)
     if rdm in range(1,31):
         data += """"trace_name": "lignes de code",
-        "value": """ + str(random.randint(15,100)) + """,
-        \"category":["Static"]}"""
+        "value": """ + str(random.randint(15,100)) + "}"
     elif rdm in range(31,41):
         data += """"trace_name": "Nom des fonctions",
-        "value": \"""" + random.choice(["do_things", "open_door", "drink_coffee", "say_hi"]) + """\",
-        \"category":["Static"]}"""
+        "value": \"""" + random.choice(["do_things", "open_door", "drink_coffee", "say_hi"]) + "\"}"
     elif rdm in range(41,71):
         data += """"trace_name": "test_""" + str(random.randint(1,5)) + """",
-        "value": """ + random.choice(["true","false"]) + """,
-        \"category":["Dynamic"]}"""
+        "value": """ + random.choice(["true","false"]) + "}"
     elif rdm in range(71,81):
         data += """"trace_name": "warnings",
-        "value": """ + str(random.randint(0,10)) + """,
-        \"category":["Dynamic"]}"""
+        "value": """ + str(random.randint(0,10)) + "}"
     elif rdm in range(81,91):
         data += """"trace_name": "_""" + random.choice(["copy_paste","window_change", "code_chunk"]) + """\",
         \"category":["Suspicious"]}"""
     elif rdm in range(91,101):
-        data += """"trace_name": "&""" + random.choice(["aaa","bbb", "ccc"]) + """\",
-        \"category":[]}"""
+        data += """"trace_name": "Nom des Fichiers",
+        "value": \"""" + random.choice(["Exo_1.py", "Exo_2.py", "Exo_3.py", "blah.py"]) + "\"}"
 
     data += "}"
     if i != limit-1:
