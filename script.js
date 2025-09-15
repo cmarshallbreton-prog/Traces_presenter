@@ -1,11 +1,12 @@
 let currentData = null;
 let chartsInstances = {};
 let currentStudentTraces = {};
-let currentTab = 'static';
+let currentTab = 'numeric';
 const TIME_SEGMENTS = 10;
 let selectedTraces = {
-    static: null,
-    dynamic: null
+    numeric: null,
+    textual: null,
+    boolean: null
 };
 let globalTimeRange = null;
 
@@ -19,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     //Events pour la sélection des onglets à graphes
-    document.getElementById('staticTraceSelect').addEventListener('change', () => updateChart('static'));
-    document.getElementById('dynamicTraceSelect').addEventListener('change', () => updateChart('dynamic'));
+    document.getElementById('numericTraceSelect').addEventListener('change', () => updateChart('numeric'));
+    document.getElementById('textualTraceSelect').addEventListener('change', () => updateChart('textual'));
+    document.getElementById('booleanTraceSelect').addEventListener('change', () => updateChart('boolean'));
 });
 
 function handleFileUpload(event) {
@@ -127,8 +129,8 @@ function onStudentChange() {
 function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('selectedStudentName').textContent = `Étudiant : ${studentName}`;
     
-    // Catégoriser les traces selon les catégories
-    currentStudentTraces = categorizeTraces(studentTraces);
+    // Catégoriser les traces selon le type de données
+    currentStudentTraces = categorizeTracesByType(studentTraces);
     
     // Suppression des anciens graphiques
     Object.values(chartsInstances).forEach(chart => {
@@ -138,12 +140,12 @@ function displayStudentDashboard(studentName, studentTraces) {
     });
     chartsInstances = {};
     
-    // Peupler les dropdowns des traces statiques et dynamiques
-    populateTraceDropdown('staticTraceSelect', currentStudentTraces.static);
-    populateTraceDropdown('dynamicTraceSelect', currentStudentTraces.dynamic);
+    // Peupler les dropdowns des traces par type
+    populateTraceDropdown('numericTraceSelect', currentStudentTraces.numeric);
+    populateTraceDropdown('textualTraceSelect', currentStudentTraces.textual);
+    populateTraceDropdown('booleanTraceSelect', currentStudentTraces.boolean);
     
-    // Générer les tableaux pour les onglets suspicious et others
-    generateTable('suspiciousTable', currentStudentTraces.suspicious);
+    // Générer le tableau pour les autres traces
     generateTable('othersTable', currentStudentTraces.others);
     
     switchToTab(currentTab);
@@ -151,28 +153,28 @@ function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('studentDashboard').style.display = 'block';
 }
 
-//Partie en dur pour les catégories.
-function categorizeTraces(traces) {
+// Nouvelle fonction pour catégoriser selon le type de données
+function categorizeTracesByType(traces) {
     const categorized = {
-        static: [],
-        dynamic: [],
-        suspicious: [],
+        numeric: [],
+        textual: [],
+        boolean: [],
         others: []
     };
     
     traces.forEach(trace => {
-        const categories = trace.trace.category || [];
+        const value = trace.trace.value;
         
-        if (categories.includes('Suspicious') || categories.length === 0) {
-            if (categories.includes('Suspicious')) {
-                categorized.suspicious.push(trace);
-            } else {
-                categorized.others.push(trace);
-            }
-        } else if (categories.includes('Static')) {
-            categorized.static.push(trace);
-        } else if (categories.includes('Dynamic')) {
-            categorized.dynamic.push(trace);
+        if (value === undefined || value === null) {
+            categorized.others.push(trace);
+        } else if (typeof value === 'number') {
+            categorized.numeric.push(trace);
+        } else if (typeof value === 'boolean') {
+            categorized.boolean.push(trace);
+        } else if (typeof value === 'string') {
+            categorized.textual.push(trace);
+        } else {
+            categorized.others.push(trace);
         }
     });
     
@@ -229,7 +231,7 @@ function switchTab(event) {
 
 function switchToTab(tabName) {
     currentTab = tabName;
-    // active pour disply, cf css.
+    // active pour display, cf css.
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.dataset.tab === tabName) {
@@ -246,7 +248,7 @@ function switchToTab(tabName) {
         targetTab.classList.add('active');
     }
     
-    if (tabName === 'static' || tabName === 'dynamic') {
+    if (tabName === 'numeric' || tabName === 'textual' || tabName === 'boolean') {
         const select = document.getElementById(tabName + 'TraceSelect');
         if (select && select.value) {
             updateChart(tabName);
@@ -289,12 +291,8 @@ function createChart(studentTraces, canvasId, category, traceName) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
     
-    //A changer si on a plus de catégories.
-    const categoryName = category === 'static' ? 'Static' : 'Dynamic';
-    const allTraces = currentData.traces.filter(trace => {
-        return trace.trace.trace_name === traceName &&
-               trace.trace.category && trace.trace.category.includes(categoryName);
-    });
+    // Obtenir toutes les traces de même nom pour calculer la moyenne
+    const allTraces = currentData.traces.filter(trace => trace.trace.trace_name === traceName);
     
     const sortedStudentTraces = studentTraces.sort((a, b) => 
         new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
@@ -309,13 +307,12 @@ function createChart(studentTraces, canvasId, category, traceName) {
         return;
     }
     
-    const firstValue = sortedStudentTraces[0].trace.value;
-    
-    if (typeof firstValue === 'number') {
+    // Créer le graphique selon le type de données
+    if (category === 'numeric') {
         createNumericChart(sortedStudentTraces, allTraces, canvas, canvasId);
-    } else if (typeof firstValue === 'boolean'){
+    } else if (category === 'boolean') {
         createBooleanChart(sortedStudentTraces, canvas, canvasId);
-    } else {
+    } else if (category === 'textual') {
         createTextualChart(sortedStudentTraces, canvas, canvasId);
     }
 }

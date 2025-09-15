@@ -10,7 +10,7 @@ Suspicious : anything related to suspicious activity
     "trace": {
         "timestamp":,
         "trace_name":,
-        "value":,
-        "category" : []
+        "value":,  //Peut ne pas contenir de champ valeur => Trace "Autres"
+        "category" : [] //Deprecated ?
     }
 }

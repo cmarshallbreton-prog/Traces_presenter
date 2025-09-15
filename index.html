@@ -43,42 +43,48 @@
             <h3 id="selectedStudentName"></h3>
             
             <div class="tabs">
-                <button class="tab-btn active" data-tab="static">📊 Statiques</button>
-                <button class="tab-btn" data-tab="dynamic">⚡ Dynamiques</button>
-                <button class="tab-btn" data-tab="suspicious">⚠️ Suspectes</button>
+                <button class="tab-btn active" data-tab="numeric">🔢 Numériques</button>
+                <button class="tab-btn" data-tab="textual">📝 Textuelles</button>
+                <button class="tab-btn" data-tab="boolean">✅ Booléennes</button>
                 <button class="tab-btn" data-tab="others">📋 Autres</button>
             </div>
 
-            <div id="staticTab" class="tab-content active">
+            <div id="numericTab" class="tab-content active">
                 <div class="trace-controls">
-                    <label for="staticTraceSelect">Sélectionner une trace :</label>
-                    <select id="staticTraceSelect">
+                    <label for="numericTraceSelect">Sélectionner une trace :</label>
+                    <select id="numericTraceSelect">
                         <option value="">-- Aucune trace disponible --</option>
                     </select>
                 </div>
                 <div class="chart-container">
-                    <h4 id="staticChartTitle">Sélectionner une trace</h4>
-                    <canvas id="staticChart"></canvas>
+                    <h4 id="numericChartTitle">Sélectionner une trace</h4>
+                    <canvas id="numericChart"></canvas>
                 </div>
             </div>
 
-            <div id="dynamicTab" class="tab-content">
+            <div id="textualTab" class="tab-content">
                 <div class="trace-controls">
-                    <label for="dynamicTraceSelect">Sélectionner une trace :</label>
-                    <select id="dynamicTraceSelect">
+                    <label for="textualTraceSelect">Sélectionner une trace :</label>
+                    <select id="textualTraceSelect">
                         <option value="">-- Aucune trace disponible --</option>
                     </select>
                 </div>
                 <div class="chart-container">
-                    <h4 id="dynamicChartTitle">Sélectionner une trace</h4>
-                    <canvas id="dynamicChart"></canvas>
+                    <h4 id="textualChartTitle">Sélectionner une trace</h4>
+                    <canvas id="textualChart"></canvas>
                 </div>
             </div>
 
-            <div id="suspiciousTab" class="tab-content">
-                <div class="table-container">
-                    <h4>Traces Suspectes</h4>
-                    <div id="suspiciousTable"></div>
+            <div id="booleanTab" class="tab-content">
+                <div class="trace-controls">
+                    <label for="booleanTraceSelect">Sélectionner une trace :</label>
+                    <select id="booleanTraceSelect">
+                        <option value="">-- Aucune trace disponible --</option>
+                    </select>
+                </div>
+                <div class="chart-container">
+                    <h4 id="booleanChartTitle">Sélectionner une trace</h4>
+                    <canvas id="booleanChart"></canvas>
                 </div>
             </div>
 
