@@ -196,19 +196,48 @@ header p {
     font-size: 1em;
 }
 
-.trace-controls select {
-    width: 100%;
-    padding: 10px 15px;
+.trace-list {
+    max-height: 200px;
+    overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 6px;
     background: white;
-    font-size: 1em;
-    color: #333;
+    padding: 10px;
 }
 
-.trace-controls select:focus {
-    outline: none;
-    border-color: #007bff;
+.trace-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.trace-item:hover {
+    background-color: #f8f9fa;
+}
+
+.trace-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.trace-item label {
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0;
+    flex-grow: 1;
+    user-select: none;
+}
+
+.no-traces {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 20px;
 }
 
 .chart-container {
