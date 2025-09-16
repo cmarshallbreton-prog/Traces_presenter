@@ -153,7 +153,7 @@ function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('studentDashboard').style.display = 'block';
 }
 
-// Nouvelle fonction pour catégoriser selon le type de données
+// Catégorisation suivanttype de données.
 function categorizeTracesByType(traces) {
     const categorized = {
         numeric: [],
@@ -174,7 +174,7 @@ function categorizeTracesByType(traces) {
         } else if (typeof value === 'string') {
             categorized.textual.push(trace);
         } else {
-            categorized.others.push(trace);
+            categorized.others.push(trace);//Traces sans champ valeur
         }
     });
     
@@ -337,7 +337,7 @@ function createMultiNumericChart(traceNames, canvas, canvasId) {
                     datasets.push({
                         label: `${traceName} (moyenne classe)`,
                         data: averagePoints,
-                        backgroundColor: colors[index % colors.length],
+                        backgroundColor:'#f8f9fa',
                         borderColor: colors[index % colors.length],
                         borderDash: [5, 5],
                         pointRadius: 2,
