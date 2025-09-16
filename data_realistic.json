@@ -1,0 +1,79 @@
+{"traces": [{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:01:00.018000","trace_name":"Lignes de code","value":-4}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:06:00.071000","trace_name":"Lignes de code","value":14}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:16:00.130000","trace_name":"Lignes de code","value":27}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:19:00.182000","trace_name":"Lignes de code","value":37}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:23:00.213000","trace_name":"Lignes de code","value":43}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:27:00.227000","trace_name":"Lignes de code","value":48}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:36:00.229000","trace_name":"Lignes de code","value":43}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:46:00.266000","trace_name":"Lignes de code","value":58}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:47:00.315000","trace_name":"Lignes de code","value":74}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:57:00.372000","trace_name":"Lignes de code","value":92}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:06:00.037000","trace_name":"Lignes de code","value":11}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:14:00.051000","trace_name":"Lignes de code","value":8}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:14:00.078000","trace_name":"Lignes de code","value":14}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:23:00.129000","trace_name":"Lignes de code","value":18}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:24:00.166000","trace_name":"Lignes de code","value":16}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:29:00.170000","trace_name":"Lignes de code","value":28}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:37:00.199000","trace_name":"Lignes de code","value":28}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:41:00.222000","trace_name":"Lignes de code","value":35}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:43:00.260000","trace_name":"Lignes de code","value":36}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:49:00.286000","trace_name":"Lignes de code","value":46}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:58:00.344000","trace_name":"Lignes de code","value":58}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:00:00.026000","trace_name":"Lignes de code","value":1}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:06:00.051000","trace_name":"Lignes de code","value":-4}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:10:00.083000","trace_name":"Lignes de code","value":9}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:20:00.139000","trace_name":"Lignes de code","value":16}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:23:00.173000","trace_name":"Lignes de code","value":17}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:33:00.210000","trace_name":"Lignes de code","value":35}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:38:00.232000","trace_name":"Lignes de code","value":32}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:39:00.288000","trace_name":"Lignes de code","value":30}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:42:00.302000","trace_name":"Lignes de code","value":33}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:51:00.343000","trace_name":"Lignes de code","value":32}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:58:00.348000","trace_name":"Lignes de code","value":38}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:03:00.054000","trace_name":"Lignes de code","value":17}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:10:00.106000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:12:00.122000","trace_name":"Lignes de code","value":31}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:16:00.133000","trace_name":"Lignes de code","value":49}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:20:00.162000","trace_name":"Lignes de code","value":62}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:21:00.183000","trace_name":"Lignes de code","value":57}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:31:00.208000","trace_name":"Lignes de code","value":71}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:36:00.231000","trace_name":"Lignes de code","value":76}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:41:00.259000","trace_name":"Lignes de code","value":90}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:41:00.272000","trace_name":"Lignes de code","value":98}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:51:00.315000","trace_name":"Lignes de code","value":109}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:55:00.364000","trace_name":"Lignes de code","value":122}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:55:00.412000","trace_name":"Lignes de code","value":139}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:04:00.046000","trace_name":"Lignes de code","value":13}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:14:00.060000","trace_name":"Lignes de code","value":10}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:21:00.073000","trace_name":"Lignes de code","value":10}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:30:00.107000","trace_name":"Lignes de code","value":25}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:40:00.161000","trace_name":"Lignes de code","value":30}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:48:00.177000","trace_name":"Lignes de code","value":50}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:48:00.197000","trace_name":"Lignes de code","value":66}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:52:00.210000","trace_name":"Lignes de code","value":84}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:57:00.230000","trace_name":"Lignes de code","value":104}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:04:00.056000","trace_name":"Lignes de code","value":-5}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:00.098000","trace_name":"Lignes de code","value":6}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:00.136000","trace_name":"Lignes de code","value":2}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:17:00.155000","trace_name":"Lignes de code","value":12}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:26:00.210000","trace_name":"Lignes de code","value":13}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:26:00.267000","trace_name":"Lignes de code","value":27}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:31:00.288000","trace_name":"Lignes de code","value":35}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:35:00.334000","trace_name":"Lignes de code","value":47}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:38:00.367000","trace_name":"Lignes de code","value":59}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:43:00.382000","trace_name":"Lignes de code","value":70}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:50:00.384000","trace_name":"Lignes de code","value":70}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:57:00.385000","trace_name":"Lignes de code","value":86}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:58:00.399000","trace_name":"Lignes de code","value":97}}],"metadata": {
+    "project_name": "Epreuve FST",
+    "description": "Evolution de l'interface utilisateur d'un formulaire pour une banque. Ajout du genre X en plus de M et F.",
+    "date": "2024-03-15",
+    "class": "Math-Info"
+  }}
