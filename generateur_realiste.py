@@ -22,8 +22,7 @@ for student in student_id:
         data += "\"trace_name\":\"Lignes de code\","
         data += "\"value\":" + str(base_value) + "}}"
         base_value += random.randint(-5,20)
-        if trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
-            data += ","
+        data += ","
     #Warnings
     base_value = 0
     trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
@@ -36,12 +35,63 @@ for student in student_id:
         data += "\"trace_name\":\"Warnings\","
         data += "\"value\":" + str(base_value) + "}}"
         base_value = max(0 ,base_value + random.randint(-1,1))
-        if trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
-            data += ","
-
-    
-    if student != student_id[-1]:
         data += ","
+    #Tests
+    for i in range (1,6):
+        base_value = False
+        trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+        while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
+            data += """{"student_id":""" + student
+            data += """"trace":{
+                        "timestamp":"""
+            data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
+            trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+            data += "\"trace_name\":\"test_" + str(i) + "\","
+            if (not base_value):
+                data += "\"value\":false}}"
+                if (random.randint(1,10) > i):
+                    base_value = True
+            else:
+                data += "\"value\":true}}"
+            
+            data += ","
+    #Ouverture fichiers
+    base_value = ["Exo_1.py", "Ennonce.pdf", "Exo_2.py", "Exo_3.py"]
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
+        data += """{"student_id":""" + student
+        data += """"trace":{
+                    "timestamp":"""
+        data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        data += "\"trace_name\":\"Ouverture Fichier\","
+        data += "\"value\":\"" + random.choice(base_value) + "\"}}"
+        data += ","
+    #Nom Fonctions fichiers
+    base_value = ["ma_fonction", "DiviserParDeux", "aaaaaaa", "mon_autre_fontion"]
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
+        data += """{"student_id":""" + student
+        data += """"trace":{
+                    "timestamp":"""
+        data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        data += "\"trace_name\":\"Nom Fonctions\","
+        data += "\"value\":\"" + random.choice(base_value) + "\"}}"
+        data += ","
+    #Autres actions
+    base_value = ["copy_paste", "alt_tab", "firefox_started"]
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
+        data += """{"student_id":""" + student
+        data += """"trace":{
+                    "timestamp":"""
+        data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        data += "\"trace_name\":\"" + random.choice(base_value) + "\"}},"
+    
+    if student == student_id[-1]:
+        data = data[:-1]
 
 
 data += """],"metadata": {
