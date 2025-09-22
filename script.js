@@ -10,6 +10,22 @@ let selectedTraces = {
 };
 let globalTimeRange = null;
 
+// Couleurs prédéfinies pour les traces textuelles
+const TRACE_COLORS = [
+    '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', 
+    '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#c0392b',
+    '#2980b9', '#27ae60', '#d68910', '#8e44ad', '#16a085'
+];
+
+// Couleurs prédéfinies pour les graphiques numériques
+const CHART_COLORS = ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6f42c1', '#fd7e14', '#20c997', '#6c757d'];
+
+// Couleurs pour les graphiques booléens
+const BOOLEAN_COLORS = {
+    TRUE: '#2ecc71',
+    FALSE: '#e74c3c'
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('fileInput').addEventListener('change', handleFileUpload);
     document.getElementById('studentSelect').addEventListener('change', onStudentChange);
@@ -153,7 +169,7 @@ function displayStudentDashboard(studentName, studentTraces) {
     document.getElementById('studentDashboard').style.display = 'block';
 }
 
-// Catégorisation suivanttype de données.
+// Catégorisation suivant type de données.
 function categorizeTracesByType(traces) {
     const categorized = {
         numeric: [],
@@ -225,7 +241,11 @@ function onTraceSelectionChange(category, traceName, isSelected) {
         selectedTraces[category].delete(traceName);
     }
     
-    updateChart(category);
+    if (category === 'textual') {
+        updateTextualTable();
+    } else {
+        updateChart(category);
+    }
 }
 
 function switchTab(event) {
@@ -253,8 +273,10 @@ function switchToTab(tabName) {
         targetTab.classList.add('active');
     }
     
-    // Mettre à jour le graphique pour l'onglet actuel
-    if (tabName === 'numeric' || tabName === 'textual' || tabName === 'boolean') {
+    // Mettre à jour le graphique ou tableau pour l'onglet actuel
+    if (tabName === 'textual') {
+        updateTextualTable();
+    } else if (tabName === 'numeric' || tabName === 'boolean') {
         updateChart(tabName);
     }
 }
@@ -283,6 +305,98 @@ function updateChart(category) {
     createMultiChart(selectedTraceNames, canvasId, category);
 }
 
+function updateTextualTable() {
+    const tableTitle = document.getElementById('textualTableTitle');
+    const selectedTraceNames = Array.from(selectedTraces.textual);
+    
+    if (selectedTraceNames.length === 0) {
+        tableTitle.textContent = 'Aucune trace sélectionnée';
+        document.getElementById('textualTable').innerHTML = '<div class="no-data">Sélectionnez des traces à afficher</div>';
+        return;
+    }
+    
+    if (selectedTraceNames.length === 1) {
+        tableTitle.textContent = selectedTraceNames[0];
+    } else {
+        tableTitle.textContent = `${selectedTraceNames.length} traces sélectionnées`;
+    }
+    
+    generateTextualTable(selectedTraceNames);
+}
+
+function generateTextualTable(selectedTraceNames) {
+    const tableContainer = document.getElementById('textualTable');
+    
+    if (!tableContainer) {
+        console.error('Element textualTable not found');
+        return;
+    }
+    
+    // Filtrer les traces textuelles sélectionnées
+    const selectedTextualTraces = currentStudentTraces.textual.filter(trace => 
+        selectedTraceNames.includes(trace.trace.trace_name)
+    );
+    
+    if (selectedTextualTraces.length === 0) {
+        tableContainer.innerHTML = '<div class="no-data">Aucune trace disponible</div>';
+        return;
+    }
+    
+    // Créer une map pour associer chaque nom de trace à une couleur
+    const traceColorMap = new Map();
+    selectedTraceNames.forEach((traceName, index) => {
+        traceColorMap.set(traceName, TRACE_COLORS[index % TRACE_COLORS.length]);
+    });
+    
+    let tableHtml = `
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horodatage</th>
+                        <th>Type de trace</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+    
+    const sortedTraces = selectedTextualTraces.sort((a, b) => 
+        new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
+    );
+    
+    sortedTraces.forEach(trace => {
+        const timestamp = new Date(trace.trace.timestamp).toLocaleString('fr-FR');
+        const traceName = trace.trace.trace_name;
+        const value = trace.trace.value || '-';
+        const color = traceColorMap.get(traceName);
+        
+        tableHtml += `
+            <tr>
+                <td>${timestamp}</td>
+                <td>
+                    <span class="trace-badge" style="background-color: ${color};">
+                        ${traceName}
+                    </span>
+                </td>
+                <td>
+                    <div class="trace-value" style="border-left-color: ${color};">
+                        ${value}
+                    </div>
+                </td>
+            </tr>
+        `;
+    });
+    
+    tableHtml += `
+                </tbody>
+            </table>
+        </div>
+    `;
+    
+    tableContainer.innerHTML = tableHtml;
+}
+
 function createMultiChart(selectedTraceNames, canvasId, category) {
     if (chartsInstances[canvasId]) {
         chartsInstances[canvasId].destroy();
@@ -297,13 +411,10 @@ function createMultiChart(selectedTraceNames, canvasId, category) {
         createMultiNumericChart(selectedTraceNames, canvas, canvasId);
     } else if (category === 'boolean') {
         createMultiBooleanChart(selectedTraceNames, canvas, canvasId);
-    } else if (category === 'textual') {
-        createMultiTextualChart(selectedTraceNames, canvas, canvasId);
     }
 }
 
 function createMultiNumericChart(traceNames, canvas, canvasId) {
-    const colors = ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6f42c1', '#fd7e14', '#20c997', '#6c757d'];
     const datasets = [];
     
     traceNames.forEach((traceName, index) => {
@@ -319,8 +430,8 @@ function createMultiNumericChart(traceNames, canvas, canvasId) {
             datasets.push({
                 label: traceName,
                 data: points,
-                backgroundColor: colors[index % colors.length],
-                borderColor: colors[index % colors.length],
+                backgroundColor: CHART_COLORS[index % CHART_COLORS.length],
+                borderColor: CHART_COLORS[index % CHART_COLORS.length],
                 pointRadius: 4,
                 pointHoverRadius: 6
             });
@@ -338,7 +449,7 @@ function createMultiNumericChart(traceNames, canvas, canvasId) {
                         label: `${traceName} (moyenne classe)`,
                         data: averagePoints,
                         backgroundColor:'#f8f9fa',
-                        borderColor: colors[index % colors.length],
+                        borderColor: CHART_COLORS[index % CHART_COLORS.length],
                         borderDash: [5, 5],
                         pointRadius: 2,
                         showLine: true,
@@ -382,72 +493,6 @@ function createMultiNumericChart(traceNames, canvas, canvasId) {
     });
 }
 
-function createMultiTextualChart(traceNames, canvas, canvasId) {
-    const baseColors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#34495e', '#e67e22'];
-    const datasets = [];
-    
-    traceNames.forEach((traceName, traceIndex) => {
-        const categoryTraces = currentStudentTraces.textual;
-        const traceData = categoryTraces.filter(trace => trace.trace.trace_name === traceName);
-        
-        const allValues = [...new Set(traceData.map(t => t.trace.value))];
-        
-        allValues.forEach((value, valueIndex) => {
-            const valuePoints = traceData
-                .filter(trace => trace.trace.value === value)
-                .map(trace => ({
-                    x: new Date(trace.trace.timestamp),
-                    y: 1 + (traceIndex * 0.1) // Décalage vertical pour éviter la superposition
-                }));
-            
-            const colorIndex = (traceIndex * allValues.length + valueIndex) % baseColors.length;
-            
-            datasets.push({
-                label: `${traceName}: ${value}`,
-                data: valuePoints,
-                backgroundColor: baseColors[colorIndex],
-                borderColor: baseColors[colorIndex],
-                pointRadius: 6,
-                pointHoverRadius: 6,
-                showLine: false
-            });
-        });
-    });
-    
-    const ctx = canvas.getContext('2d');
-    chartsInstances[canvasId] = new Chart(ctx, {
-        type: 'scatter',
-        data: { datasets },
-        options: {
-            responsive: true,
-            animation: false,
-            scales: {
-                x: {
-                    type: 'time',
-                    time: {
-                        unit: 'minute',
-                        displayFormats: {
-                            minute: 'HH:mm'
-                        }
-                    },
-                    title: { display: true, text: 'Temps' },
-                    min: globalTimeRange.min,
-                    max: globalTimeRange.max
-                },
-                y: {
-                    min: 0.8, max: 2.2,
-                    ticks: { display: false },
-                    grid: { display: false },
-                    title: { display: false }
-                }
-            },
-            plugins: {
-                legend: { display: true, position: 'top', labels: { usePointStyle: true } }
-            }
-        }
-    });
-}
-
 function createMultiBooleanChart(traceNames, canvas, canvasId) {
     const datasets = [];
     
@@ -479,8 +524,8 @@ function createMultiBooleanChart(traceNames, canvas, canvasId) {
         datasets.push({
             label: 'True',
             data: truePoints,
-            backgroundColor: '#2ecc71',
-            borderColor: '#2ecc71',
+            backgroundColor: BOOLEAN_COLORS.TRUE,
+            borderColor: BOOLEAN_COLORS.TRUE,
             pointRadius: 8,
             pointHoverRadius: 8,
             showLine: false
@@ -492,8 +537,8 @@ function createMultiBooleanChart(traceNames, canvas, canvasId) {
         datasets.push({
             label: 'False',
             data: falsePoints,
-            backgroundColor: '#e74c3c',
-            borderColor: '#e74c3c',
+            backgroundColor: BOOLEAN_COLORS.FALSE,
+            borderColor: BOOLEAN_COLORS.FALSE,
             pointRadius: 8,
             pointHoverRadius: 8,
             showLine: false
