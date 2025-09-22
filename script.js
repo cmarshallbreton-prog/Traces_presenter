@@ -1,66 +1,89 @@
-let currentData = null;
-let chartsInstances = {};
-let currentStudentTraces = {};
-let currentTab = 'numeric';
+// ===== CONSTANTS =====
 const TIME_SEGMENTS = 10;
-let selectedTraces = {
-    numeric: new Set(),
-    textual: new Set(),
-    boolean: new Set()
-};
-let globalTimeRange = null;
-
-// Couleurs prédéfinies pour les traces textuelles
 const TRACE_COLORS = [
     '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', 
     '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#c0392b',
     '#2980b9', '#27ae60', '#d68910', '#8e44ad', '#16a085'
 ];
-
-// Couleurs prédéfinies pour les graphiques numériques
 const CHART_COLORS = ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6f42c1', '#fd7e14', '#20c997', '#6c757d'];
+const BOOLEAN_COLORS = { TRUE: '#2ecc71', FALSE: '#e74c3c' };
 
-// Couleurs pour les graphiques booléens
-const BOOLEAN_COLORS = {
-    TRUE: '#2ecc71',
-    FALSE: '#e74c3c'
+// ===== GLOBAL STATE =====
+const state = {
+    currentData: null,
+    chartsInstances: {},
+    currentStudentTraces: {},
+    currentTab: 'numeric',
+    selectedTraces: {
+        numeric: new Set(),
+        textual: new Set(),
+        boolean: new Set()
+    },
+    globalTimeRange: null
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('fileInput').addEventListener('change', handleFileUpload);
-    document.getElementById('studentSelect').addEventListener('change', onStudentChange);
+// ===== DOM UTILITIES =====
+const DOM = {
+    cache: {},
+    get(id) {
+        if (!this.cache[id]) {
+            this.cache[id] = document.getElementById(id);
+        }
+        return this.cache[id];
+    },
+    setText(id, text) {
+        const element = this.get(id);
+        if (element) element.textContent = text;
+    },
+    setHTML(id, html) {
+        const element = this.get(id);
+        if (element) element.innerHTML = html;
+    },
+    show(id) {
+        const element = this.get(id);
+        if (element) element.style.display = 'block';
+    },
+    hide(id) {
+        const element = this.get(id);
+        if (element) element.style.display = 'none';
+    }
+};
+
+// ===== INITIALIZATION =====
+document.addEventListener('DOMContentLoaded', () => {
+    DOM.get('fileInput')?.addEventListener('change', handleFileUpload);
+    DOM.get('studentSelect')?.addEventListener('change', onStudentChange);
     
-    //Events pour les changements d'onglets
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', switchTab);
     });
 });
 
+// ===== FILE HANDLING =====
 function handleFileUpload(event) {
     const file = event.target.files[0];
     if (!file) return;
 
-    const fileInfo = document.getElementById('fileInfo');
-    fileInfo.innerHTML = `<div class="loading"></div> Analyse de ${file.name}...`;
+    DOM.setHTML('fileInfo', `<div class="loading"></div> Analyse de ${file.name}...`);
 
     const reader = new FileReader();
-    reader.onload = function(e) {
+    reader.onload = (e) => {
         try {
             const data = JSON.parse(e.target.result);
-            currentData = data;
+            state.currentData = data;
             calculateGlobalTimeRange(data);
             displayProjectInfo(data);
             populateStudentDropdown(data);
-            fileInfo.innerHTML = `✅ Fichier "${file.name}" chargé avec succès`;
+            DOM.setHTML('fileInfo', `✅ Fichier "${file.name}" chargé avec succès`);
         } catch (error) {
             showError('Erreur lors du chargement du fichier JSON: ' + error.message);
-            fileInfo.innerHTML = '';
+            DOM.setHTML('fileInfo', '');
         }
     };
 
-    reader.onerror = function() {
+    reader.onerror = () => {
         showError('Erreur lors de la lecture du fichier');
-        fileInfo.innerHTML = '';
+        DOM.setHTML('fileInfo', '');
     };
 
     reader.readAsText(file);
@@ -68,26 +91,25 @@ function handleFileUpload(event) {
 
 function calculateGlobalTimeRange(data) {
     const allTimestamps = data.traces.map(trace => new Date(trace.trace.timestamp));
-    globalTimeRange = {
+    state.globalTimeRange = {
         min: new Date(Math.min(...allTimestamps)),
         max: new Date(Math.max(...allTimestamps))
     };
 }
 
+// ===== PROJECT INFO =====
 function displayProjectInfo(data) {
-    const metadata = data.metadata;
-    const traces = data.traces;
-    
-    document.getElementById('projectTitle').textContent = metadata.project_name || 'Projet sans nom';
-    document.getElementById('projectDescription').textContent = metadata.description || 'Aucune description disponible';
-    
+    const { metadata, traces } = data;
     const uniqueStudents = new Set(traces.map(trace => trace.student_id));
-    document.getElementById('totalTraces').textContent = `${traces.length} traces`;
-    document.getElementById('totalStudents').textContent = `${uniqueStudents.size} étudiants`;
     
-    document.getElementById('projectInfo').style.display = 'block';
+    DOM.setText('projectTitle', metadata.project_name || 'Projet sans nom');
+    DOM.setText('projectDescription', metadata.description || 'Aucune description disponible');
+    DOM.setText('totalTraces', `${traces.length} traces`);
+    DOM.setText('totalStudents', `${uniqueStudents.size} étudiants`);
+    DOM.show('projectInfo');
 }
 
+// ===== STUDENT MANAGEMENT =====
 function populateStudentDropdown(data) {
     const studentsMap = new Map();
     
@@ -100,34 +122,38 @@ function populateStudentDropdown(data) {
         }
     });
     
-    const students = Array.from(studentsMap.values()).sort((a, b) => a.name.localeCompare(b.name));
+    const students = Array.from(studentsMap.values())
+        .sort((a, b) => a.name.localeCompare(b.name));
     
-    const studentSelect = document.getElementById('studentSelect');
-    studentSelect.innerHTML = '<option value="">-- Choisir un étudiant --</option>';
+    const studentSelect = DOM.get('studentSelect');
+    if (studentSelect) {
+        studentSelect.innerHTML = '<option value="">-- Choisir un étudiant --</option>';
+        
+        students.forEach(student => {
+            const option = document.createElement('option');
+            option.value = student.id;
+            option.textContent = student.name;
+            studentSelect.appendChild(option);
+        });
+    }
     
-    students.forEach(student => {
-        const option = document.createElement('option');
-        option.value = student.id;
-        option.textContent = student.name;
-        studentSelect.appendChild(option);
-    });
-    
-    document.getElementById('studentSelector').style.display = 'block';
+    DOM.show('studentSelector');
 }
 
 function onStudentChange() {
     hideError();
     
-    const studentSelect = document.getElementById('studentSelect');
-    const selectedStudentId = studentSelect.value;
+    const selectedStudentId = DOM.get('studentSelect')?.value;
     
-    if (!selectedStudentId || !currentData) {
-        document.getElementById('studentDashboard').style.display = 'none';
+    if (!selectedStudentId || !state.currentData) {
+        DOM.hide('studentDashboard');
         return;
     }
     
-    const selectedStudent = currentData.traces.find(trace => trace.student_id === selectedStudentId);
-    const studentTraces = currentData.traces.filter(trace => trace.student_id === selectedStudentId);
+    const studentTraces = state.currentData.traces.filter(trace => 
+        trace.student_id === selectedStudentId
+    );
+    const selectedStudent = studentTraces[0];
     
     if (!selectedStudent) {
         showError('Étudiant non trouvé');
@@ -137,39 +163,34 @@ function onStudentChange() {
     displayStudentDashboard(selectedStudent.student_name, studentTraces);
 }
 
+// ===== STUDENT DASHBOARD =====
 function displayStudentDashboard(studentName, studentTraces) {
-    document.getElementById('selectedStudentName').textContent = `Étudiant : ${studentName}`;
+    DOM.setText('selectedStudentName', `Étudiant : ${studentName}`);
     
-    // Catégoriser les traces selon le type de données
-    currentStudentTraces = categorizeTracesByType(studentTraces);
+    // Clean up existing charts
+    Object.values(state.chartsInstances).forEach(chart => chart?.destroy?.());
+    state.chartsInstances = {};
     
-    // Suppression des anciens graphiques
-    Object.values(chartsInstances).forEach(chart => {
-        if (chart && typeof chart.destroy === 'function') {
-            chart.destroy();
-        }
+    // Reset selections
+    Object.keys(state.selectedTraces).forEach(key => {
+        state.selectedTraces[key].clear();
     });
-    chartsInstances = {};
     
-    // Réinitialiser les sélections
-    selectedTraces.numeric.clear();
-    selectedTraces.textual.clear();
-    selectedTraces.boolean.clear();
+    // Categorize traces
+    state.currentStudentTraces = categorizeTracesByType(studentTraces);
     
-    // Peupler les listes des traces par type
-    populateTraceList('numericTraceList', currentStudentTraces.numeric, 'numeric');
-    populateTraceList('textualTraceList', currentStudentTraces.textual, 'textual');
-    populateTraceList('booleanTraceList', currentStudentTraces.boolean, 'boolean');
+    // Populate trace lists
+    populateTraceList('numericTraceList', state.currentStudentTraces.numeric, 'numeric');
+    populateTraceList('textualTraceList', state.currentStudentTraces.textual, 'textual');
+    populateTraceList('booleanTraceList', state.currentStudentTraces.boolean, 'boolean');
     
-    // Générer le tableau pour les autres traces
-    generateTable('othersTable', currentStudentTraces.others);
+    // Generate others table
+    generateTable('othersTable', state.currentStudentTraces.others);
     
-    switchToTab(currentTab);
-    
-    document.getElementById('studentDashboard').style.display = 'block';
+    switchToTab(state.currentTab);
+    DOM.show('studentDashboard');
 }
 
-// Catégorisation suivant type de données.
 function categorizeTracesByType(traces) {
     const categorized = {
         numeric: [],
@@ -183,27 +204,21 @@ function categorizeTracesByType(traces) {
         
         if (value === undefined || value === null) {
             categorized.others.push(trace);
-        } else if (typeof value === 'number') {
-            categorized.numeric.push(trace);
-        } else if (typeof value === 'boolean') {
-            categorized.boolean.push(trace);
-        } else if (typeof value === 'string') {
-            categorized.textual.push(trace);
         } else {
-            categorized.others.push(trace);//Traces sans champ valeur
+            const type = typeof value;
+            categorized[type === 'number' ? 'numeric' : 
+                     type === 'boolean' ? 'boolean' : 
+                     type === 'string' ? 'textual' : 'others'].push(trace);
         }
     });
     
     return categorized;
 }
 
+// ===== TRACE MANAGEMENT =====
 function populateTraceList(listId, traces, category) {
-    const listContainer = document.getElementById(listId);
-    
-    if (!listContainer) {
-        console.error(`Element ${listId} not found`);
-        return;
-    }
+    const listContainer = DOM.get(listId);
+    if (!listContainer) return;
     
     const traceNames = [...new Set(traces.map(trace => trace.trace.trace_name))];
     
@@ -212,33 +227,22 @@ function populateTraceList(listId, traces, category) {
         return;
     }
     
-    listContainer.innerHTML = '';
-    //Gestion des checkBoxes
-    traceNames.forEach(traceName => {
-        const traceItem = document.createElement('div');
-        traceItem.className = 'trace-item';
-        
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = `${category}-${traceName}`;
-        checkbox.value = traceName;
-        checkbox.addEventListener('change', () => onTraceSelectionChange(category, traceName, checkbox.checked));
-        
-        const label = document.createElement('label');
-        label.htmlFor = checkbox.id;
-        label.textContent = traceName;
-        
-        traceItem.appendChild(checkbox);
-        traceItem.appendChild(label);
-        listContainer.appendChild(traceItem);
-    });
+    listContainer.innerHTML = traceNames.map(traceName => 
+        `<div class="trace-item">
+            <input type="checkbox" 
+                   id="${category}-${traceName}" 
+                   value="${traceName}"
+                   onchange="onTraceSelectionChange('${category}', '${traceName}', this.checked)">
+            <label for="${category}-${traceName}">${traceName}</label>
+        </div>`
+    ).join('');
 }
 
 function onTraceSelectionChange(category, traceName, isSelected) {
     if (isSelected) {
-        selectedTraces[category].add(traceName);
+        state.selectedTraces[category].add(traceName);
     } else {
-        selectedTraces[category].delete(traceName);
+        state.selectedTraces[category].delete(traceName);
     }
     
     if (category === 'textual') {
@@ -248,178 +252,82 @@ function onTraceSelectionChange(category, traceName, isSelected) {
     }
 }
 
+// ===== TAB MANAGEMENT =====
 function switchTab(event) {
     const targetTab = event.target.dataset.tab;
-    currentTab = targetTab;
+    state.currentTab = targetTab;
     switchToTab(targetTab);
 }
 
 function switchToTab(tabName) {
-    currentTab = tabName;
-    // active pour display, cf css.
+    state.currentTab = tabName;
+    
+    // Update tab buttons
     document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.tab === tabName) {
-            btn.classList.add('active');
-        }
+        btn.classList.toggle('active', btn.dataset.tab === tabName);
     });
     
+    // Update tab content
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
     });
+    DOM.get(tabName + 'Tab')?.classList.add('active');
     
-    const targetTab = document.getElementById(tabName + 'Tab');
-    if (targetTab) {
-        targetTab.classList.add('active');
-    }
-    
-    // Mettre à jour le graphique ou tableau pour l'onglet actuel
+    // Update display based on tab
     if (tabName === 'textual') {
         updateTextualTable();
-    } else if (tabName === 'numeric' || tabName === 'boolean') {
+    } else if (['numeric', 'boolean'].includes(tabName)) {
         updateChart(tabName);
     }
 }
 
+// ===== CHART MANAGEMENT =====
 function updateChart(category) {
-    const chartTitle = document.getElementById(`${category}ChartTitle`);
-    const canvasId = `${category}Chart`;
+    const selectedTraceNames = Array.from(state.selectedTraces[category]);
+    const titleElement = DOM.get(`${category}ChartTitle`);
     
-    const selectedTraceNames = Array.from(selectedTraces[category]);
-    
-    if (selectedTraceNames.length === 0) {
-        chartTitle.textContent = 'Aucune trace sélectionnée';
-        if (chartsInstances[canvasId]) {
-            chartsInstances[canvasId].destroy();
-            delete chartsInstances[canvasId];
-        }
-        return;
-    }
-    
-    if (selectedTraceNames.length === 1) {
-        chartTitle.textContent = selectedTraceNames[0];
-    } else {
-        chartTitle.textContent = `${selectedTraceNames.length} traces sélectionnées`;
-    }
-    
-    createMultiChart(selectedTraceNames, canvasId, category);
-}
-
-function updateTextualTable() {
-    const tableTitle = document.getElementById('textualTableTitle');
-    const selectedTraceNames = Array.from(selectedTraces.textual);
+    if (!titleElement) return;
     
     if (selectedTraceNames.length === 0) {
-        tableTitle.textContent = 'Aucune trace sélectionnée';
-        document.getElementById('textualTable').innerHTML = '<div class="no-data">Sélectionnez des traces à afficher</div>';
+        titleElement.textContent = 'Aucune trace sélectionnée';
+        destroyChart(`${category}Chart`);
         return;
     }
     
-    if (selectedTraceNames.length === 1) {
-        tableTitle.textContent = selectedTraceNames[0];
-    } else {
-        tableTitle.textContent = `${selectedTraceNames.length} traces sélectionnées`;
-    }
+    titleElement.textContent = selectedTraceNames.length === 1 
+        ? selectedTraceNames[0] 
+        : `${selectedTraceNames.length} traces sélectionnées`;
     
-    generateTextualTable(selectedTraceNames);
+    createChart(selectedTraceNames, `${category}Chart`, category);
 }
 
-function generateTextualTable(selectedTraceNames) {
-    const tableContainer = document.getElementById('textualTable');
-    
-    if (!tableContainer) {
-        console.error('Element textualTable not found');
-        return;
+function destroyChart(canvasId) {
+    if (state.chartsInstances[canvasId]) {
+        state.chartsInstances[canvasId].destroy();
+        delete state.chartsInstances[canvasId];
     }
-    
-    // Filtrer les traces textuelles sélectionnées
-    const selectedTextualTraces = currentStudentTraces.textual.filter(trace => 
-        selectedTraceNames.includes(trace.trace.trace_name)
-    );
-    
-    if (selectedTextualTraces.length === 0) {
-        tableContainer.innerHTML = '<div class="no-data">Aucune trace disponible</div>';
-        return;
-    }
-    
-    // Créer une map pour associer chaque nom de trace à une couleur
-    const traceColorMap = new Map();
-    selectedTraceNames.forEach((traceName, index) => {
-        traceColorMap.set(traceName, TRACE_COLORS[index % TRACE_COLORS.length]);
-    });
-    
-    let tableHtml = `
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Horodatage</th>
-                        <th>Type de trace</th>
-                        <th>Valeur</th>
-                    </tr>
-                </thead>
-                <tbody>
-    `;
-    
-    const sortedTraces = selectedTextualTraces.sort((a, b) => 
-        new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
-    );
-    
-    sortedTraces.forEach(trace => {
-        const timestamp = new Date(trace.trace.timestamp).toLocaleString('fr-FR');
-        const traceName = trace.trace.trace_name;
-        const value = trace.trace.value || '-';
-        const color = traceColorMap.get(traceName);
-        
-        tableHtml += `
-            <tr>
-                <td>${timestamp}</td>
-                <td>
-                    <span class="trace-badge" style="background-color: ${color};">
-                        ${traceName}
-                    </span>
-                </td>
-                <td>
-                    <div class="trace-value" style="border-left-color: ${color};">
-                        ${value}
-                    </div>
-                </td>
-            </tr>
-        `;
-    });
-    
-    tableHtml += `
-                </tbody>
-            </table>
-        </div>
-    `;
-    
-    tableContainer.innerHTML = tableHtml;
 }
 
-function createMultiChart(selectedTraceNames, canvasId, category) {
-    if (chartsInstances[canvasId]) {
-        chartsInstances[canvasId].destroy();
-        delete chartsInstances[canvasId];
-    }
+function createChart(traceNames, canvasId, category) {
+    destroyChart(canvasId);
     
-    const canvas = document.getElementById(canvasId);
+    const canvas = DOM.get(canvasId);
     if (!canvas) return;
     
-    // Créer le graphique selon le type de données
-    if (category === 'numeric') {
-        createMultiNumericChart(selectedTraceNames, canvas, canvasId);
-    } else if (category === 'boolean') {
-        createMultiBooleanChart(selectedTraceNames, canvas, canvasId);
-    }
+    const chartCreators = {
+        numeric: createNumericChart,
+        boolean: createBooleanChart
+    };
+    
+    chartCreators[category]?.(traceNames, canvas, canvasId);
 }
 
-function createMultiNumericChart(traceNames, canvas, canvasId) {
+function createNumericChart(traceNames, canvas, canvasId) {
     const datasets = [];
     
     traceNames.forEach((traceName, index) => {
-        const categoryTraces = currentStudentTraces.numeric;
-        const traceData = categoryTraces.filter(trace => trace.trace.trace_name === traceName);
+        const traceData = state.currentStudentTraces.numeric
+            .filter(trace => trace.trace.trace_name === traceName);
         
         const points = traceData.map(trace => ({
             x: new Date(trace.trace.timestamp),
@@ -427,99 +335,58 @@ function createMultiNumericChart(traceNames, canvas, canvasId) {
         }));
         
         if (points.length > 0) {
+            const color = CHART_COLORS[index % CHART_COLORS.length];
+            
             datasets.push({
                 label: traceName,
                 data: points,
-                backgroundColor: CHART_COLORS[index % CHART_COLORS.length],
-                borderColor: CHART_COLORS[index % CHART_COLORS.length],
+                backgroundColor: color,
+                borderColor: color,
                 pointRadius: 4,
                 pointHoverRadius: 6
             });
             
-            // Ajouter la moyenne évolutive pour cette trace
-            const allTraces = currentData.traces.filter(trace => 
-                trace.trace.trace_name === traceName && typeof trace.trace.value === 'number'
-            );
-            
-            if (allTraces.length > 0) {
-                const averagePoints = calculateTimeBasedAverage(allTraces);
-                
-                if (averagePoints.length > 0) {
-                    datasets.push({
-                        label: `${traceName} (moyenne classe)`,
-                        data: averagePoints,
-                        backgroundColor:'#f8f9fa',
-                        borderColor: CHART_COLORS[index % CHART_COLORS.length],
-                        borderDash: [5, 5],
-                        pointRadius: 2,
-                        showLine: true,
-                        fill: false,
-                        tension: 0.3
-                    });
-                }
+            // Add class average
+            const classAverage = calculateClassAverage(traceName);
+            if (classAverage.length > 0) {
+                datasets.push({
+                    label: `${traceName} (moyenne classe)`,
+                    data: classAverage,
+                    backgroundColor: '#f8f9fa',
+                    borderColor: color,
+                    borderDash: [5, 5],
+                    pointRadius: 2,
+                    showLine: true,
+                    fill: false,
+                    tension: 0.3
+                });
             }
         }
     });
     
-    const ctx = canvas.getContext('2d');
-    chartsInstances[canvasId] = new Chart(ctx, {
-        type: 'scatter',
-        data: { datasets },
-        options: {
-            responsive: true,
-            animation: false,
-            scales: {
-                x: {
-                    type: 'time',
-                    time: {
-                        unit: 'minute',
-                        displayFormats: {
-                            minute: 'HH:mm'
-                        }
-                    },
-                    title: { display: true, text: 'Temps' },
-                    min: globalTimeRange.min,
-                    max: globalTimeRange.max
-                },
-                y: {
-                    beginAtZero: true,
-                    title: { display: true, text: 'Valeur' }
-                }
-            },
-            plugins: {
-                legend: { display: true, position: 'top' }
-            }
-        }
-    });
+    createChartInstance(canvas, canvasId, 'scatter', datasets, getNumericChartOptions());
 }
 
-function createMultiBooleanChart(traceNames, canvas, canvasId) {
-    const datasets = [];
-    
-    // Créer un dataset pour les valeurs true et un pour les valeurs false
+function createBooleanChart(traceNames, canvas, canvasId) {
     const truePoints = [];
     const falsePoints = [];
     
     traceNames.forEach((traceName, traceIndex) => {
-        const categoryTraces = currentStudentTraces.boolean;
-        const traceData = categoryTraces.filter(trace => trace.trace.trace_name === traceName);
+        const traceData = state.currentStudentTraces.boolean
+            .filter(trace => trace.trace.trace_name === traceName);
         
         traceData.forEach(trace => {
             const point = {
                 x: new Date(trace.trace.timestamp),
-                y: traceIndex, // Position exacte sur l'axe Y
+                y: traceIndex,
                 traceName: traceName
             };
             
-            if (trace.trace.value === true) {
-                truePoints.push(point);
-            } else {
-                falsePoints.push(point);
-            }
+            (trace.trace.value ? truePoints : falsePoints).push(point);
         });
     });
     
-    // Dataset pour les valeurs true (vert)
+    const datasets = [];
     if (truePoints.length > 0) {
         datasets.push({
             label: 'True',
@@ -532,7 +399,6 @@ function createMultiBooleanChart(traceNames, canvas, canvasId) {
         });
     }
     
-    // Dataset pour les valeurs false (rouge)
     if (falsePoints.length > 0) {
         datasets.push({
             label: 'False',
@@ -545,141 +411,148 @@ function createMultiBooleanChart(traceNames, canvas, canvasId) {
         });
     }
     
+    createChartInstance(canvas, canvasId, 'scatter', datasets, getBooleanChartOptions(traceNames));
+}
+
+function createChartInstance(canvas, canvasId, type, datasets, options) {
     const ctx = canvas.getContext('2d');
-    chartsInstances[canvasId] = new Chart(ctx, {
-        type: 'scatter',
+    state.chartsInstances[canvasId] = new Chart(ctx, {
+        type,
         data: { datasets },
-        options: {
-            responsive: true,
-            animation: false,
-            scales: {
-                x: {
-                    type: 'time',
-                    time: {
-                        unit: 'minute',
-                        displayFormats: {
-                            minute: 'HH:mm'
-                        }
-                    },
-                    title: { display: true, text: 'Temps' },
-                    min: globalTimeRange.min,
-                    max: globalTimeRange.max
+        options
+    });
+}
+
+function getNumericChartOptions() {
+    return {
+        responsive: true,
+        animation: false,
+        scales: {
+            x: {
+                type: 'time',
+                time: {
+                    unit: 'minute',
+                    displayFormats: { minute: 'HH:mm' }
                 },
-                y: {
-                    type: 'linear',
-                    min: -0.5,
-                    max: traceNames.length - 0.5,
-                    ticks: {
-                        stepSize: 1,
-                        // Forcer les ticks à être exactement aux positions entières
-                        callback: function(value, index, ticks) {
-                            // Ne montrer que les valeurs entières qui correspondent aux indices des traces
-                            if (Number.isInteger(value) && value >= 0 && value < traceNames.length) {
-                                return traceNames[value];
-                            }
-                            return '';
-                        },
-                        // Forcer l'affichage des ticks aux positions exactes
-                        major: {
-                            enabled: true
-                        }
-                    },
-                    title: { display: true, text: 'Traces' },
-                    grid: {
-                        display: true,
-                        drawOnChartArea: true,
-                        color: function(context) {
-                            // Ne montrer les lignes de grille que pour les positions entières
-                            if (Number.isInteger(context.tick.value)) {
-                                return '#e0e0e0';
-                            }
-                            return 'transparent';
-                        }
-                    },
-                    // Définir manuellement les ticks pour être sûr de l'alignement
-                    afterBuildTicks: function(axis) {
-                        axis.ticks = [];
-                        for (let i = 0; i < traceNames.length; i++) {
-                            axis.ticks.push({
-                                value: i,
-                                major: true
-                            });
-                        }
-                    }
-                }
+                title: { display: true, text: 'Temps' },
+                min: state.globalTimeRange.min,
+                max: state.globalTimeRange.max
             },
-            plugins: {
-                legend: { 
-                    display: true, 
-                    position: 'top',
-                    labels: { usePointStyle: true }
+            y: {
+                beginAtZero: true,
+                title: { display: true, text: 'Valeur' }
+            }
+        },
+        plugins: {
+            legend: { display: true, position: 'top' }
+        }
+    };
+}
+
+function getBooleanChartOptions(traceNames) {
+    return {
+        responsive: true,
+        animation: false,
+        scales: {
+            x: {
+                type: 'time',
+                time: {
+                    unit: 'minute',
+                    displayFormats: { minute: 'HH:mm' }
                 },
-                tooltip: {
-                    callbacks: {
-                        title: function(context) {
-                            const date = new Date(context[0].parsed.x);
-                            return date.toLocaleString('fr-FR');
-                        },
-                        label: function(context) {
-                            const traceIndex = Math.round(context.parsed.y);
-                            const traceName = traceNames[traceIndex];
-                            const value = context.dataset.label;
-                            return `${traceName}: ${value}`;
+                title: { display: true, text: 'Temps' },
+                min: state.globalTimeRange.min,
+                max: state.globalTimeRange.max
+            },
+            y: {
+                type: 'linear',
+                min: -0.5,
+                max: traceNames.length - 0.5,
+                ticks: {
+                    stepSize: 1,
+                    callback: function(value) {
+                        if (Number.isInteger(value) && value >= 0 && value < traceNames.length) {
+                            return traceNames[value];
                         }
+                        return '';
+                    }
+                },
+                title: { display: true, text: 'Traces' }
+            }
+        },
+        plugins: {
+            legend: { display: true, position: 'top', labels: { usePointStyle: true } },
+            tooltip: {
+                callbacks: {
+                    title: function(context) {
+                        return new Date(context[0].parsed.x).toLocaleString('fr-FR');
+                    },
+                    label: function(context) {
+                        const traceIndex = Math.round(context.parsed.y);
+                        return `${traceNames[traceIndex]}: ${context.dataset.label}`;
                     }
                 }
             }
         }
+    };
+}
+
+// ===== TEXTUAL TABLE =====
+function updateTextualTable() {
+    const selectedTraceNames = Array.from(state.selectedTraces.textual);
+    
+    if (selectedTraceNames.length === 0) {
+        DOM.setText('textualTableTitle', 'Aucune trace sélectionnée');
+        DOM.setHTML('textualTable', '<div class="no-data">Sélectionnez des traces à afficher</div>');
+        return;
+    }
+    
+    DOM.setText('textualTableTitle', 
+        selectedTraceNames.length === 1 
+            ? selectedTraceNames[0] 
+            : `${selectedTraceNames.length} traces sélectionnées`
+    );
+    
+    generateTextualTable(selectedTraceNames);
+}
+
+function generateTextualTable(selectedTraceNames) {
+    const selectedTraces = state.currentStudentTraces.textual
+        .filter(trace => selectedTraceNames.includes(trace.trace.trace_name))
+        .sort((a, b) => new Date(a.trace.timestamp) - new Date(b.trace.timestamp));
+    
+    if (selectedTraces.length === 0) {
+        DOM.setHTML('textualTable', '<div class="no-data">Aucune trace disponible</div>');
+        return;
+    }
+    
+    const colorMap = new Map();
+    selectedTraceNames.forEach((name, index) => {
+        colorMap.set(name, TRACE_COLORS[index % TRACE_COLORS.length]);
     });
-}
-
-// Calcul des intervals de temps pour la moyenne évolutive
-function calculateTimeBasedAverage(allNumericTraces) {
-    const totalDuration = globalTimeRange.max.getTime() - globalTimeRange.min.getTime();
-    const segmentDuration = totalDuration / TIME_SEGMENTS; // Diviser en TIME_SEGMENTS segments
     
-    const averagePoints = [];
-    
-    for (let i = 0; i < TIME_SEGMENTS; i++) {
-        const segmentStart = new Date(globalTimeRange.min.getTime() + (i * segmentDuration));
-        const segmentEnd = new Date(globalTimeRange.min.getTime() + ((i + 1) * segmentDuration));
-        const segmentMiddle = new Date(globalTimeRange.min.getTime() + ((i + 0.5) * segmentDuration));
+    const rows = selectedTraces.map(trace => {
+        const timestamp = new Date(trace.trace.timestamp).toLocaleString('fr-FR');
+        const color = colorMap.get(trace.trace.trace_name);
         
-        // Filtrer les traces qui tombent dans ce segment
-        const tracesInSegment = allNumericTraces.filter(trace => {
-            const traceTime = new Date(trace.trace.timestamp);
-            return traceTime >= segmentStart && traceTime < segmentEnd;
-        });
-        
-        // Calculer la moyenne pour ce segment s'il y a des données
-        if (tracesInSegment.length > 0) {
-            const values = tracesInSegment.map(t => t.trace.value);
-            const average = values.reduce((sum, val) => sum + val, 0) / values.length;
-            
-            averagePoints.push({
-                x: segmentMiddle,
-                y: average
-            });
-        }
-    }
+        return `
+            <tr>
+                <td>${timestamp}</td>
+                <td>
+                    <span class="trace-badge" style="background-color: ${color};">
+                        ${trace.trace.trace_name}
+                    </span>
+                </td>
+                <td>
+                    <div class="trace-value" style="border-left-color: ${color};">
+                        ${trace.trace.value || '-'}
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
     
-    return averagePoints;
-}
-
-function generateTable(tableId, traces) {
-    const tableContainer = document.getElementById(tableId);
-    
-    if (!tableContainer) {
-        console.error(`Element ${tableId} not found`);
-        return;
-    }
-    
-    if (traces.length === 0) {
-        tableContainer.innerHTML = '<div class="no-data">Aucune trace pour cet étudiant</div>';
-        return;
-    }
-    
-    let tableHtml = `
+    DOM.setHTML('textualTable', `
         <div class="table-responsive">
             <table>
                 <thead>
@@ -689,44 +562,84 @@ function generateTable(tableId, traces) {
                         <th>Valeur</th>
                     </tr>
                 </thead>
-                <tbody>
-    `;
+                <tbody>${rows}</tbody>
+            </table>
+        </div>
+    `);
+}
+
+// ===== UTILITY FUNCTIONS =====
+function calculateClassAverage(traceName) {
+    const allTraces = state.currentData.traces.filter(trace => 
+        trace.trace.trace_name === traceName && typeof trace.trace.value === 'number'
+    );
+    
+    if (allTraces.length === 0) return [];
+    
+    const totalDuration = state.globalTimeRange.max.getTime() - state.globalTimeRange.min.getTime();
+    const segmentDuration = totalDuration / TIME_SEGMENTS;
+    const averagePoints = [];
+    
+    for (let i = 0; i < TIME_SEGMENTS; i++) {
+        const segmentStart = new Date(state.globalTimeRange.min.getTime() + (i * segmentDuration));
+        const segmentEnd = new Date(state.globalTimeRange.min.getTime() + ((i + 1) * segmentDuration));
+        const segmentMiddle = new Date(state.globalTimeRange.min.getTime() + ((i + 0.5) * segmentDuration));
+        
+        const tracesInSegment = allTraces.filter(trace => {
+            const traceTime = new Date(trace.trace.timestamp);
+            return traceTime >= segmentStart && traceTime < segmentEnd;
+        });
+        
+        if (tracesInSegment.length > 0) {
+            const average = tracesInSegment.reduce((sum, trace) => sum + trace.trace.value, 0) / tracesInSegment.length;
+            averagePoints.push({ x: segmentMiddle, y: average });
+        }
+    }
+    
+    return averagePoints;
+}
+
+function generateTable(tableId, traces) {
+    if (traces.length === 0) {
+        DOM.setHTML(tableId, '<div class="no-data">Aucune trace pour cet étudiant</div>');
+        return;
+    }
     
     const sortedTraces = traces.sort((a, b) => 
         new Date(a.trace.timestamp) - new Date(b.trace.timestamp)
     );
     
-    sortedTraces.forEach(trace => {
-        const timestamp = new Date(trace.trace.timestamp).toLocaleString('fr-FR');
-        const value = trace.trace.value !== undefined ? trace.trace.value : '-';
-        
-        tableHtml += `
-            <tr>
-                <td>${timestamp}</td>
-                <td>${trace.trace.trace_name}</td>
-                <td>${value}</td>
-            </tr>
-        `;
-    });
+    const rows = sortedTraces.map(trace => `
+        <tr>
+            <td>${new Date(trace.trace.timestamp).toLocaleString('fr-FR')}</td>
+            <td>${trace.trace.trace_name}</td>
+            <td>${trace.trace.value !== undefined ? trace.trace.value : '-'}</td>
+        </tr>
+    `).join('');
     
-    tableHtml += `
-                </tbody>
+    DOM.setHTML(tableId, `
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horodatage</th>
+                        <th>Type de trace</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
             </table>
         </div>
-    `;
-    
-    tableContainer.innerHTML = tableHtml;
+    `);
 }
 
+// ===== ERROR HANDLING =====
 function showError(message) {
-    const errorDiv = document.getElementById('errorMessage');
-    errorDiv.textContent = message;
-    errorDiv.style.display = 'block';
-    document.getElementById('projectInfo').style.display = 'none';
-    document.getElementById('studentSelector').style.display = 'none';
-    document.getElementById('studentDashboard').style.display = 'none';
+    DOM.setText('errorMessage', message);
+    DOM.show('errorMessage');
+    ['projectInfo', 'studentSelector', 'studentDashboard'].forEach(DOM.hide);
 }
 
 function hideError() {
-    document.getElementById('errorMessage').style.display = 'none';
+    DOM.hide('errorMessage');
 }
