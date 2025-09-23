@@ -10,6 +10,14 @@
       }
     },
     {
+      "student_id": "FST_002",
+      "student_name": "Jean Dupont",
+      "trace": {
+        "trace_name": "ERREUR_2",
+        "value": true
+      }
+    },
+    {
       "student_id": "FST_005",
       "student_name": "Nathalie Aurez",
       "trace": {

@@ -12,7 +12,7 @@ student_id = [""""FST_001", "student_name": "Marie Dubois",""",
 for student in student_id:
     #Lignes de code
     base_value = 0
-    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
     while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
         data += """{"student_id":""" + student
         data += """"trace":{
@@ -25,7 +25,7 @@ for student in student_id:
         data += ","
     #Warnings
     base_value = 0
-    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
     while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
         data += """{"student_id":""" + student
         data += """"trace":{
@@ -37,9 +37,10 @@ for student in student_id:
         base_value = max(0 ,base_value + random.randint(-1,1))
         data += ","
     #Tests
-    for i in range (1,6):
+    number_of_tests = 6
+    for i in range (1,number_of_tests):
         base_value = False
-        trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+        trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
         while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
             data += """{"student_id":""" + student
             data += """"trace":{
@@ -49,7 +50,7 @@ for student in student_id:
             data += "\"trace_name\":\"test_" + str(i) + "\","
             if (not base_value):
                 data += "\"value\":false}}"
-                if (random.randint(1,10) > i):
+                if (random.randint(1,number_of_tests + 1) > i):
                     base_value = True
             else:
                 data += "\"value\":true}}"
@@ -57,7 +58,7 @@ for student in student_id:
             data += ","
     #Ouverture fichiers
     base_value = ["Exo_1.py", "Ennonce.pdf", "Exo_2.py", "Exo_3.py"]
-    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
     while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
         data += """{"student_id":""" + student
         data += """"trace":{
@@ -69,7 +70,7 @@ for student in student_id:
         data += ","
     #Nom Fonctions fichiers
     base_value = ["ma_fonction", "DiviserParDeux", "aaaaaaa", "mon_autre_fontion"]
-    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
     while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
         data += """{"student_id":""" + student
         data += """"trace":{
@@ -81,7 +82,7 @@ for student in student_id:
         data += ","
     #Autres actions
     base_value = ["copy_paste", "alt_tab", "firefox_started"]
-    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ")
+    trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
     while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
         data += """{"student_id":""" + student
         data += """"trace":{
