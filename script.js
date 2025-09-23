@@ -470,14 +470,36 @@ function getBooleanChartOptions(traceNames) {
                 max: traceNames.length - 0.5,
                 ticks: {
                     stepSize: 1,
-                    callback: function(value) {
+                    callback: function(value, index, ticks) {
                         if (Number.isInteger(value) && value >= 0 && value < traceNames.length) {
                             return traceNames[value];
                         }
                         return '';
+                    },
+                    major: {
+                        enabled: true
                     }
                 },
-                title: { display: true, text: 'Traces' }
+                title: { display: true, text: 'Traces' },
+                grid: {
+                    display: true,
+                    drawOnChartArea: true,
+                    color: function(context) {
+                        if (Number.isInteger(context.tick.value)) {
+                            return '#e0e0e0';
+                        }
+                        return 'transparent';
+                    }
+                },
+                afterBuildTicks: function(axis) {
+                    axis.ticks = [];
+                    for (let i = 0; i < traceNames.length; i++) {
+                        axis.ticks.push({
+                            value: i,
+                            major: true
+                        });
+                    }
+                }
             }
         },
         plugins: {
