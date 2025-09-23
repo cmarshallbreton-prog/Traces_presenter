@@ -75,6 +75,7 @@ function handleFileUpload(event) {
             displayProjectInfo(data);
             populateStudentDropdown(data);
             DOM.setHTML('fileInfo', `✅ Fichier "${file.name}" chargé avec succès`);
+            DOM.hide('upload-section');
         } catch (error) {
             showError('Erreur lors du chargement du fichier JSON: ' + error.message);
             DOM.setHTML('fileInfo', '');
