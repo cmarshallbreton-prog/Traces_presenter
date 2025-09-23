@@ -252,6 +252,43 @@ function onTraceSelectionChange(category, traceName, isSelected) {
     }
 }
 
+// ===== SELECT ALL / DESELECT ALL FUNCTIONS =====
+function selectAllTraces(category) {
+    const checkboxes = document.querySelectorAll(`#${category}TraceList input[type="checkbox"]`);
+    
+    checkboxes.forEach(checkbox => {
+        if (!checkbox.checked) {
+            checkbox.checked = true;
+            state.selectedTraces[category].add(checkbox.value);
+        }
+    });
+    
+    // Update display
+    if (category === 'textual') {
+        updateTextualTable();
+    } else {
+        updateChart(category);
+    }
+}
+
+function deselectAllTraces(category) {
+    const checkboxes = document.querySelectorAll(`#${category}TraceList input[type="checkbox"]`);
+    
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkbox.checked = false;
+            state.selectedTraces[category].delete(checkbox.value);
+        }
+    });
+    
+    // Update display
+    if (category === 'textual') {
+        updateTextualTable();
+    } else {
+        updateChart(category);
+    }
+}
+
 // ===== TAB MANAGEMENT =====
 function switchTab(event) {
     const targetTab = event.target.dataset.tab;

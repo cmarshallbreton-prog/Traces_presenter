@@ -18,10 +18,10 @@ for student in student_id:
         data += """"trace":{
                     "timestamp":"""
         data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-        trace_time += datetime.timedelta(minutes = random.randint(0,10), milliseconds = random.randint(1,59))
+        trace_time += datetime.timedelta(minutes = random.randint(0,10), seconds = random.randint(1,59))
         data += "\"trace_name\":\"Lignes de code\","
         data += "\"value\":" + str(base_value) + "}}"
-        base_value += random.randint(-5,20)
+        base_value = max(0, base_value + random.randint(-5,20))
         data += ","
     #Warnings
     base_value = 0
@@ -31,7 +31,7 @@ for student in student_id:
         data += """"trace":{
                     "timestamp":"""
         data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), seconds = random.randint(1,59))
         data += "\"trace_name\":\"Warnings\","
         data += "\"value\":" + str(base_value) + "}}"
         base_value = max(0 ,base_value + random.randint(-1,1))
@@ -40,20 +40,22 @@ for student in student_id:
     number_of_tests = 6
     for i in range (1,number_of_tests):
         base_value = False
-        trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(0,10))
+        trace_time = datetime.datetime.strptime("2025-07-15T09:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ") + datetime.timedelta(minutes = random.randint(5*i,5*i+5))
         while trace_time < datetime.datetime.strptime("2025-07-15T10:00:00.00Z","%Y-%m-%dT%H:%M:%S.%fZ"):
             data += """{"student_id":""" + student
             data += """"trace":{
                         "timestamp":"""
             data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-            trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
             data += "\"trace_name\":\"test_" + str(i) + "\","
             if (not base_value):
                 data += "\"value\":false}}"
+                trace_time += datetime.timedelta(minutes = random.randint(1,5), seconds = random.randint(1,59))
                 if (random.randint(1,number_of_tests + 1) > i):
                     base_value = True
             else:
                 data += "\"value\":true}}"
+                trace_time += datetime.timedelta(minutes = random.randint(5,15), seconds = random.randint(1,59))
+
             
             data += ","
     #Ouverture fichiers
@@ -64,7 +66,7 @@ for student in student_id:
         data += """"trace":{
                     "timestamp":"""
         data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), seconds = random.randint(1,59))
         data += "\"trace_name\":\"Ouverture Fichier\","
         data += "\"value\":\"" + random.choice(base_value) + "\"}}"
         data += ","
@@ -76,7 +78,7 @@ for student in student_id:
         data += """"trace":{
                     "timestamp":"""
         data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), seconds = random.randint(1,59))
         data += "\"trace_name\":\"Nom Fonctions\","
         data += "\"value\":\"" + random.choice(base_value) + "\"}}"
         data += ","
@@ -88,7 +90,7 @@ for student in student_id:
         data += """"trace":{
                     "timestamp":"""
         data += "\"" + trace_time.strftime("%Y-%m-%dT%H:%M:%S.%f%Z") + "\","
-        trace_time += datetime.timedelta(minutes = random.randint(5,15), milliseconds = random.randint(1,59))
+        trace_time += datetime.timedelta(minutes = random.randint(5,15), seconds = random.randint(1,59))
         data += "\"trace_name\":\"" + random.choice(base_value) + "\"}},"
     
     if student == student_id[-1]:

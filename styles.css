@@ -347,6 +347,43 @@ tr:hover {
     margin: 2px 0;
 }
 
+/* Styles pour les boutons Tout sélectionner / Tout désélectionner */
+.select-all-controls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.select-all-btn, .deselect-all-btn {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.select-all-btn {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.select-all-btn:hover {
+    background: #28a745;
+    color: white;
+}
+
+.deselect-all-btn {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.deselect-all-btn:hover {
+    background: #dc3545;
+    color: white;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

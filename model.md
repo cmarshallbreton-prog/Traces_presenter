@@ -12,5 +12,6 @@ Suspicious : anything related to suspicious activity
         "trace_name":,
         "value":,  //Peut ne pas contenir de champ valeur => Trace "Autres"
         "category" : [] //Deprecated ?
+        
     }
 }

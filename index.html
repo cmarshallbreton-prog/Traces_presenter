@@ -51,6 +51,10 @@
             <div id="numericTab" class="tab-content active">
                 <div class="trace-controls">
                     <label>Sélectionner les traces à afficher :</label>
+                    <div class="select-all-controls">
+                        <button type="button" class="select-all-btn" onclick="selectAllTraces('numeric')">Tout sélectionner</button>
+                        <button type="button" class="deselect-all-btn" onclick="deselectAllTraces('numeric')">Tout désélectionner</button>
+                    </div>
                     <div id="numericTraceList" class="trace-list">
                         <div class="no-traces">Aucune trace disponible</div>
                     </div>
@@ -64,6 +68,10 @@
             <div id="textualTab" class="tab-content">
                 <div class="trace-controls">
                     <label>Sélectionner les traces à afficher :</label>
+                    <div class="select-all-controls">
+                        <button type="button" class="select-all-btn" onclick="selectAllTraces('textual')">Tout sélectionner</button>
+                        <button type="button" class="deselect-all-btn" onclick="deselectAllTraces('textual')">Tout désélectionner</button>
+                    </div>
                     <div id="textualTraceList" class="trace-list">
                         <div class="no-traces">Aucune trace disponible</div>
                     </div>
@@ -77,6 +85,10 @@
             <div id="booleanTab" class="tab-content">
                 <div class="trace-controls">
                     <label>Sélectionner les traces à afficher :</label>
+                    <div class="select-all-controls">
+                        <button type="button" class="select-all-btn" onclick="selectAllTraces('boolean')">Tout sélectionner</button>
+                        <button type="button" class="deselect-all-btn" onclick="deselectAllTraces('boolean')">Tout désélectionner</button>
+                    </div>
                     <div id="booleanTraceList" class="trace-list">
                         <div class="no-traces">Aucune trace disponible</div>
                     </div>

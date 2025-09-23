@@ -1,388 +1,387 @@
 {"traces": [{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:10:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:20:00.043000","trace_name":"Lignes de code","value":8}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:30:00.072000","trace_name":"Lignes de code","value":8}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:34:00.110000","trace_name":"Lignes de code","value":10}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:41:00.139000","trace_name":"Lignes de code","value":17}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:51:00.171000","trace_name":"Lignes de code","value":22}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:52:00.219000","trace_name":"Lignes de code","value":17}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:53:00.269000","trace_name":"Lignes de code","value":36}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:07:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:22:00.030000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:29:00.088000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:37:00.112000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:48:00.132000","trace_name":"Warnings","value":1}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:56:00.142000","trace_name":"Warnings","value":2}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:00:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:09:00.029000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:15:00.035000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:21:00.051000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:36:00.106000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:41:00.139000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:50:00.176000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:59:00.218000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:04:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:15:00.056000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:27:00.063000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:39:00.102000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:52:00.124000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:03:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:18:00.012000","trace_name":"test_3","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:30:00.048000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:41:00.072000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:49:00.131000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:03:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:16:00.055000","trace_name":"test_4","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:24:00.075000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:35:00.110000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:43:00.155000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:58:00.207000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:07:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:17:00.011000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:25:00.065000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:37:00.081000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                        "timestamp":"2025-07-15T09:52:00.123000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:12:00.039000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:21:00.085000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:32:00.100000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:46:00.153000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:51:00.208000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:58:00.265000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:04:00.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:12:00.016000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:27:00.032000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:33:00.089000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:44:00.102000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:57:00.135000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:04:00.000000","trace_name":"alt_tab"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:09:00.005000","trace_name":"firefox_started"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:17:00.027000","trace_name":"alt_tab"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:29:00.039000","trace_name":"alt_tab"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:42:00.047000","trace_name":"copy_paste"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:50:00.054000","trace_name":"alt_tab"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
-                    "timestamp":"2025-07-15T09:55:00.085000","trace_name":"firefox_started"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:10:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:15:00.010000","trace_name":"Lignes de code","value":3}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:23:00.048000","trace_name":"Lignes de code","value":12}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:29:00.080000","trace_name":"Lignes de code","value":9}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:33:00.113000","trace_name":"Lignes de code","value":15}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:39:00.169000","trace_name":"Lignes de code","value":18}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:45:00.184000","trace_name":"Lignes de code","value":30}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:52:00.217000","trace_name":"Lignes de code","value":33}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:07:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:20:00.010000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:27:00.019000","trace_name":"Warnings","value":1}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:32:00.051000","trace_name":"Warnings","value":1}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:37:00.072000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:49:00.107000","trace_name":"Warnings","value":1}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:55:00.120000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:08:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:21:00.055000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:27:00.095000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:40:00.112000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:45:00.132000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:58:00.185000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:07:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:18:00.007000","trace_name":"test_2","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:32:00.034000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:38:00.084000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:47:00.096000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:56:00.098000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:24:00.043000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:38:00.055000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:50:00.073000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:56:00.128000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:04:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:11:00.022000","trace_name":"test_4","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:20:00.033000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:29:00.080000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:43:00.138000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:48:00.170000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:01:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:10:00.002000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:23:00.022000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:31:00.046000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:42:00.071000","trace_name":"test_5","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:48:00.128000","trace_name":"test_5","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                        "timestamp":"2025-07-15T09:59:00.163000","trace_name":"test_5","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:16:00.048000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:31:00.053000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:44:00.071000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:51:00.129000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:19:00.019000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:30:00.068000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:43:00.089000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:52:00.101000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"copy_paste"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:16:00.051000","trace_name":"copy_paste"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:21:00.068000","trace_name":"firefox_started"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:36:00.119000","trace_name":"alt_tab"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:48:00.131000","trace_name":"alt_tab"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
-                    "timestamp":"2025-07-15T09:55:00.159000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:02:00.056000","trace_name":"Lignes de code","value":19}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:07:00.106000","trace_name":"Lignes de code","value":30}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:16:00.146000","trace_name":"Lignes de code","value":27}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:17:00.167000","trace_name":"Lignes de code","value":35}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:22:00.187000","trace_name":"Lignes de code","value":54}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:32:00.233000","trace_name":"Lignes de code","value":60}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:37:00.281000","trace_name":"Lignes de code","value":71}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:44:00.291000","trace_name":"Lignes de code","value":89}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:48:00.322000","trace_name":"Lignes de code","value":84}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:56:00.330000","trace_name":"Lignes de code","value":92}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:14:00.028000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:21:00.037000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:33:00.077000","trace_name":"Warnings","value":1}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:40:00.097000","trace_name":"Warnings","value":2}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:51:00.153000","trace_name":"Warnings","value":3}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:08:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:21:00.035000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:34:00.064000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:43:00.085000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:50:00.122000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:09:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:16:00.047000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:24:00.100000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:33:00.103000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:43:00.141000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:52:00.145000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:08:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:14:00.005000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:27:00.007000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:35:00.063000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:42:00.108000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:49:00.145000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:56:00.193000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:05:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:13:00.032000","trace_name":"test_4","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:23:00.046000","trace_name":"test_4","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:36:00.049000","trace_name":"test_4","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:51:00.063000","trace_name":"test_4","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:07:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:12:00.003000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:26:00.007000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:38:00.030000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:43:00.046000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:48:00.083000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:54:00.129000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                        "timestamp":"2025-07-15T09:59:00.149000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:17:00.037000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:24:00.056000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:31:00.087000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:38:00.115000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:53:00.144000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:16:00.044000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:31:00.052000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:38:00.099000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:52:00.145000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"alt_tab"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:11:00.033000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:16:00.058000","trace_name":"alt_tab"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:21:00.081000","trace_name":"firefox_started"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:29:00.139000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:39:00.165000","trace_name":"alt_tab"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
-                    "timestamp":"2025-07-15T09:47:00.210000","trace_name":"firefox_started"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:06:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:12:00.007000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:16:00.060000","trace_name":"Lignes de code","value":27}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:22:00.070000","trace_name":"Lignes de code","value":23}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:30:00.102000","trace_name":"Lignes de code","value":40}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:39:00.112000","trace_name":"Lignes de code","value":54}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:42:00.147000","trace_name":"Lignes de code","value":54}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:48:00.157000","trace_name":"Lignes de code","value":62}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:51:00.176000","trace_name":"Lignes de code","value":66}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:15:00.038000","trace_name":"Warnings","value":1}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:23:00.044000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:32:00.062000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:42:00.095000","trace_name":"Warnings","value":1}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:53:00.110000","trace_name":"Warnings","value":2}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:01:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:12:00.033000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:17:00.035000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:26:00.055000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:35:00.058000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:50:00.070000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:01:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:16:00.037000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:21:00.038000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:35:00.082000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:45:00.110000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:04:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:17:00.011000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:29:00.033000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:39:00.089000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:50:00.106000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:02:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:16:00.043000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:25:00.074000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:31:00.123000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:44:00.161000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:59:00.184000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:03:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:14:00.048000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:28:00.087000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:40:00.111000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:50:00.123000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                        "timestamp":"2025-07-15T09:56:00.127000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:10:00.017000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:22:00.027000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:36:00.065000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:45:00.107000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:53:00.110000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:09:00.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:23:00.015000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:38:00.025000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:48:00.077000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:56:00.110000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"alt_tab"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:12:00.056000","trace_name":"copy_paste"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:20:00.059000","trace_name":"copy_paste"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:29:00.067000","trace_name":"firefox_started"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:37:00.078000","trace_name":"alt_tab"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:50:00.133000","trace_name":"copy_paste"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
-                    "timestamp":"2025-07-15T09:59:00.161000","trace_name":"copy_paste"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:04:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:14:00.006000","trace_name":"Lignes de code","value":14}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:15:00.029000","trace_name":"Lignes de code","value":32}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:17:00.039000","trace_name":"Lignes de code","value":32}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:17:00.058000","trace_name":"Lignes de code","value":40}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:20:00.088000","trace_name":"Lignes de code","value":38}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:23:00.119000","trace_name":"Lignes de code","value":48}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:32:00.175000","trace_name":"Lignes de code","value":62}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:36:00.227000","trace_name":"Lignes de code","value":69}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:44:00.257000","trace_name":"Lignes de code","value":68}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:48:00.279000","trace_name":"Lignes de code","value":73}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:50:00.286000","trace_name":"Lignes de code","value":73}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:54:00.300000","trace_name":"Lignes de code","value":85}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:57:00.304000","trace_name":"Lignes de code","value":101}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:10:00.005000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:18:00.027000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:25:00.059000","trace_name":"Warnings","value":1}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:39:00.086000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:47:00.098000","trace_name":"Warnings","value":1}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:52:00.115000","trace_name":"Warnings","value":2}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:09:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:22:00.052000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:35:00.107000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:43:00.135000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:48:00.143000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:06:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:12:00.022000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:22:00.059000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:35:00.111000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:40:00.167000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:53:00.201000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:01:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:16:00.024000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:21:00.029000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:33:00.035000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:44:00.063000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:57:00.112000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:08:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:17:00.016000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:27:00.053000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:42:00.061000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:54:00.091000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:05:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:14:00.051000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:28:00.080000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:42:00.123000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                        "timestamp":"2025-07-15T09:51:00.148000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:06:00.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:15:00.026000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:21:00.051000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:30:00.102000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:43:00.124000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:52:00.180000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:15:00.001000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:27:00.025000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:39:00.030000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:53:00.059000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:59:00.114000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:09:00.000000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:21:00.048000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:33:00.077000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:44:00.095000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
-                    "timestamp":"2025-07-15T09:59:00.131000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:08:00.035000","trace_name":"Lignes de code","value":9}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:10:00.078000","trace_name":"Lignes de code","value":19}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:18:00.097000","trace_name":"Lignes de code","value":24}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:20:00.112000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:26:00.164000","trace_name":"Lignes de code","value":31}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:32:00.195000","trace_name":"Lignes de code","value":51}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:36:00.227000","trace_name":"Lignes de code","value":59}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:41:00.275000","trace_name":"Lignes de code","value":67}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:46:00.326000","trace_name":"Lignes de code","value":87}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:48:00.369000","trace_name":"Lignes de code","value":82}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:48:00.419000","trace_name":"Lignes de code","value":91}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:48:00.451000","trace_name":"Lignes de code","value":93}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:48:00.469000","trace_name":"Lignes de code","value":100}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:58:00.476000","trace_name":"Lignes de code","value":111}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:11:00.005000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:21:00.043000","trace_name":"Warnings","value":1}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:27:00.101000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:41:00.157000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:51:00.177000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:24:00.003000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:30:00.041000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:35:00.063000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:42:00.104000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:53:00.133000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:07:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:17:00.038000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:30:00.074000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:44:00.111000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:53:00.165000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:04:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:09:00.014000","trace_name":"test_3","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:24:00.024000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:36:00.057000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:48:00.113000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:06:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:11:00.058000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:16:00.088000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:23:00.117000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:37:00.167000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:48:00.226000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:53:00.238000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:58:00.293000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:06:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:12:00.030000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:27:00.041000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:35:00.042000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:49:00.096000","trace_name":"test_5","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                        "timestamp":"2025-07-15T09:55:00.134000","trace_name":"test_5","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:09:00.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:19:00.014000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:31:00.073000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:39:00.095000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:53:00.105000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:59:00.141000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:12:00.011000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:27:00.038000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:38:00.096000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:51:00.128000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:10:00.000000","trace_name":"copy_paste"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:15:00.037000","trace_name":"alt_tab"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:20:00.051000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:26:00.110000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:39:00.143000","trace_name":"copy_paste"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
-                    "timestamp":"2025-07-15T09:47:00.185000","trace_name":"alt_tab"}}],"metadata": {
+                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:01:10.000000","trace_name":"Lignes de code","value":9}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:06:47.000000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:11:20.000000","trace_name":"Lignes de code","value":15}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:12:14.000000","trace_name":"Lignes de code","value":11}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:16:30.000000","trace_name":"Lignes de code","value":21}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:23:19.000000","trace_name":"Lignes de code","value":19}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:25:57.000000","trace_name":"Lignes de code","value":16}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:29:19.000000","trace_name":"Lignes de code","value":13}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:36:16.000000","trace_name":"Lignes de code","value":12}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:43:33.000000","trace_name":"Lignes de code","value":30}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:53:21.000000","trace_name":"Lignes de code","value":27}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:08:11.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:19:46.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:33:33.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:39:22.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:52:39.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:58:12.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:13:55.000000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:22:26.000000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:37:27.000000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:46:00.000000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:55:43.000000","trace_name":"test_1","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:11:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:16:41.000000","trace_name":"test_2","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:19:36.000000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:32:08.000000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:42:01.000000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:53:10.000000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:58:36.000000","trace_name":"test_2","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:19:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:22:42.000000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:32:50.000000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:40:19.000000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:52:05.000000","trace_name":"test_3","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:23:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:28:50.000000","trace_name":"test_4","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:32:03.000000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:40:35.000000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:54:49.000000","trace_name":"test_4","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:26:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:27:18.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:29:39.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:33:05.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:36:18.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:40:29.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:45:36.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:48:52.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:54:23.000000","trace_name":"test_5","value":false}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                        "timestamp":"2025-07-15T09:58:57.000000","trace_name":"test_5","value":true}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:09:00.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:21:39.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:28:19.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:39:06.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:54:34.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:17:12.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:27:05.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:42:10.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:51:22.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"copy_paste"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:09:59.000000","trace_name":"firefox_started"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:21:34.000000","trace_name":"firefox_started"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:27:47.000000","trace_name":"copy_paste"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:34:58.000000","trace_name":"alt_tab"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:47:38.000000","trace_name":"copy_paste"}},{"student_id":"FST_001", "student_name": "Marie Dubois","trace":{
+                    "timestamp":"2025-07-15T09:53:33.000000","trace_name":"alt_tab"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:18:46.000000","trace_name":"Lignes de code","value":13}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:27:24.000000","trace_name":"Lignes de code","value":21}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:27:47.000000","trace_name":"Lignes de code","value":34}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:28:36.000000","trace_name":"Lignes de code","value":31}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:35:53.000000","trace_name":"Lignes de code","value":47}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:46:15.000000","trace_name":"Lignes de code","value":45}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:52:57.000000","trace_name":"Lignes de code","value":57}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:55:58.000000","trace_name":"Lignes de code","value":66}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:59:15.000000","trace_name":"Lignes de code","value":79}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:13:41.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:22:37.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:29:50.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:45:12.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:59:53.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:11:10.000000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:18:06.000000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:33:36.000000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:48:20.000000","trace_name":"test_1","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:12:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:17:41.000000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:26:04.000000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:35:05.000000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:50:09.000000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:58:42.000000","trace_name":"test_2","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:16:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:20:55.000000","trace_name":"test_3","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:25:07.000000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:38:04.000000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:46:33.000000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:56:15.000000","trace_name":"test_3","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:23:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:24:45.000000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:31:16.000000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:44:34.000000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:59:07.000000","trace_name":"test_4","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:30:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:35:20.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:38:14.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:41:40.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:45:43.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:51:10.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:54:09.000000","trace_name":"test_5","value":false}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                        "timestamp":"2025-07-15T09:56:08.000000","trace_name":"test_5","value":true}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:13:09.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:18:25.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:26:04.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:34:00.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:47:35.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:17:30.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:29:54.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:40:04.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:54:40.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:07:00.000000","trace_name":"alt_tab"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:13:15.000000","trace_name":"firefox_started"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:28:33.000000","trace_name":"copy_paste"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:43:35.000000","trace_name":"alt_tab"}},{"student_id":"FST_002", "student_name": "Jean Dupont","trace":{
+                    "timestamp":"2025-07-15T09:55:55.000000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:04:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:05:36.000000","trace_name":"Lignes de code","value":13}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:14:55.000000","trace_name":"Lignes de code","value":14}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:18:44.000000","trace_name":"Lignes de code","value":23}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:24:05.000000","trace_name":"Lignes de code","value":42}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:34:45.000000","trace_name":"Lignes de code","value":58}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:35:40.000000","trace_name":"Lignes de code","value":63}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:40:20.000000","trace_name":"Lignes de code","value":74}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:45:00.000000","trace_name":"Lignes de code","value":72}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:51:08.000000","trace_name":"Lignes de code","value":91}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:06:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:13:30.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:27:32.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:42:20.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:55:40.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:07:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:08:53.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:20:19.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:26:17.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:37:45.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:53:33.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:59:17.000000","trace_name":"test_1","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:11:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:14:47.000000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:22:22.000000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:33:28.000000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:42:03.000000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:55:12.000000","trace_name":"test_2","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:20:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:25:10.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:28:14.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:29:24.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:32:15.000000","trace_name":"test_3","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:37:20.000000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:43:47.000000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:56:25.000000","trace_name":"test_3","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:24:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:27:50.000000","trace_name":"test_4","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:31:53.000000","trace_name":"test_4","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:47:15.000000","trace_name":"test_4","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:54:31.000000","trace_name":"test_4","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:28:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:31:42.000000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                        "timestamp":"2025-07-15T09:47:08.000000","trace_name":"test_5","value":true}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:18:56.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:27:59.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:35:50.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:47:07.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:55:30.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:07:11.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:19:34.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:25:31.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:38:51.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:44:07.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:52:54.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:18:08.000000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:29:40.000000","trace_name":"copy_paste"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:39:41.000000","trace_name":"alt_tab"}},{"student_id":"FST_003", "student_name": "Anne Smith","trace":{
+                    "timestamp":"2025-07-15T09:48:45.000000","trace_name":"firefox_started"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:09:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:16:33.000000","trace_name":"Lignes de code","value":14}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:23:10.000000","trace_name":"Lignes de code","value":32}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:30:55.000000","trace_name":"Lignes de code","value":48}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:36:41.000000","trace_name":"Lignes de code","value":64}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:37:52.000000","trace_name":"Lignes de code","value":77}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:48:05.000000","trace_name":"Lignes de code","value":84}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:50:14.000000","trace_name":"Lignes de code","value":101}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:20:41.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:28:50.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:34:17.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:44:56.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:55:45.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:08:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:12:01.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:22:42.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:30:14.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:43:04.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:52:30.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:59:52.000000","trace_name":"test_1","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:12:42.000000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:22:57.000000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:35:47.000000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:42:44.000000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:53:04.000000","trace_name":"test_2","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:20:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:24:47.000000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:38:31.000000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:46:32.000000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:59:26.000000","trace_name":"test_3","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:24:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:28:25.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:33:19.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:34:50.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:38:48.000000","trace_name":"test_4","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:44:30.000000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:50:48.000000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:57:24.000000","trace_name":"test_4","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:28:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:33:37.000000","trace_name":"test_5","value":false}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:35:28.000000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                        "timestamp":"2025-07-15T09:51:16.000000","trace_name":"test_5","value":true}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:06:00.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:11:11.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:23:31.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:38:37.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:51:05.000000","trace_name":"Ouverture Fichier","value":"Exo_2.py"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:04:00.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:18:50.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:27:17.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:42:28.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:51:27.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:57:20.000000","trace_name":"Nom Fonctions","value":"DiviserParDeux"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:03:00.000000","trace_name":"firefox_started"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:18:50.000000","trace_name":"alt_tab"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:25:19.000000","trace_name":"alt_tab"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:39:56.000000","trace_name":"copy_paste"}},{"student_id":"FST_004", "student_name": "Herve Boban","trace":{
+                    "timestamp":"2025-07-15T09:55:47.000000","trace_name":"copy_paste"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:12:42.000000","trace_name":"Lignes de code","value":6}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:20:15.000000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:23:57.000000","trace_name":"Lignes de code","value":20}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:30:29.000000","trace_name":"Lignes de code","value":33}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:33:47.000000","trace_name":"Lignes de code","value":47}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:41:32.000000","trace_name":"Lignes de code","value":49}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:42:46.000000","trace_name":"Lignes de code","value":50}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:53:01.000000","trace_name":"Lignes de code","value":50}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:57:50.000000","trace_name":"Lignes de code","value":56}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:06:21.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:20:34.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:29:21.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:40:22.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:52:16.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:11:59.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:19:28.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:28:31.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:34:37.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:41:58.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:55:39.000000","trace_name":"test_1","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:10:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:11:09.000000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:23:37.000000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:32:03.000000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:40:54.000000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:52:04.000000","trace_name":"test_2","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:18:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:20:54.000000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:26:21.000000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:40:51.000000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:50:13.000000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:57:04.000000","trace_name":"test_3","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:22:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:25:46.000000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:37:41.000000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:50:58.000000","trace_name":"test_4","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:25:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:28:06.000000","trace_name":"test_5","value":false}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:31:47.000000","trace_name":"test_5","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:38:52.000000","trace_name":"test_5","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:45:15.000000","trace_name":"test_5","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                        "timestamp":"2025-07-15T09:57:24.000000","trace_name":"test_5","value":true}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:08:20.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:24:07.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:32:50.000000","trace_name":"Ouverture Fichier","value":"Exo_1.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:38:48.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:53:34.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:59:04.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:06:00.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:17:54.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:26:49.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:40:12.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:48:36.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:53:39.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:00:00.000000","trace_name":"copy_paste"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:15:42.000000","trace_name":"copy_paste"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:26:53.000000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:41:32.000000","trace_name":"firefox_started"}},{"student_id":"FST_005", "student_name": "Nathalie Aurez","trace":{
+                    "timestamp":"2025-07-15T09:56:55.000000","trace_name":"copy_paste"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:02:00.000000","trace_name":"Lignes de code","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:05:26.000000","trace_name":"Lignes de code","value":1}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:06:51.000000","trace_name":"Lignes de code","value":2}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:39.000000","trace_name":"Lignes de code","value":2}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:49.000000","trace_name":"Lignes de code","value":21}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:10:54.000000","trace_name":"Lignes de code","value":19}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:15:11.000000","trace_name":"Lignes de code","value":19}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:21:58.000000","trace_name":"Lignes de code","value":31}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:30:42.000000","trace_name":"Lignes de code","value":35}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:35:05.000000","trace_name":"Lignes de code","value":31}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:39:37.000000","trace_name":"Lignes de code","value":41}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:48:44.000000","trace_name":"Lignes de code","value":55}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:51:53.000000","trace_name":"Lignes de code","value":65}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:55:18.000000","trace_name":"Lignes de code","value":68}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:18:30.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:24:27.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:32:26.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:45:02.000000","trace_name":"Warnings","value":0}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:56:48.000000","trace_name":"Warnings","value":1}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:05:00.000000","trace_name":"test_1","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:08:28.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:17:20.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:24:37.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:31:06.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:42:15.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:48:54.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:59:26.000000","trace_name":"test_1","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:13:00.000000","trace_name":"test_2","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:15:33.000000","trace_name":"test_2","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:18:04.000000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:30:40.000000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:40:38.000000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:47:57.000000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:53:10.000000","trace_name":"test_2","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:18:00.000000","trace_name":"test_3","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:19:01.000000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:34:52.000000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:43:27.000000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:56:48.000000","trace_name":"test_3","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:23:00.000000","trace_name":"test_4","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:24:23.000000","trace_name":"test_4","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:27:47.000000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:36:00.000000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:43:23.000000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:52:09.000000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:59:35.000000","trace_name":"test_4","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:29:00.000000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:32:27.000000","trace_name":"test_5","value":false}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:35:08.000000","trace_name":"test_5","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                        "timestamp":"2025-07-15T09:50:56.000000","trace_name":"test_5","value":true}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:05:00.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:20:09.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:33:30.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:43:56.000000","trace_name":"Ouverture Fichier","value":"Ennonce.pdf"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:58:09.000000","trace_name":"Ouverture Fichier","value":"Exo_3.py"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:08:00.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:15:31.000000","trace_name":"Nom Fonctions","value":"aaaaaaa"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:26:05.000000","trace_name":"Nom Fonctions","value":"ma_fonction"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:37:53.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:49:13.000000","trace_name":"Nom Fonctions","value":"mon_autre_fontion"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:01:00.000000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:14:33.000000","trace_name":"copy_paste"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:21:52.000000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:29:07.000000","trace_name":"copy_paste"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:34:21.000000","trace_name":"firefox_started"}},{"student_id":"FST_006", "student_name": "Alain Cor","trace":{
+                    "timestamp":"2025-07-15T09:48:47.000000","trace_name":"alt_tab"}}],"metadata": {
     "project_name": "Epreuve FST",
     "description": "Simulation d'un examen de programmation pour presentation des indicateurs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "date": "2024-03-15",
