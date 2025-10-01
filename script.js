@@ -1,4 +1,4 @@
-// ===== CONSTANTS =====
+// CONSTANTES
 const TIME_SEGMENTS = 10;
 const TRACE_COLORS = [
     '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', 
@@ -8,7 +8,7 @@ const TRACE_COLORS = [
 const CHART_COLORS = ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6f42c1', '#fd7e14', '#20c997', '#6c757d'];
 const BOOLEAN_COLORS = { TRUE: '#2ecc71', FALSE: '#e74c3c' };
 
-// ===== GLOBAL STATE =====
+// NAVIGATION
 const state = {
     currentData: null,
     chartsInstances: {},
@@ -22,7 +22,7 @@ const state = {
     globalTimeRange: null
 };
 
-// ===== DOM UTILITIES =====
+// UTILS
 const DOM = {
     cache: {},
     get(id) {
@@ -49,7 +49,7 @@ const DOM = {
     }
 };
 
-// ===== INITIALIZATION =====
+// INIT
 document.addEventListener('DOMContentLoaded', () => {
     DOM.get('fileInput')?.addEventListener('change', handleFileUpload);
     DOM.get('studentSelect')?.addEventListener('change', onStudentChange);
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ===== FILE HANDLING =====
+// GESTION DU FICHIER JSON
 function handleFileUpload(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -98,7 +98,7 @@ function calculateGlobalTimeRange(data) {
     };
 }
 
-// ===== PROJECT INFO =====
+// METADONNEES
 function displayProjectInfo(data) {
     const { metadata, traces } = data;
     const uniqueStudents = new Set(traces.map(trace => trace.student_id));
@@ -110,7 +110,7 @@ function displayProjectInfo(data) {
     DOM.show('projectInfo');
 }
 
-// ===== STUDENT MANAGEMENT =====
+// LISTE DES ETUDIANTS
 function populateStudentDropdown(data) {
     const studentsMap = new Map();
     
@@ -164,28 +164,28 @@ function onStudentChange() {
     displayStudentDashboard(selectedStudent.student_name, studentTraces);
 }
 
-// ===== STUDENT DASHBOARD =====
+// DASHBOARD DE L'ETUDIANT
 function displayStudentDashboard(studentName, studentTraces) {
     DOM.setText('selectedStudentName', `Étudiant : ${studentName}`);
     
-    // Clean up existing charts
+    // Clean up 
     Object.values(state.chartsInstances).forEach(chart => chart?.destroy?.());
     state.chartsInstances = {};
     
-    // Reset selections
+    // Reset de la navigation
     Object.keys(state.selectedTraces).forEach(key => {
         state.selectedTraces[key].clear();
     });
     
-    // Categorize traces
+    // Categorisation des traces
     state.currentStudentTraces = categorizeTracesByType(studentTraces);
     
-    // Populate trace lists
+    // Liste de traces
     populateTraceList('numericTraceList', state.currentStudentTraces.numeric, 'numeric');
     populateTraceList('textualTraceList', state.currentStudentTraces.textual, 'textual');
     populateTraceList('booleanTraceList', state.currentStudentTraces.boolean, 'boolean');
     
-    // Generate others table
+    // Tableau 'autres'
     generateTable('othersTable', state.currentStudentTraces.others);
     
     switchToTab(state.currentTab);
@@ -216,7 +216,7 @@ function categorizeTracesByType(traces) {
     return categorized;
 }
 
-// ===== TRACE MANAGEMENT =====
+// GESTION DES TRACES
 function populateTraceList(listId, traces, category) {
     const listContainer = DOM.get(listId);
     if (!listContainer) return;
@@ -253,7 +253,7 @@ function onTraceSelectionChange(category, traceName, isSelected) {
     }
 }
 
-// ===== SELECT ALL / DESELECT ALL FUNCTIONS =====
+// BOUTON SELECT ALL
 function selectAllTraces(category) {
     const checkboxes = document.querySelectorAll(`#${category}TraceList input[type="checkbox"]`);
     
@@ -264,7 +264,7 @@ function selectAllTraces(category) {
         }
     });
     
-    // Update display
+    // Update
     if (category === 'textual') {
         updateTextualTable();
     } else {
@@ -282,7 +282,7 @@ function deselectAllTraces(category) {
         }
     });
     
-    // Update display
+    // Update
     if (category === 'textual') {
         updateTextualTable();
     } else {
@@ -290,7 +290,7 @@ function deselectAllTraces(category) {
     }
 }
 
-// ===== TAB MANAGEMENT =====
+// GESTION DES ONGLETS
 function switchTab(event) {
     const targetTab = event.target.dataset.tab;
     state.currentTab = targetTab;
@@ -300,12 +300,12 @@ function switchTab(event) {
 function switchToTab(tabName) {
     state.currentTab = tabName;
     
-    // Update tab buttons
+    // Update boutons onglets
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.tab === tabName);
     });
     
-    // Update tab content
+    // Update contenu de l'onglet
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.remove('active');
     });
@@ -319,7 +319,7 @@ function switchToTab(tabName) {
     }
 }
 
-// ===== CHART MANAGEMENT =====
+// GESTION DES GRAPHES
 function updateChart(category) {
     const selectedTraceNames = Array.from(state.selectedTraces[category]);
     const titleElement = DOM.get(`${category}ChartTitle`);
@@ -384,7 +384,7 @@ function createNumericChart(traceNames, canvas, canvasId) {
                 pointHoverRadius: 6
             });
             
-            // Add class average
+            // Moyenne
             const classAverage = calculateClassAverage(traceName);
             if (classAverage.length > 0) {
                 datasets.push({
@@ -557,7 +557,7 @@ function getBooleanChartOptions(traceNames) {
     };
 }
 
-// ===== TEXTUAL TABLE =====
+// TABLEAU DONNESS TEXTE
 function updateTextualTable() {
     const selectedTraceNames = Array.from(state.selectedTraces.textual);
     
@@ -628,7 +628,7 @@ function generateTextualTable(selectedTraceNames) {
     `);
 }
 
-// ===== UTILITY FUNCTIONS =====
+// UTILS
 function calculateClassAverage(traceName) {
     const allTraces = state.currentData.traces.filter(trace => 
         trace.trace.trace_name === traceName && typeof trace.trace.value === 'number'
@@ -693,7 +693,7 @@ function generateTable(tableId, traces) {
     `);
 }
 
-// ===== ERROR HANDLING =====
+// ERREURS
 function showError(message) {
     DOM.setText('errorMessage', message);
     DOM.show('errorMessage');

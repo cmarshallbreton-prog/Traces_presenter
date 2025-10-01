@@ -103,5 +103,5 @@ data += """],"metadata": {
     "date": "2024-03-15",
     "class": "Math-Info"
   }}"""
-with open("data_realistic.json", "a") as f:
+with open("data_realistic.json", "w") as f:
     f.write(data)
