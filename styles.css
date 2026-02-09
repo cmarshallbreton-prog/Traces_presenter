@@ -418,3 +418,43 @@ tr:hover {
         min-width: auto;
     }
 }
+
+/* EXPORT */
+.export-status {
+    text-align: center;
+    margin: -15px 0 20px;
+    color: #666;
+    font-size: 0.95em;
+    min-height: 1.2em;
+}
+
+.export-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 15px;
+}
+
+.export-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 700;
+    border: none;
+}
+
+.export-btn:hover {
+    background: #0056b3;
+}
+
+.export-btn.secondary {
+    background: #6c757d;
+}
+
+.export-btn.secondary:hover {
+    background: #565e64;
+}

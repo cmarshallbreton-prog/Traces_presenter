@@ -703,3 +703,163 @@ function showError(message) {
 function hideError() {
     DOM.hide('errorMessage');
 }
+
+// EXPORT (PNG / ZIP)
+function setExportStatus(message) {
+    // Non bloquant : affiche une info dans le dashboard si présent
+    const el = DOM.get('exportStatus');
+    if (!el) return;
+    el.textContent = message || '';
+}
+
+function downloadDataUrl(dataUrl, filename) {
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+function saveBlob(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function waitFor(conditionFn, timeoutMs = 2500, intervalMs = 50) {
+    const start = Date.now();
+    while (Date.now() - start < timeoutMs) {
+        try {
+            if (conditionFn()) return true;
+        } catch (_) {
+            // ignore
+        }
+        await new Promise(r => setTimeout(r, intervalMs));
+    }
+    return false;
+}
+
+function exportCurrentChart(category) {
+    try {
+        const canvasId = `${category}Chart`;
+        const chart = state.chartsInstances[canvasId];
+        if (!chart) {
+            alert('Aucun graphique à exporter. Sélectionnez au moins une trace.');
+            return;
+        }
+
+        const studentId = DOM.get('studentSelect')?.value || 'etudiant';
+        const filename = `${category}_${studentId}.png`;
+        downloadDataUrl(chart.toBase64Image(), filename);
+    } catch (e) {
+        alert(`Erreur export: ${e.message}`);
+    }
+}
+
+// Exporte un ZIP contenant un PNG "compilation" par étudiant.
+// Vous pouvez adapter traceName et category si besoin.
+async function exportCompilationForAllStudents() {
+    if (!state.currentData) {
+        alert('Chargez un fichier JSON avant d’exporter.');
+        return;
+    }
+    if (typeof JSZip === 'undefined') {
+        alert('JSZip non chargé (vérifiez la balise <script> JSZip dans index.html).');
+        return;
+    }
+    // Par défaut on cible la trace "Compilation" (souvent "Compilation" dans Progsnap2),
+    // mais si l'utilisateur a déjà coché UNE trace booléenne avant de cliquer sur le bouton,
+    // on exporte cette trace-là pour tous.
+    const defaultTraceLower = 'compilation';
+    const category = 'boolean';
+    const preselected = Array.from(state.selectedTraces?.[category] || []);
+    const traceLower = (preselected.length === 1)
+        ? String(preselected[0]).trim().toLowerCase()
+        : defaultTraceLower;
+    const traceLabel = (preselected.length === 1)
+        ? String(preselected[0]).trim()
+        : 'Compilation';
+    const select = DOM.get('studentSelect');
+    if (!select) {
+        alert('Sélecteur étudiant introuvable.');
+        return;
+    }
+
+    const studentIds = Array.from(select.options)
+        .slice(1)
+        .map(o => o.value)
+        .filter(Boolean);
+
+    if (studentIds.length === 0) {
+        alert('Aucun étudiant détecté dans le fichier.');
+        return;
+    }
+
+    const zip = new JSZip();
+    setExportStatus(`Export en cours… 0/${studentIds.length}`);
+
+    // Utilitaire : retrouve une checkbox de trace par nom (insensible à la casse)
+    function findTraceCheckbox(category, traceLower) {
+        const list = document.querySelectorAll(`#${category}TraceList input[type="checkbox"]`);
+        const arr = Array.from(list);
+        // Match par nom (insensible à la casse)
+        return arr.find(cb => String(cb.value || '').trim().toLowerCase() === traceLower) || null;
+    }
+
+    // Pour éviter des blocages sur de gros fichiers, on exporte en séquentiel.
+    for (let i = 0; i < studentIds.length; i++) {
+        const studentId = studentIds[i];
+
+        // Change l'étudiant et reconstruit le dashboard
+        select.value = studentId;
+        onStudentChange();
+
+        // Force l'onglet & sélection de la trace choisie
+        switchToTab(category);
+        deselectAllTraces(category);
+
+        const checkbox = findTraceCheckbox(category, traceLower);
+        if (!checkbox) {
+            // Pas de trace cible pour cet étudiant
+            setExportStatus(`Export en cours… ${i + 1}/${studentIds.length} (pas de trace "${traceLabel}" pour ${studentId})`);
+            continue;
+        }
+
+        checkbox.checked = true;
+        onTraceSelectionChange(category, checkbox.value, true);
+
+        // Attend que Chart.js ait créé l'instance
+        const canvasId = `${category}Chart`;
+        await waitFor(() => !!state.chartsInstances[canvasId], 3000);
+        const chart = state.chartsInstances[canvasId];
+        if (!chart) {
+            setExportStatus(`Export en cours… ${i + 1}/${studentIds.length} (graphique non prêt pour ${studentId})`);
+            continue;
+        }
+
+        // Donne un petit délai pour le rendu visuel (utile sur machines plus lentes)
+        await new Promise(r => setTimeout(r, 150));
+
+        const dataUrl = chart.toBase64Image();
+        const base64 = dataUrl.split(',')[1];
+        zip.file(`${studentId}.png`, base64, { base64: true });
+
+        setExportStatus(`Export en cours… ${i + 1}/${studentIds.length}`);
+    }
+
+    setExportStatus('Compression ZIP…');
+    if (Object.keys(zip.files).length === 0) {
+        setExportStatus(`❌ Aucun fichier à zipper (trace "${traceLabel}" introuvable pour tous les étudiants).`);
+        alert(`Aucun PNG n’a pu être généré : la trace "${traceLabel}" n’a pas été trouvée. Vérifiez le nom exact de la trace dans l’onglet Booléennes.`);
+        return;
+    }
+    const blob = await zip.generateAsync({ type: 'blob' });
+    saveBlob(blob, `compilation_graphes_${new Date().toISOString().slice(0, 10)}.zip`);
+    setExportStatus('✅ Export terminé.');
+}

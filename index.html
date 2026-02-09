@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -40,6 +41,7 @@
 
         <div id="studentDashboard" class="student-dashboard" style="display: none;">
             <h3 id="selectedStudentName"></h3>
+            <div id="exportStatus" class="export-status"></div>
             
             <div class="tabs">
                 <button class="tab-btn active" data-tab="numeric">🔢 Numériques</button>
@@ -95,6 +97,10 @@
                 </div>
                 <div class="chart-container">
                     <h4 id="booleanChartTitle">Sélectionner des traces</h4>
+                    <div class="export-controls">
+                        <button type="button" class="export-btn" onclick="exportCurrentChart('boolean')">📸 Exporter ce graphique (PNG)</button>
+                        <button type="button" class="export-btn secondary" onclick="exportCompilationForAllStudents()">📦 Exporter &quot;compilation&quot; pour tous (ZIP)</button>
+                    </div>
                     <canvas id="booleanChart"></canvas>
                 </div>
             </div>
