@@ -6,6 +6,10 @@ OUT  = r"C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\ProgSnap2A
 GAP_MIN = "5"  # minutes
 
 cmds = [
+    [sys.executable, "time_to_score1.py",  READ, rf"{OUT}\Time_To_Score1.csv"],
+    [sys.executable, "compile_span.py",  READ, rf"{OUT}\Compile_Span.csv"],
+    [sys.executable, "first_compile_vs_global_first.py",  READ, rf"{OUT}\First_Compile.csv"],
+    [sys.executable, "last_compile_vs_global_last.py",  READ, rf"{OUT}\Last_Compile.csv"],
     [sys.executable, "compile_count.py",  READ, rf"{OUT}\CompileCount.csv"],
     [sys.executable, "session_count.py",  READ, rf"{OUT}\SessionCount.csv", GAP_MIN],
     [sys.executable, "frac_long.py",      READ, rf"{OUT}\FracLong.csv", GAP_MIN],

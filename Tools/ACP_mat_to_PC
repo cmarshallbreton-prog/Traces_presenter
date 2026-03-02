@@ -1,0 +1,88 @@
+import numpy as np
+import pandas as pd
+import os
+
+# =====================
+# PARAMÈTRES À ADAPTER
+# =====================
+excel_path = "ACP_test.xlsx"   # <-- mets ici le chemin vers TON fichier (ou laisse si même dossier)
+sheet_norm = "ACP_Norm_Red"     # données déjà centrées-réduites
+sheet_corr = "ACP_Mat_Correl"   # matrice de corrélation (optionnelle)
+
+# Colonnes utilisées pour l'ACP (dans ton fichier elles existent exactement comme ça)
+vars_cols = ["EQ", "RED", "Comp_Count", "Sess_Count", "Comp_FP_Ratio", "Frac_Long", "Mean_Test"]
+id_col = "SubjectID"
+
+# =========================
+# 1) Lire les données Z (déjà centrées-réduites)
+# =========================
+df_norm = pd.read_excel(excel_path, sheet_name=sheet_norm)
+
+Z_df = df_norm[vars_cols].copy()
+mask = Z_df.notna().all(axis=1)          # garder lignes complètes
+Z_df = Z_df.loc[mask].reset_index(drop=True)
+
+ids = None
+if id_col in df_norm.columns:
+    ids = df_norm.loc[mask, id_col].reset_index(drop=True)
+
+Z = Z_df.to_numpy(dtype=float)           # matrice n×p
+
+# =========================
+# 2) Lire R (corrélation) si l'onglet existe, sinon la recalculer depuis Z
+# =========================
+R = None
+try:
+    df_corr = pd.read_excel(excel_path, sheet_name=sheet_corr, index_col=0)
+    df_corr = df_corr.loc[vars_cols, vars_cols]  # s'assurer du bon ordre
+    R = df_corr.to_numpy(dtype=float)
+except Exception:
+    # fallback : corrélation calculée depuis Z
+    R = np.corrcoef(Z, rowvar=False)
+
+# =========================
+# 3) Passage matrice -> PC1, PC2... : valeurs/vecteurs propres
+#    R a = λ a
+# =========================
+eigvals, eigvecs = np.linalg.eigh(R)          # R est symétrique -> méthode stable
+order = np.argsort(eigvals)[::-1]             # trier par variance décroissante
+eigvals = eigvals[order]
+eigvecs = eigvecs[:, order]                   # colonnes = vecteurs propres = "poids" des PCs
+
+pc_names = [f"PC{i+1}" for i in range(len(vars_cols))]
+
+# Variance expliquée
+explained_ratio = eigvals / eigvals.sum()
+df_var = pd.DataFrame({
+    "PC": pc_names,
+    "eigenvalue": eigvals,
+    "explained_%": explained_ratio * 100,
+    "cumulative_%": np.cumsum(explained_ratio) * 100,
+})
+
+# Poids (recette) des composantes : PCk = somme_j (eigvecs[j,k] * Z_j)
+df_weights = pd.DataFrame(eigvecs, index=vars_cols, columns=pc_names)
+
+# Corr(variable, PC) (souvent appelé "loadings" au sens interprétation) :
+# corr(var_j, PC_k) = eigvecs[j,k] * sqrt(eigvals[k])
+df_var_pc_cor = pd.DataFrame(eigvecs * np.sqrt(eigvals), index=vars_cols, columns=pc_names)
+
+# Scores individus : T = Z V
+scores = Z @ eigvecs
+df_scores = pd.DataFrame(scores, columns=pc_names)
+if ids is not None:
+    df_scores.insert(0, id_col, ids.values)
+
+# =========================
+# 4) Export
+# =========================
+out_path = "pca_results_numpy.xlsx"
+with pd.ExcelWriter(out_path, engine="openpyxl") as writer:
+    df_var.to_excel(writer, sheet_name="variance", index=False)
+    df_weights.to_excel(writer, sheet_name="weights")
+    df_var_pc_cor.to_excel(writer, sheet_name="var_pc_cor")
+    df_scores.to_excel(writer, sheet_name="scores", index=False)
+    pd.DataFrame(R, index=vars_cols, columns=vars_cols).to_excel(writer, sheet_name="corr_matrix")
+
+print("OK ->", os.path.abspath(out_path))
+print(df_var[["PC", "explained_%", "cumulative_%"]].round(2).to_string(index=False))
