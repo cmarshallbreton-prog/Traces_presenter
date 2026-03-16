@@ -27,7 +27,9 @@ row_ha = HeatmapAnnotation(
 )
 
 # 4) Clustermap
+
 plt.figure(figsize=(10, 14))
+
 cm = ClusterMapPlotter(
     data=Xz,
     right_annotation=row_ha,
@@ -35,6 +37,9 @@ cm = ClusterMapPlotter(
     row_cluster=True,
     col_cluster=True,
     show_rownames=False,
+    show_colnames=True,
+    col_names_side="top",
+    xticklabels_kws={"labelrotation": 45, "labelsize": 10},
     cmap="RdBu_r",
     center=0,
     label="z-score",
