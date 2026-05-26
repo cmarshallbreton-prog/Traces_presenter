@@ -1,5 +1,5 @@
 COMMANDE LOGIQUE
-python C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\data C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\csv\CompileSpan.csv
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\CompileSpan.csv
 
 SORTIE DU SCRIPT
 --- Logging error ---
@@ -49,18 +49,18 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 97, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 97, in filter_dataset
     main_table_df = assign_session_ids(main_table_df, gap_time)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 55, in assign_session_ids
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 55, in assign_session_ids
     out.info("Assigning session IDs:")
 Message: 'Assigning session IDs:'
 Arguments: ()
@@ -112,18 +112,18 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 97, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 97, in filter_dataset
     main_table_df = assign_session_ids(main_table_df, gap_time)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 89, in assign_session_ids
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 89, in assign_session_ids
     out.info("Subjects: " + str(subject_changes))
 Message: 'Subjects: 131'
 Arguments: ()
@@ -174,18 +174,18 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 97, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 97, in filter_dataset
     main_table_df = assign_session_ids(main_table_df, gap_time)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 90, in assign_session_ids
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 90, in assign_session_ids
     out.info("Assigned %d unique sessionIDs" % session_id)
 Message: 'Assigned 131 unique sessionIDs'
 Arguments: ()
@@ -236,16 +236,16 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 101, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 101, in filter_dataset
     out.info("Filtering sessions...")
 Message: 'Filtering sessions...'
 Arguments: ()
@@ -296,16 +296,16 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 114, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 114, in filter_dataset
     out.info("Dropping %d sessions with < %.02f compiles (M=%.02f and SD=%.02f), removing %s students" %
 Message: 'Dropping 21 sessions with < 4.00 compiles (M=12.74 and SD=10.59), removing 21 students'
 Arguments: ()
@@ -356,16 +356,16 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 118, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 118, in filter_dataset
     out.info("Filtering students...")
 Message: 'Filtering students...'
 Arguments: ()
@@ -416,16 +416,16 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 33, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 33, in <module>
     main_table_df = data_filter.load_main_table(read_path)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 221, in load_main_table
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 221, in load_main_table
     main_table_df = filter_dataset(main_table_df)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\data_filter.py", line 130, in filter_dataset
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\data_filter.py", line 130, in filter_dataset
     out.info("Dropping %d students with with z-score < %.02f for sessions (M=%.02f and SD=%.02f)" %
 Message: 'Dropping 0 students with with z-score < -2.00 for sessions (M=1.00 and SD=1.00)'
 Arguments: ()
@@ -476,14 +476,14 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 36, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 36, in <module>
     metric_map = utils.calculate_metric_map(main_table_df, calculate_compile_span_minutes)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\utils.py", line 80, in calculate_metric_map
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\utils.py", line 80, in calculate_metric_map
     out.info("Calculating error metric...")
 Message: 'Calculating error metric...'
 Arguments: ()
@@ -535,14 +535,14 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compile_span.py", line 36, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compile_span.py", line 36, in <module>
     metric_map = utils.calculate_metric_map(main_table_df, calculate_compile_span_minutes)
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\utils.py", line 98, in calculate_metric_map
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\utils.py", line 98, in calculate_metric_map
     out.info("Dropped %d subjects with no pairs of compile events" % dropped)
 Message: 'Dropped 0 subjects with no pairs of compile events'
 Arguments: ()

@@ -1,5 +1,5 @@
 COMMANDE LOGIQUE
-python C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compil_ratio.py C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\data C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\csv\CompileSuccessRate.csv
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compil_ratio.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\CompileSuccessRate.csv
 
 SORTIE DU SCRIPT
 --- Logging error ---
@@ -49,12 +49,12 @@ Call stack:
     if await self.run_code(code, result, async_=asy):
   File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
     exec(code_obj, self.user_global_ns, self.user_ns)
-  File "C:\Users\chris\AppData\Local\Temp\ipykernel_26320\289381979.py", line 92, in <module>
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_17752\289381979.py", line 92, in <module>
     runpy.run_path(str(script_path), run_name="__main__")
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Chaine_avec_notebooks (2)\Chaine\scripts\compil_ratio.py", line 95, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts\compil_ratio.py", line 95, in <module>
     out.info(f"Computed CompileSuccessRate for {len(metric_map)} subjects")
 Message: 'Computed CompileSuccessRate for 131 subjects'
 Arguments: ()
