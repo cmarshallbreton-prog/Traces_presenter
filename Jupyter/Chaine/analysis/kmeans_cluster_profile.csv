@@ -1,45 +1,29 @@
 Cluster,variable,centre_standardise,sens
-Cluster 1,CompileSuccessRate,0.8961825971649615,au-dessus de la moyenne
-Cluster 1,MeanTestScore,0.8870360087754187,au-dessus de la moyenne
-Cluster 1,ErrorQuotient,-0.8589322191453423,en dessous de la moyenne
-Cluster 1,RED,-0.7942189741936018,en dessous de la moyenne
-Cluster 1,MinutesToScore1,-0.587423417257745,en dessous de la moyenne
-Cluster 1,MinutesToGlobalLastCompile,-0.5785176843218887,en dessous de la moyenne
-Cluster 1,SessionCount,0.49297583856450766,au-dessus de la moyenne
-Cluster 1,CompileSpanMinutes,0.4742619788805937,au-dessus de la moyenne
-Cluster 1,FracLong,0.3280444232894602,au-dessus de la moyenne
-Cluster 1,MinutesFromGlobalFirstCompile,0.19357348057776647,au-dessus de la moyenne
-Cluster 1,CompileCount,-0.030842342310568135,en dessous de la moyenne
-Cluster 2,MinutesToScore1,1.9026442736266587,au-dessus de la moyenne
-Cluster 2,RED,1.6314751479302507,au-dessus de la moyenne
-Cluster 2,ErrorQuotient,1.5733456139234654,au-dessus de la moyenne
-Cluster 2,CompileSuccessRate,-1.499967548760456,en dessous de la moyenne
-Cluster 2,MeanTestScore,-1.4922064435076892,en dessous de la moyenne
-Cluster 2,MinutesFromGlobalFirstCompile,0.4922726720060292,au-dessus de la moyenne
-Cluster 2,FracLong,0.29229069723237616,au-dessus de la moyenne
-Cluster 2,CompileSpanMinutes,-0.22184391735006773,en dessous de la moyenne
-Cluster 2,SessionCount,0.1885632582509243,au-dessus de la moyenne
-Cluster 2,CompileCount,-0.06531319548120325,en dessous de la moyenne
-Cluster 2,MinutesToGlobalLastCompile,0.03722483207218805,au-dessus de la moyenne
-Cluster 3,MinutesToGlobalLastCompile,1.6699306008384072,au-dessus de la moyenne
-Cluster 3,CompileSpanMinutes,-1.4624286829096622,en dessous de la moyenne
-Cluster 3,SessionCount,-1.0759197676670378,en dessous de la moyenne
-Cluster 3,CompileCount,-0.918466811454421,en dessous de la moyenne
-Cluster 3,FracLong,-0.5819532292705134,en dessous de la moyenne
-Cluster 3,MinutesToScore1,-0.5679985527967543,en dessous de la moyenne
-Cluster 3,MinutesFromGlobalFirstCompile,-0.3122671066453132,en dessous de la moyenne
-Cluster 3,RED,-0.3026672929544751,en dessous de la moyenne
-Cluster 3,CompileSuccessRate,-0.09665956218754293,en dessous de la moyenne
-Cluster 3,MeanTestScore,-0.09269099731732063,en dessous de la moyenne
-Cluster 3,ErrorQuotient,-0.085412292750879,en dessous de la moyenne
-Cluster 4,CompileCount,2.106350554268806,au-dessus de la moyenne
-Cluster 4,CompileSpanMinutes,1.2343662955567893,au-dessus de la moyenne
-Cluster 4,MinutesFromGlobalFirstCompile,-1.231091793321382,en dessous de la moyenne
-Cluster 4,RED,0.9163696739196556,au-dessus de la moyenne
-Cluster 4,FracLong,-0.8968748407262959,en dessous de la moyenne
-Cluster 4,ErrorQuotient,0.8893283438088662,au-dessus de la moyenne
-Cluster 4,CompileSuccessRate,-0.8395674653463296,en dessous de la moyenne
-Cluster 4,MeanTestScore,-0.8218671578393661,en dessous de la moyenne
-Cluster 4,MinutesToGlobalLastCompile,-0.8109812863726928,en dessous de la moyenne
-Cluster 4,SessionCount,-0.4436782547080567,en dessous de la moyenne
-Cluster 4,MinutesToScore1,-0.025886063999956774,en dessous de la moyenne
+Cluster 1,MinutesToGlobalLastCompile,-0.5785943590732747,en dessous de la moyenne
+Cluster 1,CompileSpanMinutes,0.5261538799422543,au-dessus de la moyenne
+Cluster 1,MinutesFromGlobalFirstCompile,0.489237579775848,au-dessus de la moyenne
+Cluster 1,CompileCount,-0.33461116589542317,en dessous de la moyenne
+Cluster 1,FracLong,0.2546778241712922,au-dessus de la moyenne
+Cluster 1,CompileSuccessRate,0.2086695043836995,au-dessus de la moyenne
+Cluster 1,SessionCount,-0.03455598655831392,en dessous de la moyenne
+Cluster 2,CompileSuccessRate,-3.191962962458776,en dessous de la moyenne
+Cluster 2,MinutesToGlobalLastCompile,1.194926499214467,au-dessus de la moyenne
+Cluster 2,MinutesFromGlobalFirstCompile,-1.1441899027203872,en dessous de la moyenne
+Cluster 2,SessionCount,-0.8918689950239604,en dessous de la moyenne
+Cluster 2,CompileSpanMinutes,-0.6720178657635097,en dessous de la moyenne
+Cluster 2,CompileCount,-0.6340736993599383,en dessous de la moyenne
+Cluster 2,FracLong,0.005172972903703322,au-dessus de la moyenne
+Cluster 3,MinutesToGlobalLastCompile,1.382056595103561,au-dessus de la moyenne
+Cluster 3,MinutesFromGlobalFirstCompile,-1.3413623433398898,en dessous de la moyenne
+Cluster 3,CompileSpanMinutes,-0.7215213269266434,en dessous de la moyenne
+Cluster 3,SessionCount,-0.6227454802104788,en dessous de la moyenne
+Cluster 3,CompileCount,-0.5917279871268653,en dessous de la moyenne
+Cluster 3,CompileSuccessRate,0.3943024885586616,au-dessus de la moyenne
+Cluster 3,FracLong,0.10251380592354313,au-dessus de la moyenne
+Cluster 4,CompileCount,1.0806030857627962,au-dessus de la moyenne
+Cluster 4,SessionCount,0.6953469411073003,au-dessus de la moyenne
+Cluster 4,MinutesFromGlobalFirstCompile,0.48049426842491294,au-dessus de la moyenne
+Cluster 4,FracLong,-0.46772685950139864,en dessous de la moyenne
+Cluster 4,MinutesToGlobalLastCompile,-0.3841264804851998,en dessous de la moyenne
+Cluster 4,CompileSpanMinutes,-0.13311258025652822,en dessous de la moyenne
+Cluster 4,CompileSuccessRate,0.018218584490942824,au-dessus de la moyenne
