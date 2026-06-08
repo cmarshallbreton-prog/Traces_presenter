@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2026-05-27T09:00:00.000000",
+    "research_usage": true,
+    "verb": {"id": "https://www.cristal.univ-lille.fr/verbs/Session.Start"},
+    "actor": {"openid": "https://example.org/users/alice/"},
+    "object": {"id": "https://example.org/objects/Session"},
+    "context": {"extension": {"https://example.org/objects/Session/ID": "S1"}}
+  },
+  {
+    "timestamp": "2026-05-27T09:01:00.000000",
+    "research_usage": true,
+    "verb": {"id": "https://www.cristal.univ-lille.fr/verbs/File.Open"},
+    "actor": {"openid": "https://example.org/users/alice/"},
+    "object": {"id": "https://example.org/objects/File", "extension": {"https://example.org/objects/File/Filename": "code.py", "https://example.org/objects/File/CodeState": "print(\"hello\")\n"}},
+    "context": {"extension": {"https://example.org/objects/Session/ID": "S1"}}
+  },
+  {
+    "timestamp": "2026-05-27T09:02:00.000000",
+    "research_usage": true,
+    "verb": {"id": "https://www.cristal.univ-lille.fr/verbs/Run.Program"},
+    "actor": {"openid": "https://example.org/users/alice/"},
+    "object": {"id": "https://example.org/objects/Program", "extension": {"https://example.org/objects/Program/Stdout": "hello\n", "https://example.org/objects/Program/Stderr": ""}},
+    "context": {"extension": {"https://example.org/objects/Session/ID": "S1"}}
+  },
+  {
+    "timestamp": "2026-05-27T09:03:00.000000",
+    "research_usage": true,
+    "verb": {"id": "https://www.cristal.univ-lille.fr/verbs/Run.test"},
+    "actor": {"openid": "https://example.org/users/bob/"},
+    "object": {"id": "https://example.org/objects/Tests", "extension": {"https://example.org/objects/Tests/Tests": [{"filename": "code.py", "lineno": 1, "tested_line": "print(\"hello\")", "expected_result": "hello", "verdict": "Success", "name": "test_print", "status": true}], "https://example.org/objects/Tests/Status": true}},
+    "context": {"extension": {"https://example.org/objects/Session/ID": "S1"}}
+  },
+  {
+    "timestamp": "2026-05-27T09:04:00.000000",
+    "research_usage": true,
+    "verb": {"id": "https://www.cristal.univ-lille.fr/verbs/Session.End"},
+    "actor": {"openid": "https://example.org/users/alice/"},
+    "object": {"id": "https://example.org/objects/Session"},
+    "context": {"extension": {"https://example.org/objects/Session/ID": "S1"}}
+  }
+]

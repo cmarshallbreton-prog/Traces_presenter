@@ -1,0 +1,96 @@
+[
+    {
+        "timestamp": "2026-05-26T13:54:06.696423",
+        "research_usage": true,
+        "verb": {
+            "id": "https://www.cristal.univ-lille.fr/verbs/Session.Start"
+        },
+        "actor": {
+            "openid": "https://www.cristal.univ-lille.fr/users/oko/"
+        },
+        "object": {
+            "id": "https://www.cristal.univ-lille.fr/objects/Session"
+        },
+        "context": {
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/Session/ID": "135440811746768"
+            }
+        }
+    },
+    {
+        "timestamp": "2026-05-26T13:54:06.822537",
+        "research_usage": true,
+        "verb": {
+            "id": "https://www.cristal.univ-lille.fr/verbs/File.Open"
+        },
+        "actor": {
+            "openid": "https://www.cristal.univ-lille.fr/users/oko/"
+        },
+        "object": {
+            "id": "https://www.cristal.univ-lille.fr/objects/File",
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/File/Filename": "/home/oko/Documents/teste.py",
+                "https://www.cristal.univ-lille.fr/objects/File/CodeState": "def crash():\n    \"\"\" \u00e0_remplacer_par_ce_que_fait_la_fonction\n\n    Pr\u00e9condition :\n    Exemple(s) :\n    $$$ crash()\n    \"\"\"\n    \n    return 1 / 0\n\ndef add(a, b):\n    return a + b"
+            }
+        },
+        "context": {
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/Session/ID": "135440811746768"
+            }
+        }
+    },
+    {
+        "timestamp": "2026-05-26T13:54:09.453181",
+        "research_usage": true,
+        "verb": {
+            "id": "https://www.cristal.univ-lille.fr/verbs/Run.test"
+        },
+        "actor": {
+            "openid": "https://www.cristal.univ-lille.fr/users/oko/"
+        },
+        "object": {
+            "id": "https://www.cristal.univ-lille.fr/objects/Tests",
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/File/Filename": "/home/oko/Documents/teste.py",
+                "https://www.cristal.univ-lille.fr/objects/Tests/Tests": [
+                    {
+                        "filename": "/home/oko/Documents/teste.py",
+                        "lineno": 6,
+                        "tested_line": "crash()",
+                        "expected_result": "",
+                        "details": "File \"/home/oko/Documents/teste.py\", line 9, in crash\n    return 1 / 0\n           ~~^~~\nZeroDivisionError: division by zero",
+                        "verdict": "ExceptionVerdict",
+                        "name": "crash()",
+                        "status": false
+                    }
+                ],
+                "https://www.cristal.univ-lille.fr/objects/Tests/Status": true,
+                "https://www.cristal.univ-lille.fr/objects/Tests/Error": null,
+                "https://www.cristal.univ-lille.fr/objects/Program/CodeState": "def crash():\n    \"\"\" \u00e0_remplacer_par_ce_que_fait_la_fonction\n\n    Pr\u00e9condition :\n    Exemple(s) :\n    $$$ crash()\n    \"\"\"\n    \n    return 1 / 0\n\ndef add(a, b):\n    return a + b"
+            }
+        },
+        "context": {
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/Session/ID": "135440811746768"
+            }
+        }
+    },
+    {
+        "timestamp": "2026-05-26T13:54:12.106220",
+        "research_usage": true,
+        "verb": {
+            "id": "https://www.cristal.univ-lille.fr/verbs/Session.End"
+        },
+        "actor": {
+            "openid": "https://www.cristal.univ-lille.fr/users/oko/"
+        },
+        "object": {
+            "id": "https://www.cristal.univ-lille.fr/objects/Session"
+        },
+        "context": {
+            "extension": {
+                "https://www.cristal.univ-lille.fr/objects/Session/ID": "135440811746768"
+            }
+        }
+    }
+]

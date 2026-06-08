@@ -1,0 +1,6 @@
+EventID,EventType,SubjectID,ToolInstances,CodeStateID,ServerTimestamp,SessionID,ExecutionResult,ProgramInput,ProgramOutput,ProgramErrorOutput,X-RunTestData,Lineno
+1,Session.Start,2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90,Thonny,,2026-05-27T09:00:00.000000,S1,,,,,,
+2,File.Open,2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90,Thonny,b80792336156c7b0f7fe02eeef24610d2d52a10d1810397744471d1dc5738180,2026-05-27T09:01:00.000000,S1,,,,,,
+3,Run.Program,2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90,Thonny,,2026-05-27T09:02:00.000000,S1,,,,,,
+4,Run.Test,81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9,Thonny,,2026-05-27T09:03:00.000000,S1,Success,,,,"[{""filename"":""code.py"",""lineno"":1,""tested_line"":""print(\""hello\"")"",""expected_result"":""hello"",""verdict"":""Success"",""name"":""test_print"",""status"":true}]",
+5,Session.End,2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90,Thonny,,2026-05-27T09:04:00.000000,S1,,,,,,
