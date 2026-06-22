@@ -1264,15 +1264,6 @@
       "student_id": "abord.mesestime",
       "student_name": "abord.mesestime",
       "trace": {
-        "timestamp": "2024-10-02 15:42:42.838000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "abord.mesestime",
-      "student_name": "abord.mesestime",
-      "trace": {
         "timestamp": "2024-10-02 15:43:10.937000+00:00",
         "trace_name": "repetition(chaine, n)",
         "value": true
@@ -1663,15 +1654,6 @@
         "timestamp": "2024-10-02 15:50:17.024000+00:00",
         "trace_name": "message(salutation, metier, nb_exclamation)",
         "value": true
-      }
-    },
-    {
-      "student_id": "abord.mesestime",
-      "student_name": "abord.mesestime",
-      "trace": {
-        "timestamp": "2024-10-02 15:55:40.243000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -1789,15 +1771,6 @@
         "timestamp": "2024-10-02 15:07:00.883000+00:00",
         "trace_name": "chaine()",
         "value": true
-      }
-    },
-    {
-      "student_id": "haschich.ecoeurait",
-      "student_name": "haschich.ecoeurait",
-      "trace": {
-        "timestamp": "2024-10-02 15:59:11.778000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -2803,15 +2776,6 @@
       "student_id": "verrues.clamais",
       "student_name": "verrues.clamais",
       "trace": {
-        "timestamp": "2024-10-02 15:58:55.829000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "verrues.clamais",
-      "student_name": "verrues.clamais",
-      "trace": {
         "timestamp": "2024-10-02 15:59:41.904000+00:00",
         "trace_name": "de()",
         "value": true
@@ -2893,15 +2857,6 @@
       "student_id": "reformais.glissais",
       "student_name": "reformais.glissais",
       "trace": {
-        "timestamp": "2024-10-02 15:02:13.410000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "reformais.glissais",
-      "student_name": "reformais.glissais",
-      "trace": {
         "timestamp": "2024-10-02 15:02:29.409000+00:00",
         "trace_name": "maximum(n1, n2)",
         "value": true
@@ -5611,24 +5566,6 @@
       "student_id": "reformais.glissais",
       "student_name": "reformais.glissais",
       "trace": {
-        "timestamp": "2024-10-02 15:23:43.383000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "reformais.glissais",
-      "student_name": "reformais.glissais",
-      "trace": {
-        "timestamp": "2024-10-02 15:23:53.827000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "reformais.glissais",
-      "student_name": "reformais.glissais",
-      "trace": {
         "timestamp": "2024-10-02 15:24:03.927000+00:00",
         "trace_name": "maximum(n1, n2)",
         "value": true
@@ -7711,24 +7648,6 @@
         "timestamp": "2024-10-02 15:25:17.691000+00:00",
         "trace_name": "numero_jour(jour, mois, annee)",
         "value": true
-      }
-    },
-    {
-      "student_id": "reformais.glissais",
-      "student_name": "reformais.glissais",
-      "trace": {
-        "timestamp": "2024-10-02 15:25:50.896000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "reformais.glissais",
-      "student_name": "reformais.glissais",
-      "trace": {
-        "timestamp": "2024-10-02 15:26:28.198000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -8368,15 +8287,6 @@
         "timestamp": "2024-10-02 15:28:15.534000+00:00",
         "trace_name": "montant_facture(nb_flyers)",
         "value": true
-      }
-    },
-    {
-      "student_id": "fouinez.superflu",
-      "student_name": "fouinez.superflu",
-      "trace": {
-        "timestamp": "2024-10-02 15:38:50.290000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -9220,15 +9130,6 @@
       "student_id": "bafouer.fuie",
       "student_name": "bafouer.fuie",
       "trace": {
-        "timestamp": "2024-10-02 15:30:48.779000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "bafouer.fuie",
-      "student_name": "bafouer.fuie",
-      "trace": {
         "timestamp": "2024-10-02 15:31:32.579000+00:00",
         "trace_name": "repetition(chaine, n)",
         "value": true
@@ -10888,15 +10789,6 @@
         "timestamp": "2024-10-02 15:59:29.167000+00:00",
         "trace_name": "partage_bonbons(enfants, bonbons)",
         "value": false
-      }
-    },
-    {
-      "student_id": "reclus.ridee",
-      "student_name": "reclus.ridee",
-      "trace": {
-        "timestamp": "2024-10-02 15:35:00.203000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -10930,42 +10822,6 @@
       "student_id": "neuviemes.doperiez",
       "student_name": "neuviemes.doperiez",
       "trace": {
-        "timestamp": "2024-10-02 15:19:40.127000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:19:55.474000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:20:22.455000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:27:15.095000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
         "timestamp": "2024-10-02 15:32:16.430000+00:00",
         "trace_name": "nombre_exemplaires(nb_flyer)",
         "value": true
@@ -11032,69 +10888,6 @@
         "timestamp": "2024-10-02 15:32:16.430000+00:00",
         "trace_name": "montant_facture(nb_flyer)",
         "value": true
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:42:44.358000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:47:09.380000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:47:16.857000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:53:21.365000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:53:51.872000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:54:02.952000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "neuviemes.doperiez",
-      "student_name": "neuviemes.doperiez",
-      "trace": {
-        "timestamp": "2024-10-02 15:54:18.558000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -11110,36 +10903,9 @@
       "student_id": "leverent.lestant",
       "student_name": "leverent.lestant",
       "trace": {
-        "timestamp": "2024-10-02 15:09:08.492000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "leverent.lestant",
-      "student_name": "leverent.lestant",
-      "trace": {
-        "timestamp": "2024-10-02 15:17:15.831000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "leverent.lestant",
-      "student_name": "leverent.lestant",
-      "trace": {
         "timestamp": "2024-10-02 15:21:38.887000+00:00",
         "trace_name": "chaine()",
         "value": true
-      }
-    },
-    {
-      "student_id": "leverent.lestant",
-      "student_name": "leverent.lestant",
-      "trace": {
-        "timestamp": "2024-10-02 15:30:43.064000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
@@ -12571,24 +12337,6 @@
         "timestamp": "2024-10-02 15:31:16.621000+00:00",
         "trace_name": "chaine()",
         "value": true
-      }
-    },
-    {
-      "student_id": "debacler.decores",
-      "student_name": "debacler.decores",
-      "trace": {
-        "timestamp": "2024-10-02 15:34:27.965000+00:00",
-        "trace_name": null,
-        "value": null
-      }
-    },
-    {
-      "student_id": "debacler.decores",
-      "student_name": "debacler.decores",
-      "trace": {
-        "timestamp": "2024-10-02 15:43:47.899000+00:00",
-        "trace_name": null,
-        "value": null
       }
     },
     {
