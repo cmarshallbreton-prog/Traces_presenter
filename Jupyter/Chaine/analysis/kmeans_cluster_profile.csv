@@ -1,0 +1,29 @@
+Cluster,variable,centre_standardise,sens
+Cluster 1,SessionSpan,-1.2589605067626397,en dessous de la moyenne
+Cluster 1,SessionCount,-1.0799755085835536,en dessous de la moyenne
+Cluster 1,REDMessage,-0.6678311284566971,en dessous de la moyenne
+Cluster 1,ErrorQuotientMessage,-0.6413645341044654,en dessous de la moyenne
+Cluster 1,ErrorQuotient,-0.6091072647524157,en dessous de la moyenne
+Cluster 1,RED,-0.6013947051218891,en dessous de la moyenne
+Cluster 1,TestPassRate,-0.02626401657888422,en dessous de la moyenne
+Cluster 2,SessionCount,0.6877877740290833,au-dessus de la moyenne
+Cluster 2,SessionSpan,0.5843996861402331,au-dessus de la moyenne
+Cluster 2,RED,-0.5262745646306172,en dessous de la moyenne
+Cluster 2,ErrorQuotient,-0.5213955571172855,en dessous de la moyenne
+Cluster 2,ErrorQuotientMessage,-0.5117245009761274,en dessous de la moyenne
+Cluster 2,REDMessage,-0.4781914861490835,en dessous de la moyenne
+Cluster 2,TestPassRate,0.29993451420389367,au-dessus de la moyenne
+Cluster 3,ErrorQuotientMessage,1.3935856097680581,au-dessus de la moyenne
+Cluster 3,ErrorQuotient,1.3759006777832692,au-dessus de la moyenne
+Cluster 3,RED,1.3681009273019975,au-dessus de la moyenne
+Cluster 3,REDMessage,1.3645075116916456,au-dessus de la moyenne
+Cluster 3,SessionSpan,0.5264988375798868,au-dessus de la moyenne
+Cluster 3,SessionCount,0.1874774110255068,au-dessus de la moyenne
+Cluster 3,TestPassRate,0.05690430064070466,au-dessus de la moyenne
+Cluster 4,TestPassRate,-6.12771974673946,en dessous de la moyenne
+Cluster 4,SessionSpan,-0.849130668105899,en dessous de la moyenne
+Cluster 4,ErrorQuotient,-0.8285921972035314,en dessous de la moyenne
+Cluster 4,ErrorQuotientMessage,-0.8083295407438783,en dessous de la moyenne
+Cluster 4,RED,-0.7346703825397937,en dessous de la moyenne
+Cluster 4,REDMessage,-0.667831128456697,en dessous de la moyenne
+Cluster 4,SessionCount,-0.5729943407399295,en dessous de la moyenne

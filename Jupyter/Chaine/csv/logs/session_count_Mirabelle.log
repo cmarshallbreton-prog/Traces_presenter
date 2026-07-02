@@ -1,0 +1,75 @@
+COMMANDE LOGIQUE
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_count_Mirabelle.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\traces_20_sept_10_11.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\session_count.csv 5.0
+
+SORTIE DU SCRIPT
+2026-07-02 05:15:18,762 [INFO ]  Chargement de C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\traces_20_sept_10_11.csv …
+2026-07-02 05:15:18,892 [INFO ]    1836 lignes, 34 colonnes
+2026-07-02 05:15:18,893 [INFO ]  66 étudiant(s) trouvé(s)
+2026-07-02 05:15:18,898 [INFO ]    alimente.cadriez : 1 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,900 [INFO ]    apercevra.conter : 3 session(s)  (15 Run.Test)
+2026-07-02 05:15:18,902 [INFO ]    atroce.adjugerez : 1 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,903 [WARNI]    auspices.heurtoir : aucun Run.Test — ignoré
+2026-07-02 05:15:18,904 [INFO ]    avereront.vouees : 3 session(s)  (8 Run.Test)
+2026-07-02 05:15:18,907 [INFO ]    avertis.cormoran : 1 session(s)  (1 Run.Test)
+2026-07-02 05:15:18,909 [INFO ]    avouait.happes : 3 session(s)  (7 Run.Test)
+2026-07-02 05:15:18,911 [INFO ]    becquee.aerait : 4 session(s)  (16 Run.Test)
+2026-07-02 05:15:18,912 [INFO ]    borderais.calmait : 3 session(s)  (13 Run.Test)
+2026-07-02 05:15:18,914 [INFO ]    cokefier.survolait : 5 session(s)  (7 Run.Test)
+2026-07-02 05:15:18,915 [INFO ]    cougouars.balayes : 2 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,916 [WARNI]    coulerons.elisiez : aucun Run.Test — ignoré
+2026-07-02 05:15:18,917 [INFO ]    crantes.mutes : 3 session(s)  (12 Run.Test)
+2026-07-02 05:15:18,919 [INFO ]    debacler.decores : 2 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,921 [INFO ]    decalques.avenu : 2 session(s)  (32 Run.Test)
+2026-07-02 05:15:18,922 [INFO ]    decernera.promesse : 3 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,924 [INFO ]    deprime.grondions : 1 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,926 [INFO ]    deraser.mouilliez : 4 session(s)  (35 Run.Test)
+2026-07-02 05:15:18,928 [INFO ]    dotait.huilerons : 2 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,928 [WARNI]    ecrieriez.indemnes : aucun Run.Test — ignoré
+2026-07-02 05:15:18,930 [INFO ]    egalisiez.pendrons : 2 session(s)  (5 Run.Test)
+2026-07-02 05:15:18,931 [WARNI]    epargnent.torpille : aucun Run.Test — ignoré
+2026-07-02 05:15:18,932 [INFO ]    estompes.renomme : 2 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,933 [WARNI]    fanees.disserter : aucun Run.Test — ignoré
+2026-07-02 05:15:18,933 [WARNI]    flaneras.irriguer : aucun Run.Test — ignoré
+2026-07-02 05:15:18,935 [INFO ]    forestier.redonnes : 3 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,936 [WARNI]    formol.resumiez : aucun Run.Test — ignoré
+2026-07-02 05:15:18,937 [INFO ]    fouinez.superflu : 4 session(s)  (12 Run.Test)
+2026-07-02 05:15:18,938 [WARNI]    fraisures.culinaire : aucun Run.Test — ignoré
+2026-07-02 05:15:18,939 [INFO ]    gueules.bouderons : 2 session(s)  (17 Run.Test)
+2026-07-02 05:15:18,942 [INFO ]    haschich.ecoeurait : 4 session(s)  (10 Run.Test)
+2026-07-02 05:15:18,943 [INFO ]    importons.boulaie : 4 session(s)  (5 Run.Test)
+2026-07-02 05:15:18,945 [INFO ]    irriteras.taquinant : 2 session(s)  (18 Run.Test)
+2026-07-02 05:15:18,947 [INFO ]    lamineurs.etatisees : 3 session(s)  (11 Run.Test)
+2026-07-02 05:15:18,948 [WARNI]    loriot.puzzle : aucun Run.Test — ignoré
+2026-07-02 05:15:18,949 [INFO ]    matraque.ramier : 3 session(s)  (7 Run.Test)
+2026-07-02 05:15:18,950 [WARNI]    native.colosses : aucun Run.Test — ignoré
+2026-07-02 05:15:18,952 [INFO ]    neuviemes.doperiez : 3 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,953 [INFO ]    offrirait.rendors : 1 session(s)  (14 Run.Test)
+2026-07-02 05:15:18,955 [INFO ]    penombres.intermede : 1 session(s)  (1 Run.Test)
+2026-07-02 05:15:18,957 [INFO ]    pervenche.saturera : 2 session(s)  (2 Run.Test)
+2026-07-02 05:15:18,959 [INFO ]    plastique.ratatines : 3 session(s)  (15 Run.Test)
+2026-07-02 05:15:18,961 [INFO ]    postuler.petrifie : 4 session(s)  (10 Run.Test)
+2026-07-02 05:15:18,962 [WARNI]    purifiera.tenonner : aucun Run.Test — ignoré
+2026-07-02 05:15:18,964 [INFO ]    rayonnage.atterrait : 2 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,965 [INFO ]    reclus.ridee : 4 session(s)  (6 Run.Test)
+2026-07-02 05:15:18,966 [WARNI]    recousons.faisais : aucun Run.Test — ignoré
+2026-07-02 05:15:18,966 [WARNI]    reculs.levais : aucun Run.Test — ignoré
+2026-07-02 05:15:18,967 [WARNI]    refondrez.purifies : aucun Run.Test — ignoré
+2026-07-02 05:15:18,968 [INFO ]    reformais.glissais : 5 session(s)  (11 Run.Test)
+2026-07-02 05:15:18,969 [WARNI]    regreer.editee : aucun Run.Test — ignoré
+2026-07-02 05:15:18,969 [WARNI]    rigidites.refais : aucun Run.Test — ignoré
+2026-07-02 05:15:18,971 [INFO ]    roulant.vrilla : 2 session(s)  (4 Run.Test)
+2026-07-02 05:15:18,972 [INFO ]    sachent.gares : 1 session(s)  (3 Run.Test)
+2026-07-02 05:15:18,973 [WARNI]    seconds.etagerais : aucun Run.Test — ignoré
+2026-07-02 05:15:18,976 [INFO ]    sommes.leveras : 4 session(s)  (7 Run.Test)
+2026-07-02 05:15:18,977 [INFO ]    sondez.diligence : 3 session(s)  (21 Run.Test)
+2026-07-02 05:15:18,978 [WARNI]    sportif.oculiste : aucun Run.Test — ignoré
+2026-07-02 05:15:18,980 [INFO ]    sulfatees.frisa : 3 session(s)  (20 Run.Test)
+2026-07-02 05:15:18,981 [INFO ]    targuions.detaille : 1 session(s)  (1 Run.Test)
+2026-07-02 05:15:18,983 [INFO ]    tisses.indolent : 4 session(s)  (18 Run.Test)
+2026-07-02 05:15:18,984 [INFO ]    tonifiais.tour : 4 session(s)  (12 Run.Test)
+2026-07-02 05:15:18,986 [INFO ]    tribunes.carrosse : 1 session(s)  (1 Run.Test)
+2026-07-02 05:15:18,988 [INFO ]    triplais.allonge : 2 session(s)  (3 Run.Test)
+2026-07-02 05:15:18,989 [INFO ]    vaches.recopiera : 2 session(s)  (4 Run.Test)
+2026-07-02 05:15:18,991 [INFO ]    verrues.clamais : 3 session(s)  (16 Run.Test)
+2026-07-02 05:15:18,991 [INFO ]  18 étudiant(s) ignoré(s) (aucun Run.Test)
+2026-07-02 05:15:18,993 [INFO ]  Résultat écrit dans C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\session_count.csv  (48 étudiant(s))
