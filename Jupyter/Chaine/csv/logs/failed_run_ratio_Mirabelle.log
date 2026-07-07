@@ -1,5 +1,5 @@
 COMMANDE LOGIQUE
-python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\traces_20_sept_10_11.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\session_span.csv
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\traces_20_sept_10_11.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\failed_run_ratio.csv
 
 SORTIE DU SCRIPT
 --- Logging error ---
@@ -54,9 +54,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 69, in <module>
-    df = load_csv(read_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 41, in load_csv
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 45, in main
+    df = um.load_csv(read_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\utils_Mirabelle.py", line 247, in load_csv
     out.info("Chargement de %s …", path)
 Message: 'Chargement de %s …'
 Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\data\\traces_20_sept_10_11.csv',)
@@ -112,9 +114,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 69, in <module>
-    df = load_csv(read_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 43, in load_csv
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 45, in main
+    df = um.load_csv(read_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\utils_Mirabelle.py", line 249, in load_csv
     out.info("  %d lignes, %d colonnes", len(df), len(df.columns))
 Message: '  %d lignes, %d colonnes'
 Arguments: (1836, 34)
@@ -170,7 +174,9 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 74, in <module>
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 51, in main
     out.info("%d étudiant(s) trouvé(s)", len(actors))
 Message: '%d étudiant(s) trouvé(s)'
 Arguments: (66,)
@@ -226,10 +232,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('alimente.cadriez', 0.34195, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('alimente.cadriez', 'FailedTestRunRatio', 0.0, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -282,10 +290,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('apercevra.conter', 34.920550000000006, 15)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('apercevra.conter', 'FailedTestRunRatio', 0.8666666666666667, 15)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -338,10 +348,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('atroce.adjugerez', 1.0926, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('atroce.adjugerez', 'FailedTestRunRatio', 0.0, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -394,9 +406,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('auspices.heurtoir',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -450,10 +464,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('avereront.vouees', 30.431233333333335, 8)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('avereront.vouees', 'FailedTestRunRatio', 0.5, 8)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -506,10 +522,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('avertis.cormoran', 0.0, 1)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('avertis.cormoran', 'FailedTestRunRatio', 0.0, 1)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -562,10 +580,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('avouait.happes', 23.30026666666667, 7)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('avouait.happes', 'FailedTestRunRatio', 0.16666666666666666, 7)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -618,10 +638,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('becquee.aerait', 37.443983333333335, 16)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('becquee.aerait', 'FailedTestRunRatio', 0.5333333333333333, 16)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -674,10 +696,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('borderais.calmait', 38.9599, 13)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('borderais.calmait', 'FailedTestRunRatio', 0.5384615384615384, 13)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -730,10 +754,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('cokefier.survolait', 37.07076666666667, 7)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('cokefier.survolait', 'FailedTestRunRatio', 0.14285714285714285, 7)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -786,10 +812,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('cougouars.balayes', 31.9696, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('cougouars.balayes', 'FailedTestRunRatio', 0.0, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -842,9 +870,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('coulerons.elisiez',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -898,10 +928,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('crantes.mutes', 36.54115, 12)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('crantes.mutes', 'FailedTestRunRatio', 0.08333333333333333, 12)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -954,10 +986,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('debacler.decores', 10.36625, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('debacler.decores', 'FailedTestRunRatio', 0.75, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1010,10 +1044,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('decalques.avenu', 44.026066666666665, 32)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('decalques.avenu', 'FailedTestRunRatio', 0.7333333333333333, 32)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1066,10 +1102,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('decernera.promesse', 29.306116666666664, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('decernera.promesse', 'FailedTestRunRatio', 0.4, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1122,10 +1160,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('deprime.grondions', 0.49225, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('deprime.grondions', 'FailedTestRunRatio', 0.5, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1178,10 +1218,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('deraser.mouilliez', 44.12713333333333, 35)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('deraser.mouilliez', 'FailedTestRunRatio', 0.6060606060606061, 35)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1234,10 +1276,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('dotait.huilerons', 19.302866666666667, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('dotait.huilerons', 'FailedTestRunRatio', 0.0, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1290,9 +1334,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('ecrieriez.indemnes',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1346,10 +1392,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('egalisiez.pendrons', 21.005, 5)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('egalisiez.pendrons', 'FailedTestRunRatio', 0.2, 5)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1402,9 +1450,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('epargnent.torpille',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1458,10 +1508,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('estompes.renomme', 10.198816666666666, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('estompes.renomme', 'FailedTestRunRatio', 1.0, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1514,9 +1566,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('fanees.disserter',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1570,9 +1624,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('flaneras.irriguer',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1626,10 +1682,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('forestier.redonnes', 29.443350000000002, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('forestier.redonnes', 'FailedTestRunRatio', 0.25, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1682,9 +1740,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('formol.resumiez',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1738,10 +1798,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('fouinez.superflu', 39.77506666666667, 12)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('fouinez.superflu', 'FailedTestRunRatio', 0.4444444444444444, 12)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1794,9 +1856,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('fraisures.culinaire',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -1850,10 +1914,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('gueules.bouderons', 31.863816666666665, 17)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('gueules.bouderons', 'FailedTestRunRatio', 0.7142857142857143, 17)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1906,10 +1972,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('haschich.ecoeurait', 34.171166666666664, 10)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('haschich.ecoeurait', 'FailedTestRunRatio', 0.2222222222222222, 10)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1962,10 +2030,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('importons.boulaie', 28.299083333333332, 5)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('importons.boulaie', 'FailedTestRunRatio', 1.0, 5)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2018,10 +2088,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('irriteras.taquinant', 37.6228, 18)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('irriteras.taquinant', 'FailedTestRunRatio', 0.3333333333333333, 18)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2074,10 +2146,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('lamineurs.etatisees', 33.05141666666667, 11)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('lamineurs.etatisees', 'FailedTestRunRatio', 0.6, 11)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2130,9 +2204,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('loriot.puzzle',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2186,10 +2262,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('matraque.ramier', 32.30683333333334, 7)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('matraque.ramier', 'FailedTestRunRatio', 0.0, 7)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2242,9 +2320,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('native.colosses',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2298,10 +2378,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('neuviemes.doperiez', 38.08271666666667, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('neuviemes.doperiez', 'FailedTestRunRatio', 0.6, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2354,10 +2436,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('offrirait.rendors', 18.794383333333332, 14)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('offrirait.rendors', 'FailedTestRunRatio', 0.7857142857142857, 14)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2410,10 +2494,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('penombres.intermede', 0.0, 1)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('penombres.intermede', 'FailedTestRunRatio', 1.0, 1)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2466,10 +2552,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('pervenche.saturera', 12.890133333333333, 2)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('pervenche.saturera', 'FailedTestRunRatio', 1.0, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2522,10 +2610,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('plastique.ratatines', 30.890933333333333, 15)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('plastique.ratatines', 'FailedTestRunRatio', 0.7777777777777778, 15)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2578,10 +2668,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('postuler.petrifie', 24.753233333333334, 10)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('postuler.petrifie', 'FailedTestRunRatio', 0.2857142857142857, 10)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2634,9 +2726,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('purifiera.tenonner',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2690,10 +2784,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('rayonnage.atterrait', 11.284183333333335, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('rayonnage.atterrait', 'FailedTestRunRatio', 0.0, 6)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2746,10 +2842,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('reclus.ridee', 32.243766666666666, 6)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
+Arguments: ('reclus.ridee',)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2802,9 +2900,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('recousons.faisais',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2858,9 +2958,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('reculs.levais',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2914,9 +3016,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('refondrez.purifies',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2970,10 +3074,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('reformais.glissais', 41.62371666666666, 11)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('reformais.glissais', 'FailedTestRunRatio', 0.1111111111111111, 11)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3026,9 +3132,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('regreer.editee',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -3082,9 +3190,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('rigidites.refais',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -3138,10 +3248,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('roulant.vrilla', 21.49046666666667, 4)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
+Arguments: ('roulant.vrilla',)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3194,10 +3306,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('sachent.gares', 1.6471333333333333, 3)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('sachent.gares', 'FailedTestRunRatio', 0.0, 3)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3250,9 +3364,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('seconds.etagerais',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -3306,10 +3422,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('sommes.leveras', 40.530899999999995, 7)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('sommes.leveras', 'FailedTestRunRatio', 0.2857142857142857, 7)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3362,10 +3480,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('sondez.diligence', 31.041999999999998, 21)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('sondez.diligence', 'FailedTestRunRatio', 0.4, 21)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3418,9 +3538,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 84, in <module>
-    out.warning("  %s : aucun Run.Test — ignoré", actor)
-Message: '  %s : aucun Run.Test — ignoré'
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 61, in main
+    out.warning("  %s : aucun Run.Test non vide — ignoré", actor)
+Message: '  %s : aucun Run.Test non vide — ignoré'
 Arguments: ('sportif.oculiste',)
 --- Logging error ---
 Traceback (most recent call last):
@@ -3474,10 +3596,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('sulfatees.frisa', 34.62866666666666, 20)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('sulfatees.frisa', 'FailedTestRunRatio', 0.6666666666666666, 20)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3530,10 +3654,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('targuions.detaille', 0.0, 1)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('targuions.detaille', 'FailedTestRunRatio', 1.0, 1)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3586,10 +3712,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('tisses.indolent', 34.344, 18)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('tisses.indolent', 'FailedTestRunRatio', 0.5333333333333333, 18)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3642,10 +3770,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('tonifiais.tour', 39.1666, 12)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('tonifiais.tour', 'FailedTestRunRatio', 0.8333333333333334, 12)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3698,10 +3828,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('tribunes.carrosse', 0.0, 1)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('tribunes.carrosse', 'FailedTestRunRatio', 1.0, 1)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3754,10 +3886,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('triplais.allonge', 13.730500000000001, 3)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('triplais.allonge', 'FailedTestRunRatio', 1.0, 3)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3810,10 +3944,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('vaches.recopiera', 15.98695, 4)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('vaches.recopiera', 'FailedTestRunRatio', 0.5, 4)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3866,10 +4002,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 88, in <module>
-    out.info("  %s : %.1f min  (%d Run.Test)",
-Message: '  %s : %.1f min  (%d Run.Test)'
-Arguments: ('verrues.clamais', 25.575916666666668, 16)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 65, in main
+    out.info(
+Message: '  %s : %s = %.3f  (%d Run.Test)'
+Arguments: ('verrues.clamais', 'FailedTestRunRatio', 0.2, 16)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3922,10 +4060,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 92, in <module>
-    out.info("%d étudiant(s) ignoré(s) (aucun Run.Test)", dropped)
-Message: '%d étudiant(s) ignoré(s) (aucun Run.Test)'
-Arguments: (18,)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 73, in main
+    out.info("%d étudiant(s) ignoré(s) (aucun Run.Test non vide)", dropped)
+Message: '%d étudiant(s) ignoré(s) (aucun Run.Test non vide)'
+Arguments: (20,)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -3978,9 +4118,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 93, in <module>
-    write_metric("SessionSpan", metric_map, write_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\session_span_Mirabelle.py", line 62, in write_metric
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 80, in <module>
+    main(_read, _write)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\failed_run_ratio_Mirabelle.py", line 74, in main
+    um.write_metric(METRIC_NAME, metric_map, write_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Mirabelle\utils_Mirabelle.py", line 268, in write_metric
     out.info("Résultat écrit dans %s  (%d étudiant(s))", path, len(metric_map))
 Message: 'Résultat écrit dans %s  (%d étudiant(s))'
-Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\csv\\session_span.csv', 48)
+Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\csv\\failed_run_ratio.csv', 46)
