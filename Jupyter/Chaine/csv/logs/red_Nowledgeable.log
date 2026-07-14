@@ -1,0 +1,2100 @@
+COMMANDE LOGIQUE
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\session_13568_answers_corrige.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\RED_Nowledgeable.csv
+
+SORTIE DU SCRIPT
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 296, in main
+    df = load_csv(read_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 262, in load_csv
+    out.info("Chargement de %s …", path)
+Message: 'Chargement de %s …'
+Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\data\\session_13568_answers_corrige.csv',)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 296, in main
+    df = load_csv(read_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 269, in load_csv
+    out.info("  %d lignes, %d colonnes", len(df), len(df.columns))
+Message: '  %d lignes, %d colonnes'
+Arguments: (1422, 14)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 300, in main
+    attempts = prepare_attempts(df)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 165, in prepare_attempts
+    out.info(
+Message: '%d soumission(s) dupliquée(s) par answerUuid ont été retirées'
+Arguments: (71,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 302, in main
+    out.info("%d étudiant(s) trouvé(s)", len(students))
+Message: '%d étudiant(s) trouvé(s)'
+Arguments: (30,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10032', 0.05, 10)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10056', 0.6083959899749374, 19)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10058', 0.25, 2)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10119', 0.10227272727272728, 22)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10120', 0.611111111111111, 3)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10121', 0.38447204968944104, 23)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10123', 0.25, 2)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10124', 0.19117647058823528, 17)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10126', 0.5952380952380952, 7)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10127', 0.35714285714285715, 14)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10129', 0.0, 2)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10132', 0.643939393939394, 22)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10133', 0.68125, 8)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10222', 0.05555555555555555, 9)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10231', 0.3059782608695652, 46)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10232', 0.64, 5)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10233', 0.8888888888888888, 8)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10453', 0.2841880341880342, 39)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10454', 0.2424242424242424, 11)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10455', 0.8712962962962963, 36)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10457', 0.2833333333333333, 16)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 312, in main
+    out.warning(
+Message: '  %s : aucune transition avec feedback de compilation observable — ignoré'
+Arguments: ('10460',)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10649', 0.5, 1)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10657', 0.5048400673400675, 36)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10658', 0.6898148148148149, 18)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 312, in main
+    out.warning(
+Message: '  %s : aucune transition avec feedback de compilation observable — ignoré'
+Arguments: ('10659',)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10938', 0.5, 3)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('10939', 0.48125, 16)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('11714', 0.0, 2)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 321, in main
+    out.info(
+Message: '  %s : RED = %.4f (%d transition(s))'
+Arguments: ('723', 0.0, 1)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 328, in main
+    out.info("%d étudiant(s) ignoré(s) (aucune transition observable)", dropped)
+Message: '%d étudiant(s) ignoré(s) (aucune transition observable)'
+Arguments: (2,)
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\traitlets\config\application.py", line 1082, in launch_instance
+    app.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelapp.py", line 758, in start
+    self.io_loop.start()
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+  File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 621, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py", line 834, in execute_request
+    reply_content = await reply_content
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\ipkernel.py", line 464, in do_execute
+    res = shell.run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\ipykernel\zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3170, in run_cell
+    result = self._run_cell(
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3225, in _run_cell
+    result = runner(coro)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3447, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3688, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "C:\Users\chris\AppData\Roaming\Python\Python314\site-packages\IPython\core\interactiveshell.py", line 3748, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\chris\AppData\Local\Temp\ipykernel_22564\1630972538.py", line 78, in <module>
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 339, in <module>
+    main(input_path, output_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 329, in main
+    write_metric(METRIC_NAME, metric_map, write_path)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\red_Nowledgeable.py", line 292, in write_metric
+    out.info("Résultat écrit dans %s (%d étudiants)", path, len(metric_map))
+Message: 'Résultat écrit dans %s (%d étudiants)'
+Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\csv\\RED_Nowledgeable.csv', 28)
