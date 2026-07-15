@@ -1,5 +1,5 @@
 COMMANDE LOGIQUE
-python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\session_13568_answers_corrige.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\ScoreProgression_Nowledgeable.csv
+python C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\data\session_13568_answers_corrige.csv C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\csv\SessionCount_Nowledgeable.csv
 
 SORTIE DU SCRIPT
 --- Logging error ---
@@ -54,11 +54,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 201, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 193, in main
     df = load_csv(read_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 167, in load_csv
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 156, in load_csv
     out.info("Chargement de %s …", path)
 Message: 'Chargement de %s …'
 Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\data\\session_13568_answers_corrige.csv',)
@@ -114,11 +114,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 201, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 193, in main
     df = load_csv(read_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 174, in load_csv
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 163, in load_csv
     out.info("  %d lignes, %d colonnes", len(df), len(df.columns))
 Message: '  %d lignes, %d colonnes'
 Arguments: (1422, 14)
@@ -174,13 +174,13 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 206, in main
-    attempts = prepare_attempts(df)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 119, in prepare_attempts
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 202, in main
+    activities = prepare_activities(df)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 120, in prepare_activities
     out.info(
-Message: '%d soumission(s) dupliquée(s) par answerUuid ont été retirées'
+Message: '%d activité(s) dupliquée(s) par answerUuid ont été retirées'
 Arguments: (71,)
 --- Logging error ---
 Traceback (most recent call last):
@@ -234,9 +234,9 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 208, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 204, in main
     out.info("%d étudiant(s) trouvé(s)", len(students))
 Message: '%d étudiant(s) trouvé(s)'
 Arguments: (30,)
@@ -292,12 +292,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10032', 0.5833333333333334, 6, 26)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10032', 4, 26)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -350,12 +350,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10056', 0.125, 8, 69)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10056', 7, 73)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -408,12 +408,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10058', 1.0, 9, 38)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10058', 5, 40)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -466,12 +466,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10119', 0.6785714285714286, 7, 103)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10119', 4, 106)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -524,12 +524,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10120', 0.3125, 4, 9)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10120', 5, 16)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -582,12 +582,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10121', 0.125, 4, 81)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10121', 3, 84)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -640,12 +640,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10123', 0.7361111111111116, 6, 18)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10123', 8, 20)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -698,12 +698,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10124', 0.84375, 8, 35)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10124', 5, 36)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -756,12 +756,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10126', 0.875, 6, 26)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10126', 8, 27)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -814,12 +814,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10127', 0.8888888888888888, 9, 31)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10127', 5, 33)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -872,12 +872,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10129', 0.6, 5, 33)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10129', 4, 39)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -930,12 +930,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10132', 0.9, 5, 64)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10132', 6, 65)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -988,12 +988,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10133', 0.0, 3, 14)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10133', 6, 22)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1046,12 +1046,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10222', 0.4375, 4, 38)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10222', 8, 39)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1104,12 +1104,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10231', 0.9, 10, 77)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10231', 3, 78)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1162,12 +1162,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10232', 0.5, 6, 36)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10232', 9, 38)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1220,12 +1220,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10233', 0.9166666666666666, 3, 40)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10233', 7, 41)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1278,12 +1278,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10453', 0.16666666666666666, 3, 52)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10453', 1, 56)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1336,12 +1336,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10454', 0.6, 5, 46)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10454', 5, 48)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1394,12 +1394,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10455', 0.9375, 8, 69)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10455', 5, 72)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1452,12 +1452,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10457', 0.6, 5, 28)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10457', 4, 29)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1510,12 +1510,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10460', 1.0, 8, 33)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10460', 5, 36)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1568,12 +1568,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10649', 0.4166666666666667, 6, 19)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10649', 6, 23)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1626,12 +1626,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10657', 0.9285714285714286, 7, 149)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10657', 5, 149)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1684,12 +1684,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10658', 0.5, 7, 28)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10658', 4, 32)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1742,12 +1742,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10659', 0.0, 1, 2)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10659', 1, 9)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1800,12 +1800,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10938', 0.375, 4, 12)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10938', 6, 15)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1858,12 +1858,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('10939', 0.25, 6, 59)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('10939', 9, 61)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1916,12 +1916,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('11714', 0.6388888888888888, 9, 34)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('11714', 5, 36)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -1974,12 +1974,12 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 227, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 222, in main
     out.info(
-Message: '  %s : %+.4f (%d exercice(s), %d tentative(s))'
-Arguments: ('723', 0.0, 1, 2)
+Message: '  %s : %d session(s) (%d activité(s))'
+Arguments: ('723', 1, 2)
 --- Logging error ---
 Traceback (most recent call last):
   File "c:\Users\chris\AppData\Local\Programs\Python\Python314\Lib\logging\__init__.py", line 1154, in emit
@@ -2032,11 +2032,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 235, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 229, in main
     out.info(
-Message: '%d étudiant(s) ignoré(s) (progression non mesurable)'
+Message: '%d étudiant(s) ignoré(s) (aucune activité horodatée)'
 Arguments: (0,)
 --- Logging error ---
 Traceback (most recent call last):
@@ -2090,11 +2090,11 @@ Call stack:
   File "<frozen runpy>", line 287, in run_path
   File "<frozen runpy>", line 98, in _run_module_code
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 251, in <module>
-    main(input_path, output_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 239, in main
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 249, in <module>
+    main(input_path, output_path, gap)
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 233, in main
     write_metric(METRIC_NAME, metric_map, write_path)
-  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\score_progression_Nowledgeable.py", line 197, in write_metric
+  File "C:\Users\chris\Desktop\Code\TracesPresenter\Traces_presenter\Jupyter\Chaine\scripts_Nowledgeable\session_count_Nowledgeable.py", line 189, in write_metric
     out.info("Résultat écrit dans %s (%d étudiants)", path, len(metric_map))
 Message: 'Résultat écrit dans %s (%d étudiants)'
-Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\csv\\ScoreProgression_Nowledgeable.csv', 30)
+Arguments: ('C:\\Users\\chris\\Desktop\\Code\\TracesPresenter\\Traces_presenter\\Jupyter\\Chaine\\csv\\SessionCount_Nowledgeable.csv', 30)
