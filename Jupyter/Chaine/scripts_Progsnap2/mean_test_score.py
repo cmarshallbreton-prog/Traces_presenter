@@ -1,3 +1,11 @@
+"""Score moyen des événements d'exécution/test de ProgSnap2.
+
+Dans chaque session filtrée, on sélectionne d'abord les événements dont le
+type commence par ``Run`` ; si aucun n'existe, on utilise les lignes ayant un
+``Score`` renseigné. La moyenne des scores de la session est ensuite moyennée
+sur les sessions de l'étudiant.
+"""
+
 # mean_test_score.py
 import sys
 import logging

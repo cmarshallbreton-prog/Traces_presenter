@@ -1,3 +1,8 @@
+"""Indicateur Mirabelle : red_FE.
+
+Voir README.md pour la formule détaillée et les conventions de segmentation.
+"""
+
 import sys
 
 import utils_Mirabelle as um
@@ -8,7 +13,7 @@ out = um.out
 def calculate_red(actor_attempts) -> float | None:
     """
     Calcule la Repeated Error Density d'un étudiant à partir de la table
-    de ses tentatives (issue de verdict_utils.build_attempts).
+    de ses tentatives (issue de utils_Mirabelle.build_attempts).
 
     Retourne un float >= 0.0, ou None si aucune paire de tentatives
     consécutives n'est disponible.

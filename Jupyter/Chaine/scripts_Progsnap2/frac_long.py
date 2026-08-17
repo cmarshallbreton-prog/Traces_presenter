@@ -1,3 +1,11 @@
+"""Fraction des intervalles longs entre compilations ProgSnap2.
+
+Dans chaque session filtrée, les compilations sont ordonnées par timestamp et
+l'on calcule la proportion des écarts consécutifs strictement supérieurs au
+seuil (5 minutes dans le registre central). La valeur étudiant est la moyenne
+des fractions de ses sessions.
+"""
+
 # frac_long.py
 import sys
 import logging

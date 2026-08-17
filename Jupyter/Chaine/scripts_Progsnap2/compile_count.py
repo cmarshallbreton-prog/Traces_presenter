@@ -1,3 +1,11 @@
+"""Nombre de compilations dans une session ProgSnap2 filtrée.
+
+Le pipeline historique ``data_filter`` prépare les sessions, puis
+``utils.calculate_metric_map`` applique cette fonction à chaque session et
+retourne, pour chaque étudiant, la **moyenne du nombre de compilations par
+session retenue**. Le comportement numérique historique est conservé.
+"""
+
 # compile_count.py
 import sys
 import logging

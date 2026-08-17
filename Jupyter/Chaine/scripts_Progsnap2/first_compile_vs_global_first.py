@@ -1,3 +1,11 @@
+"""Décalage temporel par rapport à la première compilation du corpus.
+
+La référence globale est la première compilation de la table ProgSnap2 déjà
+filtrée. Pour chaque session, on calcule en minutes le délai entre cette
+référence et la première compilation de la session ; l'étudiant reçoit ensuite
+la moyenne de ses sessions.
+"""
+
 # first_compile_vs_global_first.py
 import sys
 import pandas as pd

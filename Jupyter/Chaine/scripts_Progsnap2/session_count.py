@@ -1,3 +1,12 @@
+"""Nombre de sous-sessions de compilation à l'intérieur des sessions ProgSnap2.
+
+Attention : il s'agit d'une métrique historique. ``data_filter`` fournit déjà
+des ``SessionID`` ; ce script redécoupe chaque session retenue lorsque deux
+compilations sont séparées par plus de 5 minutes, puis
+``utils.calculate_metric_map`` **moyenne** ce nombre de sous-sessions par
+étudiant. Ce n'est donc pas le nombre total de sessions de l'étudiant.
+"""
+
 # session_count.py
 import sys
 import logging

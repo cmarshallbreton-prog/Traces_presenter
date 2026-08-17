@@ -7,7 +7,7 @@ Le fichier d'entrée Nowledgeable doit contenir au minimum :
 Chaque dictionnaire présent dans ``recordedFeedback["tests"]`` compte comme un
 cas de test exécuté. Un même test réexécuté lors de plusieurs soumissions est
 compté à chaque exécution. Ce calcul correspond au dénominateur utilisé par
-``testratio_Nowledgeable.py``.
+``test_pass_rate_Nowledgeable.py``.
 
 Les étudiants pour lesquels aucun cas de test détaillé n'est trouvé reçoivent
 la valeur 0.
@@ -67,7 +67,7 @@ def calculate_total_test_count(student_rows: pd.DataFrame) -> int:
         if not isinstance(tests, list):
             continue
 
-        # Même convention que testratio_Nowledgeable.py : seuls les éléments
+        # Même convention que test_pass_rate_Nowledgeable.py : seuls les éléments
         # structurés sous forme de dictionnaire sont des cas de test valides.
         total_tests += sum(isinstance(test, dict) for test in tests)
 

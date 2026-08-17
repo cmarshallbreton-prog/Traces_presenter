@@ -1,3 +1,11 @@
+"""Temps nécessaire pour atteindre un score de 1 dans ProgSnap2.
+
+Pour chaque session filtrée, le départ est la première compilation (ou le
+premier événement daté en repli). On recherche le premier ``Run.Program`` avec
+``Score >= 1 - 1e-9``. Si aucun succès observable n'est atteint, la valeur de
+la session est 60 minutes. La métrique étudiant est la moyenne des sessions.
+"""
+
 # time_to_score1.py
 import sys
 import pandas as pd

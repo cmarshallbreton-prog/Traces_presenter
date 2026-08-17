@@ -198,4 +198,6 @@ if __name__ == "__main__":
         watwin_map = utils.calculate_metric_map(main_table_df, calculate_watwin)
         out.info(watwin_map)
         utils.write_metric_map("WatWin", watwin_map, write_path)
+    else:
+        sys.exit(1)
 

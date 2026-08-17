@@ -1,3 +1,11 @@
+"""Décalage temporel par rapport à la dernière compilation du corpus.
+
+La référence globale est la dernière compilation de la table ProgSnap2 déjà
+filtrée. Pour chaque session, on calcule en minutes le temps restant entre sa
+dernière compilation et la référence globale ; l'étudiant reçoit la moyenne
+de ses sessions.
+"""
+
 # last_compile_vs_global_last.py
 import sys
 import pandas as pd

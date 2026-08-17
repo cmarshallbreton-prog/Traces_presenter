@@ -1,3 +1,8 @@
+"""Indicateur Mirabelle : eq_FE.
+
+Voir README.md pour la formule détaillée et les conventions de segmentation.
+"""
+
 import sys
 
 import utils_Mirabelle as um
@@ -8,7 +13,7 @@ out = um.out
 def calculate_eq(actor_attempts) -> float | None:
     """
     Calcule l'Error Quotient d'un étudiant à partir de la table de ses
-    tentatives (issue de verdict_utils.build_attempts).
+    tentatives (issue de utils_Mirabelle.build_attempts).
 
     Retourne un float dans [0.0, 1.0], ou None si aucune paire de
     tentatives consécutives n'est disponible.

@@ -1,3 +1,11 @@
+"""Taux de compilations réussies dans ProgSnap2.
+
+Pour chaque session filtrée : ``Success / (Success + Error)`` sur les
+événements ``Compile``. Les autres valeurs de ``Compile.Result`` sont ignorées
+du dénominateur. L'indicateur étudiant est la moyenne des ratios de ses
+sessions, via l'utilitaire historique.
+"""
+
 # compil_ratio.py
 import sys
 import logging

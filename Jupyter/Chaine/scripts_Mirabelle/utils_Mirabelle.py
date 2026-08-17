@@ -1,6 +1,5 @@
-# verdict_utils.py
 """
-Fonctions partagées par error_quotient.py et repeated_error_density.py.
+Utilitaires partagés par les indicateurs Mirabelle.
 
 Ces deux indicateurs (Error Quotient de Jadud et Repeated Error Density)
 nécessitent de savoir si deux erreurs sont "identiques". Dans
@@ -39,6 +38,8 @@ COL_TS = "timestamp.$date"
 COL_FILE = "filename_infere"
 COL_SESSION = "session.id"
 COL_CODESTATE = "P_codeState"
+COL_ACTIVITY_SESSION = "__activity_session"
+DEFAULT_SESSION_GAP_MINUTES = 5.0
 
 # Verdicts considérés comme des erreurs (par opposition à Passed* qui
 # signale un test réussi).
@@ -48,20 +49,77 @@ REQUIRED_COLS = [COL_ACTOR, COL_VERB, COL_TESTS, COL_TS]
 
 
 def parse_tests(raw) -> list[dict]:
+    """Parse la colonne ``tests`` en conservant les traces échappées.
+
+    Le corpus Mirabelle contient des représentations Python où certaines
+    apostrophes internes sont doublement échappées (``\\'``). Elles rendent
+    la chaîne invalide pour :func:`ast.literal_eval` alors que la structure
+    sous-jacente est récupérable. On tente donc d'abord le parsing normal,
+    puis un fallback *ciblé* qui ne déséchappe que ce motif connu.
+
+    Une valeur réellement illisible est signalée dans les logs au lieu d'être
+    silencieusement confondue avec un ``Run.Test`` sans cas de test.
     """
-    Parse la valeur brute de la colonne 'tests' (repr Python d'une liste
-    de dicts). Retourne une liste de dicts, ou une liste vide si le
-    parsing échoue.
-    """
-    if not isinstance(raw, str) or raw.strip() in ("", "[]", "nan"):
+    if not isinstance(raw, str) or raw.strip().lower() in ("", "[]", "nan"):
         return []
-    try:
-        parsed = ast.literal_eval(raw)
+
+    candidates = [raw]
+    repaired = raw.replace("\\\\'", "\\'")
+    if repaired != raw:
+        candidates.append(repaired)
+
+    for candidate in candidates:
+        try:
+            parsed = ast.literal_eval(candidate)
+        except (ValueError, SyntaxError):
+            continue
         if isinstance(parsed, list):
-            return parsed
-    except (ValueError, SyntaxError):
-        out.debug("Parsing échoué pour : %s", raw[:80])
+            return [case for case in parsed if isinstance(case, dict)]
+
+    out.warning("Valeur 'tests' illisible (début) : %s", raw[:120])
     return []
+
+
+def add_activity_session_ids(
+    rows: pd.DataFrame,
+    *,
+    gap_minutes: float = DEFAULT_SESSION_GAP_MINUTES,
+    output_col: str = COL_ACTIVITY_SESSION,
+    timestamp_col: str = COL_TS,
+) -> pd.DataFrame:
+    """Ajoute un identifiant de session d'activité cohérent à Mirabelle.
+
+    Une nouvelle session commence, pour un même étudiant, lorsque l'écart avec
+    le ``Run.Test`` précédent est strictement supérieur à ``gap_minutes``.
+    L'identifiant est local à l'étudiant et ne dépend pas de ``session.id`` du
+    fichier source, dont la granularité est différente.
+    """
+    result = rows.copy()
+    if result.empty:
+        result[output_col] = pd.Series(dtype="Int64")
+        return result
+    if COL_ACTOR not in result.columns or timestamp_col not in result.columns:
+        raise KeyError(f"Colonnes requises pour les sessions : {COL_ACTOR}, {timestamp_col}")
+
+    helper_ts = "__activity_ts"
+    helper_order = "__activity_order"
+    result[helper_order] = range(len(result))
+    if timestamp_col == "__timestamp" and pd.api.types.is_datetime64_any_dtype(result[timestamp_col]):
+        result[helper_ts] = result[timestamp_col]
+    else:
+        result[helper_ts] = pd.to_datetime(result[timestamp_col], errors="coerce", utc=True)
+    result = result.dropna(subset=[COL_ACTOR, helper_ts]).sort_values(
+        [COL_ACTOR, helper_ts, helper_order], kind="mergesort"
+    )
+
+    session_ids = pd.Series(index=result.index, dtype="Int64")
+    for _, actor_rows in result.groupby(COL_ACTOR, sort=False):
+        gaps = actor_rows[helper_ts].diff().dt.total_seconds().div(60.0)
+        starts = gaps.isna() | gaps.gt(float(gap_minutes))
+        session_ids.loc[actor_rows.index] = starts.cumsum().astype("int64").to_numpy()
+
+    result[output_col] = session_ids
+    return result.drop(columns=[helper_ts, helper_order])
 
 
 def error_categories(raw) -> frozenset:
@@ -164,7 +222,9 @@ def build_attempts(actor_rows: pd.DataFrame) -> pd.DataFrame:
         return attempts
 
     attempts["_ts"] = pd.to_datetime(attempts[COL_TS], errors="coerce", utc=True)
-    attempts = attempts.dropna(subset=["_ts"]).sort_values("_ts").reset_index(drop=True)
+    attempts = attempts.dropna(subset=["_ts"])
+    attempts = add_activity_session_ids(attempts, timestamp_col="_ts")
+    attempts = attempts.sort_values("_ts", kind="mergesort").reset_index(drop=True)
     attempts["error_categories"] = attempts[COL_TESTS].apply(error_categories)
     attempts["error_messages"] = attempts[COL_TESTS].apply(error_messages)
     attempts["has_error"] = attempts["error_categories"].apply(lambda s: len(s) > 0)
@@ -179,7 +239,7 @@ def get_segments_indexes(attempts: pd.DataFrame) -> list[list[int]]:
         rapport à la précédente est ignorée (l'étudiant a relancé les
         tests sans modifier son code) ;
       - un nouveau segment démarre dès que le problème
-        (filename_infere) ou la session (session.id) change.
+        (filename_infere) ou la session d’activité dérivée (pause > 5 min) change.
     Si les colonnes optionnelles de segmentation ne sont pas présentes
     dans le CSV, la contrainte correspondante est simplement ignorée
     (dégradation gracieuse).
@@ -191,38 +251,35 @@ def get_segments_indexes(attempts: pd.DataFrame) -> list[list[int]]:
         return []
 
     has_codestate = COL_CODESTATE in attempts.columns
-    seg_cols = [c for c in (COL_FILE, COL_SESSION) if c in attempts.columns]
+    seg_cols = [c for c in (COL_FILE, COL_ACTIVITY_SESSION) if c in attempts.columns]
 
     segments = []
     current_segment = [0]
     for i in range(1, n):
-        if has_codestate:
-            prev_code = attempts[COL_CODESTATE].iloc[i - 1]
-            curr_code = attempts[COL_CODESTATE].iloc[i]
-            if pd.notna(prev_code) and pd.notna(curr_code) and prev_code == curr_code:
-                # Code inchangé : cette tentative est ignorée (elle n'est
-                # ajoutée à aucun segment, mais la comparaison suivante
-                # se refait par rapport à elle, comme dans Progsnap2).
-                continue
-
+        # La frontière de segment doit être traitée AVANT le test du code
+        # inchangé : le premier événement d'une nouvelle session/fichier ne
+        # doit jamais être avalé parce que son code ressemble au précédent.
         changed_segment = False
         for col in seg_cols:
             prev_val = attempts[col].iloc[i - 1]
             curr_val = attempts[col].iloc[i]
-            # NaN != NaN vaut True en pandas : deux valeurs manquantes ne
-            # doivent pas être interprétées comme un changement de
-            # segment, sans quoi une colonne optionnelle entièrement
-            # vide (ex: filename_infere non renseigné) déclencherait un
-            # nouveau segment à CHAQUE tentative.
             if pd.isna(prev_val) and pd.isna(curr_val):
                 continue
-            if prev_val != curr_val:
+            if (pd.isna(prev_val) != pd.isna(curr_val)) or prev_val != curr_val:
                 changed_segment = True
                 break
 
         if changed_segment:
-            segments.append(current_segment)
-            current_segment = []
+            if current_segment:
+                segments.append(current_segment)
+            current_segment = [i]
+            continue
+
+        if has_codestate:
+            prev_code = attempts[COL_CODESTATE].iloc[i - 1]
+            curr_code = attempts[COL_CODESTATE].iloc[i]
+            if pd.notna(prev_code) and pd.notna(curr_code) and prev_code == curr_code:
+                continue
 
         current_segment.append(i)
 

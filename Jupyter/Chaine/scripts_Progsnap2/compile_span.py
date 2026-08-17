@@ -1,3 +1,11 @@
+"""Durée d'activité de compilation dans une session ProgSnap2 filtrée.
+
+Pour chaque session, la métrique est l'écart en minutes entre la première et
+la dernière ligne ``EventType == "Compile"`` disposant d'un timestamp valide.
+``utils.calculate_metric_map`` agrège ensuite par la moyenne des sessions de
+l'étudiant. Le comportement historique est conservé.
+"""
+
 # compile_span_per_student.py
 import sys
 import pandas as pd

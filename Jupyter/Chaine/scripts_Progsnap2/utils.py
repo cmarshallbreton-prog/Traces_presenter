@@ -1,3 +1,11 @@
+"""Utilitaires historiques communs aux métriques ProgSnap2.
+
+Ils fournissent notamment l'agrégation par étudiant/session, l'écriture des
+CSV, la segmentation des compilations et les fonctions utilisées par EQ, RED
+et WatWin. Le comportement existant est volontairement conservé afin de ne pas
+modifier indirectement les trois métriques protégées.
+"""
+
 import pathlib
 import csv
 import numpy as np
@@ -110,11 +118,9 @@ def get_segments_indexes(compiles):
     segments = []
     current_segment = [0]
     for i in range(1, len(compiles)):
-        if compiles["CodeStateID"].iloc[i] == compiles["CodeStateID"].iloc[i - 1]:
-            # If the code hasn't changed, skip this compile
-            continue
-
-        # A segment consists of consecutive compiles within a single assignment/problem/session
+        # D'abord traiter les frontières : le premier compile d'une nouvelle
+        # session/problème doit rester dans le nouveau segment, même si son
+        # CodeStateID est identique au dernier compile du segment précédent.
         changed_segments = False
         for segment_id in ["SessionID", "ProblemID", "AssignmentID"]:
             if segment_id not in compiles:
@@ -124,8 +130,14 @@ def get_segments_indexes(compiles):
                 break
 
         if changed_segments:
-            segments.append(current_segment)
-            current_segment = []
+            if current_segment:
+                segments.append(current_segment)
+            current_segment = [i]
+            continue
+
+        if compiles["CodeStateID"].iloc[i] == compiles["CodeStateID"].iloc[i - 1]:
+            # If the code hasn't changed within the same segment, skip this compile.
+            continue
 
         current_segment.append(i)
 
